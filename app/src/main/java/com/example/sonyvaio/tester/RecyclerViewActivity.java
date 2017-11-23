@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    static Word[] words = null;
+    static Word[] words = new Word[]{};
 
 
     @Override

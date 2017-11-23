@@ -60,7 +60,7 @@ public class ArraysWords {
             new Word("talk", "разговаривать", "[ ˈtɔːk ]", R.drawable.talk), new Word("taste", "пробовать", "[ teɪst ]", R.drawable.taste),
             new Word("touch", "касаться", "[ tʌtʃ ]", R.drawable.touch), new Word("underline", "подчеркивать", "[ ˌʌndəˈlaɪn ]", R.drawable.underline),
             new Word("wait", "ждать", "[ weɪt ]", R.drawable.wait), new Word("whisper", "шептать", "[ ˈwɪspə ]", R.drawable.whisper),
-            new Word("write", "писать", "[ ˈraɪt ]", R.drawable.write),};
+            new Word("write", "писать", "[ ˈraɪt ]", R.drawable.write)};
 
     final static Word[] alphabet = {new Word("A a", "эй", "[ eɪ ]", R.drawable.a), new Word("B b", "би", "[ biː ]", R.drawable.a),
             new Word("C c", "си", "[ siː ]", R.drawable.a), new Word("D d", "ди", "[ diː ]", R.drawable.a),
@@ -282,11 +282,11 @@ public class ArraysWords {
         return rnd;
     }
 
-    public static void fillHashSet(HashSet<Integer> trainerSet, int size) {
+    public static void fillHashSet(HashSet<Integer> testerSet, int size) {
         Random random = new Random();
         //int size = array.length;
-        while (trainerSet.size() != 4) {
-            trainerSet.add(random.nextInt(size));
+        while (testerSet.size() != 4) {
+            testerSet.add(random.nextInt(size));
         }
     }
 }

@@ -32,7 +32,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.WordViewHolder> {
         }
     }
 
-    Word[] words;
+    private Word[] words;
 
     public RVAdapter(Word[] words) {
         this.words = words;

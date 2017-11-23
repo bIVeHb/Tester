@@ -2,6 +2,7 @@ package com.example.sonyvaio.tester;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -34,6 +35,8 @@ public class TesterActivity extends Activity {
     TextView timerTextView;
     TextView textViewQuestion;
 
+    GridLayout gridLayoutTester;
+
     Integer[] myArray = {};
 
     public int locationOfCorrectAnswer = 0;
@@ -56,6 +59,8 @@ public class TesterActivity extends Activity {
         pointsTextView = (TextView) findViewById(R.id.pointsTextView);
         timerTextView = (TextView) findViewById(R.id.timerTextView);
         textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
+
+        gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
 
         play();
 
@@ -86,7 +91,7 @@ public class TesterActivity extends Activity {
 
                 timerTextView.setText("0s");
                 resultTextView.setText("Количество правильных ответов: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
-
+                gridLayoutTester.setVisibility(View.INVISIBLE);
             }
         }.start();
 
@@ -117,9 +122,9 @@ public class TesterActivity extends Activity {
         textViewQuestion.setText("Какая карточка соответствует слову " + actions[myArray[locationOfCorrectAnswer]].getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
-            //imagesView[i].setTranslationX(-1000f);
+            imagesView[i].setTranslationX(-1000f);
             imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-            //imagesView[i].animate().translationXBy(1000f).setDuration(300);
+            imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
 
         testerSet.clear();
