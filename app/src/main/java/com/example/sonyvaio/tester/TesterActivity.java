@@ -3,12 +3,18 @@ package com.example.sonyvaio.tester;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Random;
 
 import static com.example.sonyvaio.tester.ArraysWords.actions;
 
@@ -16,22 +22,24 @@ import static com.example.sonyvaio.tester.ArraysWords.actions;
  * Created by SonyVaio on 26.10.2017.
  */
 
-public class TesterActivity extends Activity implements ImageView.OnClickListener{
+public class TesterActivity extends Activity {
 
     ImageView imageView0;
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
 
+    TextView resultTextView;
+    TextView pointsTextView;
+    TextView timerTextView;
+    TextView textViewQuestion;
+
     Integer[] myArray = {};
 
-    public int number = 20;
-    public int answer = 0;
+    public int locationOfCorrectAnswer = 0;
+    public int score = 0;
+    public int numberOfQuestions = 0;
 
-    final String TAG = " answer";
-    final String TAG_ANSWER = " button";
-
-    // Может статическое поле убрать?
     public HashSet<Integer> testerSet = new HashSet<Integer>();
 
     @Override
@@ -44,64 +52,80 @@ public class TesterActivity extends Activity implements ImageView.OnClickListene
         imageView2 = (ImageView) findViewById(R.id.imageView2);
         imageView3 = (ImageView) findViewById(R.id.imageView3);
 
-        imageView0.setOnClickListener(this);
-        imageView1.setOnClickListener(this);
-        imageView2.setOnClickListener(this);
-        imageView3.setOnClickListener(this);
+        resultTextView = (TextView) findViewById(R.id.resultTextView);
+        pointsTextView = (TextView) findViewById(R.id.pointsTextView);
+        timerTextView = (TextView) findViewById(R.id.timerTextView);
+        textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
 
-        final ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
+        play();
 
-        loopTester(myArray, imagesView);
     }
 
+    public void play() {
 
-    public void loopTester(Integer[] myArray, ImageView[] imagesView) {
+        score = 0;
+        numberOfQuestions = 0;
 
+        timerTextView.setText("30s");
+        pointsTextView.setText("0/0");
+        resultTextView.setText("");
 
-        for (int k = 0; k < number; k++) {
+        generateQuestion();
 
-            ArraysWords.fillHashSet(testerSet, actions.length);
-            myArray = testerSet.toArray(new Integer[testerSet.size()]);
-            answer = ArraysWords.randomInt(myArray.length);
-            Log.i(TAG, "k = " + k + ", answer = " + answer);
+        new CountDownTimer(30100, 1000) {
 
-            for (int i = 0; i < imagesView.length; i++) {
-                //imagesView[i].setTranslationX(-1000f);
-                imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-                //imagesView[i].animate().translationXBy(1000f).setDuration(300);
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
+
             }
-        }
-    }
 
-    @Override
-    public void onClick(View v) {
+            @Override
+            public void onFinish() {
 
-        switch (v.getId()) {
-            case R.id.imageView0:
-                if (answer == 0) {
-                    Log.i(TAG_ANSWER + " 0 ", "imageView0 clicked " + "Вы ответили правильно");
-                    break;
-                }
-            case R.id.imageView1:
-                if (answer == 1) {
-                    Log.i(TAG_ANSWER + " 1 ", "imageView1 clicked " + "Вы ответили правильно");
-                    break;
-                }
-            case R.id.imageView2:
-                if (answer == 2) {
-                    Log.i(TAG_ANSWER + " 2 ", "imageView2 clicked " + "Вы ответили правильно");
-                    break;
-                }
-            case R.id.imageView3:
-                if (answer == 3) {
-                    Log.i(TAG_ANSWER + " 3 ", "imageView3 clicked " + "Вы ответили правильно");
-                    break;
-                }
-            default:
-                break;
-        }
+                timerTextView.setText("0s");
+                resultTextView.setText("Количество правильных ответов: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+
+            }
+        }.start();
+
 
     }
+
+    public void chooseAnswer(View view) {
+        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswer))) {
+            score++;
+            resultTextView.setText("Правильный ответ!");
+        }else{
+            resultTextView.setText("Неправильный ответ!");
+        }
+
+        numberOfQuestions++;
+        pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+        generateQuestion();
+    }
+
+    private void generateQuestion() {
+
+        ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
+
+        ArraysWords.fillHashSet(testerSet, actions.length);
+        myArray = testerSet.toArray(new Integer[testerSet.size()]);
+        locationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
+
+        textViewQuestion.setText("Какая карточка соответствует слову " + actions[myArray[locationOfCorrectAnswer]].getWord());
+
+        for (int i = 0; i < imagesView.length; i++) {
+            //imagesView[i].setTranslationX(-1000f);
+            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+            //imagesView[i].animate().translationXBy(1000f).setDuration(300);
+        }
+
+        testerSet.clear();
+    }
+
+
 
     @Override
     public void onBackPressed() {
