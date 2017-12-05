@@ -1,7 +1,8 @@
 package com.example.sonyvaio.tester;
 
+import com.example.sonyvaio.tester.model.Word;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -14,6 +15,10 @@ import java.util.Random;
 public class ArraysWords {
 
     final static HashMap<String, Word[]> themesMap = new HashMap<>();
+
+    final static ArrayList<Word[]> themesList = new ArrayList<Word[]>();
+    final static ArrayList<Map.Entry<String, Word[]>> themesList2 = new ArrayList<>();
+
 
     public ArraysWords() {
         themesMap.put("Глаголы", actions);
@@ -42,7 +47,58 @@ public class ArraysWords {
         themesMap.put("Фигуры", shapes);
         themesMap.put("Транспорт", transport);
         themesMap.put("Погода", weather);
+
+        themesList.add(actions);
+        themesList.add(alphabet);
+        themesList.add(animalBodyParts);
+        themesList.add(animals);
+        themesList.add(birds);
+        themesList.add(bugs);
+        themesList.add(classroomObjects);
+        themesList.add(clothes);
+        themesList.add(colours);
+        themesList.add(describing);
+        themesList.add(everydayObjects);
+        themesList.add(fairyStories);
+        themesList.add(family);
+        themesList.add(feelings);
+        themesList.add(food);
+        themesList.add(furniture);
+        themesList.add(home);
+        themesList.add(homeObjects);
+        themesList.add(humanBody);
+        themesList.add(nature);
+        themesList.add(numbers);
+        themesList.add(places);
+        themesList.add(prepositionsOfPlace);
+        themesList.add(shapes);
+        themesList.add(transport);
+        themesList.add(weather);
+
+        for(Map.Entry<String, Word[]> entry : themesMap.entrySet()){
+            themesList2.add(entry);
+        }
     }
+
+    //Из массивов в списки
+    private final ArrayList<Word> action = new ArrayList<Word>() {{
+        add(new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow)); add(new Word("catch", "ловить", "[ kætʃ ]",R.drawable.catchmy));
+        add(new Word("clap", "хлопать", "[ klæp ]", R.drawable.clap)); add(new Word("cut", "резать", "[ kʌt ]", R.drawable.cut));
+        add(new Word("dance", "танцевать", "[ dɑːns ]", R.drawable.dance)); add(new Word("dig", "копать", "[ dɪɡ ]", R.drawable.dig));
+        add(new Word("drink", "пить", "[ drɪŋk ]", R.drawable.drink)); add(new Word("eat", "кушать", "[ iːt ]", R.drawable.eat));
+        add(new Word("follow", "следовать", "[ ˈfɒləʊ ]", R.drawable.follow)); add(new Word("go", "идти", "[ ɡəʊ ]", R.drawable.go));
+        add(new Word("hide", "прятать(ся)", "[ haɪd ]", R.drawable.hide)); add(new Word("hug", "обниматься", "[ hʌɡ ]", R.drawable.hug));
+        add(new Word("jump", "прыгать", "[ dʒʌmp ]", R.drawable.jump)); add( new Word("listen", "слушать", "[ ˈlɪsn̩ ]", R.drawable.listen));
+        add(new Word("look", "смотреть", "[ lʊk ]", R.drawable.look)); add(new Word("point", "указывать", "[ pɔɪnt ]", R.drawable.point));
+        add(new Word("pull", "тянуть", "[ pʊl ]", R.drawable.pull)); add(new Word("read", "читать", "[ riːd ]", R.drawable.read));
+        add(new Word("run", "бежать", "[ rʌn ]", R.drawable.run)); add(new Word("share", "делиться", "[ ʃeə ]", R.drawable.share));
+        add(new Word("shout", "кричать", "[ ʃaʊt ]", R.drawable.shout)); add(new Word("sing", "петь", "[ sɪŋ ]", R.drawable.sing));
+        add(new Word("smell", "пахнуть", "[ smel ]", R.drawable.smell)); add(new Word("smile", "улыбаться", "[ smaɪl ]", R.drawable.smile));
+        add(new Word("talk", "разговаривать", "[ ˈtɔːk ]", R.drawable.talk)); add(new Word("taste", "пробовать", "[ teɪst ]", R.drawable.taste));
+        add(new Word("touch", "касаться", "[ tʌtʃ ]", R.drawable.touch)); add(new Word("underline", "подчеркивать", "[ ˌʌndəˈlaɪn ]", R.drawable.underline));
+        add(new Word("wait", "ждать", "[ weɪt ]", R.drawable.wait)); add(new Word("whisper", "шептать", "[ ˈwɪspə ]", R.drawable.whisper));
+        add(new Word("write", "писать", "[ ˈraɪt ]", R.drawable.write));
+    }};
 
 
     final static Word[] actions = {new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow), new Word("catch", "ловить", "[ kætʃ ]", R.drawable.catchmy),

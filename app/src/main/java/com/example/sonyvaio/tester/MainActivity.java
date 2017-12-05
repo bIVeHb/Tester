@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnVocabulary:
-                intent = new Intent(MainActivity.this, VocabularyActivity.class);
+                intent = new Intent(MainActivity.this, VocabularyActivity2.class);
                 startActivity(intent);
                 break;
 

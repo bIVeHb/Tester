@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sonyvaio.tester.model.Word;
+
 /**
  * Created by SonyVaio on 20.11.2017.
  */
@@ -40,7 +42,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.WordViewHolder> {
 
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.itemword, parent, false);
         WordViewHolder wordViewHolder = new WordViewHolder(v);
         return wordViewHolder;
     }

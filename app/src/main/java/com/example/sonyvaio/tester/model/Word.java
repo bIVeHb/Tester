@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.model;
 
 /**
  * Created by SonyVaio on 09.11.2017.

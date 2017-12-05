@@ -19,6 +19,7 @@
         <activity android:name=".VocabularyActivity" />
         <activity android:name=".TesterActivity" />
         <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".VocabularyActivity2"></activity>
     </application>
 
 </manifest>

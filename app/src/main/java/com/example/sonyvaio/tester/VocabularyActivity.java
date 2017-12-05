@@ -2,31 +2,21 @@ package com.example.sonyvaio.tester;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Paint;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v7.widget.RecyclerView;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.HashMap;
+import com.example.sonyvaio.tester.model.Word;
+
 import java.util.Map;
 
 import static android.widget.GridLayout.*;
-import static android.widget.GridLayout.FILL;
 
 /**
  * Created by SonyVaio on 26.10.2017.
@@ -41,7 +31,6 @@ public class VocabularyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        gridLayoutVocabulary = (GridLayout) findViewById(R.id.gridLayoutVocabulary);
 
         ArraysWords arraysWords = new ArraysWords();
 
@@ -50,6 +39,7 @@ public class VocabularyActivity extends Activity {
         int height = (int) ((display.getWidth())/2.5);
         LinearLayout.LayoutParams parms = new LinearLayout.LayoutParams(width,height);
         int id = 0;
+
 
         for(Map.Entry<String, Word[]> entry : ArraysWords.themesMap.entrySet())
         {
@@ -92,6 +82,4 @@ public class VocabularyActivity extends Activity {
         }
 
     }
-
-
 }

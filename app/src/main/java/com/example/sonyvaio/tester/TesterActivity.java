@@ -102,7 +102,7 @@ public class TesterActivity extends Activity {
         if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswer))) {
             score++;
             resultTextView.setText("Правильный ответ!");
-        }else{
+        } else {
             resultTextView.setText("Неправильный ответ!");
         }
 
@@ -119,17 +119,22 @@ public class TesterActivity extends Activity {
         myArray = testerSet.toArray(new Integer[testerSet.size()]);
         locationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
 
-        textViewQuestion.setText("Какая карточка соответствует слову " + actions[myArray[locationOfCorrectAnswer]].getWord());
+        textViewQuestion.setText("Что означает слово " + "\n" + actions[myArray[locationOfCorrectAnswer]].getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
-            imagesView[i].setTranslationX(-1000f);
-            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-            imagesView[i].animate().translationXBy(1000f).setDuration(300);
+            if (i % 2 == 0) {
+                imagesView[i].setTranslationX(-1000f);
+                imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+                imagesView[i].animate().translationXBy(1000f).setDuration(300);
+            } else {
+                imagesView[i].setTranslationX(1000f);
+                imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+                imagesView[i].animate().translationXBy(-1000f).setDuration(300);
+            }
         }
 
         testerSet.clear();
     }
-
 
 
     @Override
