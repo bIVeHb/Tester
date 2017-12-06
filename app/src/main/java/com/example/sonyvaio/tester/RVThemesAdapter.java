@@ -1,6 +1,10 @@
 package com.example.sonyvaio.tester;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +20,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,10 +42,31 @@ public class RVThemesAdapter extends RecyclerView.Adapter<RVThemesAdapter.Themes
             pictureTheme = (ImageView) itemThemesView.findViewById(R.id.pictureTheme);
         }
 
+        public interface ThemeClickListener {
+            void onThemeClick(@NonNull Word[] word);
+        }
+
+        // Передаем сюда модель из адаптера
+        public void bindView(@NonNull final Word[] word, final ThemeClickListener mThemeClickListener, Context context) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mThemeClickListener != null){
+                        mThemeClickListener.onThemeClick(word);
+                    }
+                }
+            });
+        }
+
     }
 
     //private ArrayList<Word[]> themes;
     private ArrayList<Map.Entry<String, Word[]>> themes;
+
+    private Context mContext;
+
+    @Nullable
+    private ThemesViewHolder.ThemeClickListener mThemeClickListener;
 
     public RVThemesAdapter(ArrayList<Map.Entry<String, Word[]>> themes) {
         this.themes = themes;
@@ -58,6 +84,12 @@ public class RVThemesAdapter extends RecyclerView.Adapter<RVThemesAdapter.Themes
         Word[] array = themes.get(position).getValue();
         holder.nameTheme.setText(themes.get(position).getKey());
         holder.pictureTheme.setImageResource(array[ArraysWords.randomInt(array.length)].getPicture());
+        //(ThemesViewHolder) holder.bindView(themes.get(position).getValue(), mThemeClickListener, mContext);
+        holder.bindView(array, mThemeClickListener, mContext);
+    }
+
+    public void setThemeClickListener(@Nullable ThemesViewHolder.ThemeClickListener themeCLickListener) {
+        mThemeClickListener = themeCLickListener;
     }
 
     @Override

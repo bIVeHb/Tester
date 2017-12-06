@@ -122,15 +122,9 @@ public class TesterActivity extends Activity {
         textViewQuestion.setText("Что означает слово " + "\n" + actions[myArray[locationOfCorrectAnswer]].getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
-            if (i % 2 == 0) {
-                imagesView[i].setTranslationX(-1000f);
-                imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-                imagesView[i].animate().translationXBy(1000f).setDuration(300);
-            } else {
-                imagesView[i].setTranslationX(1000f);
-                imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-                imagesView[i].animate().translationXBy(-1000f).setDuration(300);
-            }
+            imagesView[i].setTranslationX(-1000f);
+            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+            imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
 
         testerSet.clear();

@@ -31,6 +31,7 @@ public class VocabularyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
+        gridLayoutVocabulary = (GridLayout) findViewById(R.id.gridLayoutVocabulary);
 
         ArraysWords arraysWords = new ArraysWords();
 
