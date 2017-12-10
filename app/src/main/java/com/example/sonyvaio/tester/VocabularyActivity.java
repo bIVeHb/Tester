@@ -55,8 +55,8 @@ public class VocabularyActivity extends Activity {
             imageButton.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(VocabularyActivity.this, RecyclerViewActivity.class);
-                    RecyclerViewActivity.words = array;
+                    Intent intent = new Intent(VocabularyActivity.this, RVWordsActivity.class);
+                    RVWordsActivity.words = array;
                     startActivity(intent);
                 }
             });

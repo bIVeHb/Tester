@@ -41,8 +41,8 @@ public class VocabularyActivity2 extends AppCompatActivity implements ThemesView
     @Override
     public void onThemeClick(@NonNull Word[] word) {
 
-        Intent intent = new Intent(VocabularyActivity2.this, RecyclerViewActivity.class);
-        RecyclerViewActivity.words = word;
+        Intent intent = new Intent(VocabularyActivity2.this, RVWordsActivity.class);
+        RVWordsActivity.words = word;
         startActivity(intent);
     }
 }
