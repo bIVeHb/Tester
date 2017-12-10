@@ -1,86 +1,52 @@
 package com.example.sonyvaio.tester;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.GridLayout;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
+import com.example.sonyvaio.tester.adapters.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
+import com.example.sonyvaio.tester.viewholders.ThemesViewHolder;
 
-import java.util.Map;
+public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener{
 
-import static android.widget.GridLayout.*;
-
-/**
- * Created by SonyVaio on 26.10.2017.
- */
-
-public class VocabularyActivity extends Activity {
-
-    GridLayout gridLayoutVocabulary;
+    private RecyclerView recyclerViewVocabulary;
+    //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        gridLayoutVocabulary = (GridLayout) findViewById(R.id.gridLayoutVocabulary);
-
         ArraysWords arraysWords = new ArraysWords();
 
-        Display display = getWindowManager().getDefaultDisplay();
-        int width = (int) ((display.getWidth())/2.5);
-        int height = (int) ((display.getWidth())/2.5);
-        LinearLayout.LayoutParams parms = new LinearLayout.LayoutParams(width,height);
-        int id = 0;
-
-
-        for(Map.Entry<String, Word[]> entry : ArraysWords.themesMap.entrySet())
-        {
-            //lButtonParams.gravity = Gravity.CENTER;
-            //lButtonParams.gravity = Gravity.FILL;
-            ImageButton imageButton = new ImageButton(this);
-            //imageView.setGravity(Gravity.FILL);
-            imageButton.setLayoutParams(parms);
-            imageButton.setId(id);
-            final Word[] array = entry.getValue();
-            imageButton.setBackgroundResource(array[ArraysWords.randomInt(array.length)].getPicture());
-            imageButton.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(VocabularyActivity.this, RVWordsActivity.class);
-                    RVWordsActivity.words = array;
-                    startActivity(intent);
-                }
-            });
+        recyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);
 
 
 
-            TextView textView = new TextView(this);
-            textView.setGravity(Gravity.CENTER);
-            textView.setId(id);
-            textView.setText(entry.getKey());
-            //btn.setLayoutParams(lButtonParams);
-            //btn.setOnClickListener(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerViewVocabulary.setLayoutManager(linearLayoutManager);
+        //recyclerViewVocabulary.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerViewVocabulary.setHasFixedSize(false);
+        recyclerViewVocabulary.setNestedScrollingEnabled(false);
 
-            LinearLayout linearLayout = new LinearLayout(this);
-            linearLayout.setGravity(Gravity.FILL_HORIZONTAL);
-            linearLayout.setPadding(35, 35, 35, 35);
-            //linearLayout.setGravity(Gravity.CENTER_HORIZONTAL);
-            linearLayout.setOrientation(LinearLayout.VERTICAL);
-            linearLayout.addView(imageButton);
-            linearLayout.addView(textView);
+        RVThemesAdapter adapter = new RVThemesAdapter(ArraysWords.themesList2);
+        recyclerViewVocabulary.setAdapter(adapter);
+        adapter.setThemeClickListener(this);
+    }
 
-            gridLayoutVocabulary.addView(linearLayout);
-            id++;
-        }
+    @Override
+    public void onThemeClick(@NonNull Word[] word) {
 
+        Intent intent = new Intent(VocabularyActivity.this, WordsActivity.class);
+        WordsActivity.words = word;
+        startActivity(intent);
     }
 }
+
+
+
+

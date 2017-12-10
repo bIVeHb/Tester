@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import com.example.sonyvaio.tester.adapters.RVWordsAdapter;
 import com.example.sonyvaio.tester.model.Word;
 
-public class RVWordsActivity extends AppCompatActivity {
+public class WordsActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     static Word[] words = new Word[]{};
@@ -17,7 +17,7 @@ public class RVWordsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rv_words);
+        setContentView(R.layout.activity_words);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewWords);
 

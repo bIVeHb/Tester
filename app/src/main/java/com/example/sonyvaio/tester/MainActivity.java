@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnVocabulary:
-                intent = new Intent(MainActivity.this, VocabularyActivity2.class);
+                intent = new Intent(MainActivity.this, VocabularyActivity.class);
                 startActivity(intent);
                 break;
 

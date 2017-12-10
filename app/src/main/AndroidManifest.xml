@@ -16,10 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VocabularyActivity" />
         <activity android:name=".TesterActivity" />
-        <activity android:name=".RVWordsActivity" />
-        <activity android:name=".VocabularyActivity2"></activity>
+        <activity android:name=".WordsActivity" />
+        <activity android:name=".VocabularyActivity"></activity>
     </application>
 
 </manifest>
