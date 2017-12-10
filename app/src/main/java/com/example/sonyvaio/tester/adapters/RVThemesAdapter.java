@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.sonyvaio.tester.ArraysWords;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
+import com.example.sonyvaio.tester.viewholders.ThemesViewHolder;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -22,10 +23,10 @@ import java.util.Map;
  * Created by SonyVaio on 04.12.2017.
  */
 
-public class RVThemesAdapter extends RecyclerView.Adapter<RVThemesAdapter.ThemesViewHolder> {
+public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
 
-    public static class ThemesViewHolder extends RecyclerView.ViewHolder {
+/*    public static class ThemesViewHolder extends RecyclerView.ViewHolder {
         CardView cardViewThemes;
         TextView nameTheme;
         ImageView pictureTheme;
@@ -53,7 +54,7 @@ public class RVThemesAdapter extends RecyclerView.Adapter<RVThemesAdapter.Themes
             });
         }
 
-    }
+    }*/
 
     //private ArrayList<Word[]> themes;
     private ArrayList<Map.Entry<String, Word[]>> themes;

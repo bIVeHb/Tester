@@ -10,14 +10,15 @@ import android.widget.TextView;
 
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
+import com.example.sonyvaio.tester.viewholders.WordViewHolder;
 
 /**
  * Created by SonyVaio on 20.11.2017.
  */
 
-public class RVWordsAdapter extends RecyclerView.Adapter<RVWordsAdapter.WordViewHolder> {
+public class RVWordsAdapter extends RecyclerView.Adapter<WordViewHolder> {
 
-    public static class WordViewHolder extends RecyclerView.ViewHolder {
+/*    public static class WordViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
         TextView word;
@@ -33,7 +34,7 @@ public class RVWordsAdapter extends RecyclerView.Adapter<RVWordsAdapter.WordView
             transription = (TextView) itemView.findViewById(R.id.transcription);
             picture = (ImageView) itemView.findViewById(R.id.picture);
         }
-    }
+    }*/
 
     private Word[] words;
 

@@ -9,8 +9,9 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.sonyvaio.tester.adapters.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
+import com.example.sonyvaio.tester.viewholders.ThemesViewHolder;
 
-public class VocabularyActivity2 extends AppCompatActivity implements RVThemesAdapter.ThemesViewHolder.ThemeClickListener{
+public class VocabularyActivity2 extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener{
 
     private RecyclerView recyclerViewVocabulary;
     //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
