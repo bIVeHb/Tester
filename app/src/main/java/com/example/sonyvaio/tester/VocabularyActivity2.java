@@ -1,20 +1,14 @@
 package com.example.sonyvaio.tester;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
 
+import com.example.sonyvaio.tester.adapters.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
-
-import java.util.ArrayList;
-import java.util.Map;
 
 public class VocabularyActivity2 extends AppCompatActivity implements RVThemesAdapter.ThemesViewHolder.ThemeClickListener{
 

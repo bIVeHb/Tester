@@ -2,10 +2,10 @@ package com.example.sonyvaio.tester;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.sonyvaio.tester.adapters.RVWordsAdapter;
 import com.example.sonyvaio.tester.model.Word;
 
 public class RecyclerViewActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setNestedScrollingEnabled(false);
 
 
-        RVAdapter adapter = new RVAdapter(words);
+        RVWordsAdapter adapter = new RVWordsAdapter(words);
         recyclerView.setAdapter(adapter);
     }
 

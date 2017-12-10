@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.adapters;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 
 /**
  * Created by SonyVaio on 20.11.2017.
  */
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.WordViewHolder> {
+public class RVWordsAdapter extends RecyclerView.Adapter<RVWordsAdapter.WordViewHolder> {
 
     public static class WordViewHolder extends RecyclerView.ViewHolder {
 
@@ -36,7 +37,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.WordViewHolder> {
 
     private Word[] words;
 
-    public RVAdapter(Word[] words) {
+    public RVWordsAdapter(Word[] words) {
         this.words = words;
     }
 

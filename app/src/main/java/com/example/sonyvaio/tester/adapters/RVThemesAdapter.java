@@ -1,8 +1,6 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
@@ -12,15 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.sonyvaio.tester.ArraysWords;
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
