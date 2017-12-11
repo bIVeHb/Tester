@@ -12,6 +12,9 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sonyvaio.tester.presenter.TesterPresenter;
+import com.example.sonyvaio.tester.view.TesterView;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -23,32 +26,36 @@ import static com.example.sonyvaio.tester.ArraysWords.actions;
  * Created by SonyVaio on 26.10.2017.
  */
 
-public class TesterActivity extends Activity {
+public class TesterActivity extends Activity implements TesterView{
+
+    private TesterPresenter presenter;
 
     ImageView imageView0;
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
 
-    TextView resultTextView;
-    TextView pointsTextView;
-    TextView timerTextView;
-    TextView textViewQuestion;
+    private TextView resultTextView;
+    private TextView pointsTextView;
+    private TextView timerTextView;
+    private TextView textViewQuestion;
 
-    GridLayout gridLayoutTester;
+    private GridLayout gridLayoutTester;
 
-    Integer[] myArray = {};
+    //Integer[] myArray = {};
 
-    public int locationOfCorrectAnswer = 0;
-    public int score = 0;
-    public int numberOfQuestions = 0;
+    private int mLocationOfCorrectAnswer = 0;
+    private int score = 0;
+    private int numberOfQuestions = 0;
 
-    public HashSet<Integer> testerSet = new HashSet<Integer>();
+    public HashSet<Integer> mTesterSet = new HashSet<Integer>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tester);
+
+        presenter = new TesterPresenter(this, this);
 
         imageView0 = (ImageView) findViewById(R.id.imageView0);
         imageView1 = (ImageView) findViewById(R.id.imageView1);
@@ -61,6 +68,8 @@ public class TesterActivity extends Activity {
         textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
 
         gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
+
+        presenter.dispatchCreate(savedInstanceState);
 
         play();
 
@@ -77,7 +86,7 @@ public class TesterActivity extends Activity {
 
         generateQuestion();
 
-        new CountDownTimer(30100, 1000) {
+        /*new CountDownTimer(30100, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -93,13 +102,13 @@ public class TesterActivity extends Activity {
                 resultTextView.setText("Количество правильных ответов: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
                 gridLayoutTester.setVisibility(View.INVISIBLE);
             }
-        }.start();
+        }.start();*/
 
 
     }
 
     public void chooseAnswer(View view) {
-        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswer))) {
+        if (view.getTag().toString().equals(Integer.toString(mLocationOfCorrectAnswer))) {
             score++;
             resultTextView.setText("Правильный ответ!");
         } else {
@@ -113,21 +122,8 @@ public class TesterActivity extends Activity {
 
     private void generateQuestion() {
 
-        ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
+        presenter.dispatchGenerateQuestion(mTesterSet);
 
-        ArraysWords.fillHashSet(testerSet, actions.length);
-        myArray = testerSet.toArray(new Integer[testerSet.size()]);
-        locationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
-
-        textViewQuestion.setText("Что означает слово " + "\n" + actions[myArray[locationOfCorrectAnswer]].getWord());
-
-        for (int i = 0; i < imagesView.length; i++) {
-            imagesView[i].setTranslationX(-1000f);
-            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
-            imagesView[i].animate().translationXBy(1000f).setDuration(300);
-        }
-
-        testerSet.clear();
     }
 
 
@@ -137,5 +133,24 @@ public class TesterActivity extends Activity {
         super.onBackPressed();  // optional depending on your needs
         //testerSet = new HashSet<Integer>();
         finish();
+    }
+
+    @Override
+    public void showAnswer(Integer[] myArray) {
+
+        mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
+
+        ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
+
+        textViewQuestion.setText("Что означает слово " + "\n" + actions[myArray[mLocationOfCorrectAnswer]].getWord());
+
+        for (int i = 0; i < imagesView.length; i++) {
+            imagesView[i].setTranslationX(-1000f);
+            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+            imagesView[i].animate().translationXBy(1000f).setDuration(300);
+        }
+
+        mTesterSet.clear();
+
     }
 }

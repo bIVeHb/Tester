@@ -30,8 +30,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerViewVocabulary.setLayoutManager(linearLayoutManager);
         //recyclerViewVocabulary.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerViewVocabulary.setHasFixedSize(false);
-        recyclerViewVocabulary.setNestedScrollingEnabled(false);
+        recyclerViewVocabulary.setHasFixedSize(true);
 
         RVThemesAdapter adapter = new RVThemesAdapter(ArraysWords.themesList2);
         recyclerViewVocabulary.setAdapter(adapter);

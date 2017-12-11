@@ -101,7 +101,7 @@ public class ArraysWords {
     }};
 
 
-    final static Word[] actions = {new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow), new Word("catch", "ловить", "[ kætʃ ]", R.drawable.catchmy),
+    public final static Word[] actions = {new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow), new Word("catch", "ловить", "[ kætʃ ]", R.drawable.catchmy),
             new Word("clap", "хлопать", "[ klæp ]", R.drawable.clap), new Word("cut", "резать", "[ kʌt ]", R.drawable.cut),
             new Word("dance", "танцевать", "[ dɑːns ]", R.drawable.dance), new Word("dig", "копать", "[ dɪɡ ]", R.drawable.dig),
             new Word("drink", "пить", "[ drɪŋk ]", R.drawable.drink), new Word("eat", "кушать", "[ iːt ]", R.drawable.eat),
