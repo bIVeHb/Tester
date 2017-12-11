@@ -1,5 +1,6 @@
 package com.example.sonyvaio.tester;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,10 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
 
     private RecyclerView recyclerViewVocabulary;
     //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
+
+    public static Intent startIntent(@NonNull Context context) {
+        return new Intent(context, VocabularyActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
