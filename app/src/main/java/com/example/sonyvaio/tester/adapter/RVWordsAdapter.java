@@ -1,16 +1,13 @@
-package com.example.sonyvaio.tester.adapters;
+package com.example.sonyvaio.tester.adapter;
 
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
-import com.example.sonyvaio.tester.viewholders.WordViewHolder;
+import com.example.sonyvaio.tester.adapter.viewholder.WordViewHolder;
 
 /**
  * Created by SonyVaio on 20.11.2017.

@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester.viewholders;
+package com.example.sonyvaio.tester.adapter.viewholder;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;

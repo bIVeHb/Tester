@@ -8,12 +8,15 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.sonyvaio.tester.adapters.RVThemesAdapter;
+import com.example.sonyvaio.tester.adapter.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
-import com.example.sonyvaio.tester.viewholders.ThemesViewHolder;
+import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;
+import com.example.sonyvaio.tester.presenter.VocabularyPresenter;
+import com.example.sonyvaio.tester.view.VocabularyView;
 
-public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener{
+public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView{
 
+    private VocabularyPresenter presenter;
     private RecyclerView recyclerViewVocabulary;
     //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
 
@@ -26,6 +29,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
+        presenter = new VocabularyPresenter(this, this);
         ArraysWords arraysWords = new ArraysWords();
 
         recyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);

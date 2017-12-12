@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester.viewholders;
+package com.example.sonyvaio.tester.adapter.viewholder;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sonyvaio.tester.R;
-import com.example.sonyvaio.tester.adapters.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
 
 /**

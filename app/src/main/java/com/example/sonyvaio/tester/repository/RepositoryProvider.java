@@ -2,7 +2,6 @@ package com.example.sonyvaio.tester.repository;
 
 import android.support.annotation.NonNull;
 
-import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.repository.tester.TesterRepository;
 
 import java.util.HashSet;
@@ -13,7 +12,7 @@ import java.util.HashSet;
 
 public class RepositoryProvider {
 
-    private static TesterRepository sAccountRepository;
+    private static TesterRepository sTesterRepository;
     private static HashSet<Integer> mTesterSet;
 
     private RepositoryProvider() {
@@ -25,9 +24,9 @@ public class RepositoryProvider {
 
         mTesterSet = testerSet;
 
-        if (sAccountRepository == null) {
-            sAccountRepository = new TesterRepository(mTesterSet);
+        if (sTesterRepository == null) {
+            sTesterRepository = new TesterRepository(mTesterSet);
         }
-        return sAccountRepository;
+        return sTesterRepository;
     }
 }

@@ -118,7 +118,7 @@ public class ArraysWords {
             new Word("wait", "ждать", "[ weɪt ]", R.drawable.wait), new Word("whisper", "шептать", "[ ˈwɪspə ]", R.drawable.whisper),
             new Word("write", "писать", "[ ˈraɪt ]", R.drawable.write)};
 
-    final static Word[] alphabet = {new Word("A a", "эй", "[ eɪ ]", R.drawable.a), new Word("B b", "би", "[ biː ]", R.drawable.a),
+    public final static Word[] alphabet = {new Word("A a", "эй", "[ eɪ ]", R.drawable.a), new Word("B b", "би", "[ biː ]", R.drawable.a),
             new Word("C c", "си", "[ siː ]", R.drawable.a), new Word("D d", "ди", "[ diː ]", R.drawable.a),
             new Word("E e", "и", "[ iː ]", R.drawable.a), new Word("F f", "эф", "[ ef ]", R.drawable.a),
             new Word("G g", "джи", "[ dʒiː ]", R.drawable.a), new Word("H h", "эйч", "[ eɪtʃ ]", R.drawable.a),
