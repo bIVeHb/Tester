@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
@@ -125,10 +126,13 @@ public class TesterActivity extends Activity implements TesterView {
         final View[] views = {view0, view1, view2, view3};
 
         if (view.getTag().toString().equals(Integer.toString(mLocationOfCorrectAnswer))) {
+            views[mLocationOfCorrectAnswer].setBackgroundColor(ContextCompat.getColor(this, R.color.colorRightAnswer));
             views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
             score++;
             resultTextView.setText("Правильный ответ!");
         } else {
+            views[Integer.parseInt(view.getTag().toString())].setBackgroundColor(ContextCompat.getColor(this, R.color.colorWrongAnswer));
+            views[Integer.parseInt(view.getTag().toString())].setVisibility(View.VISIBLE);
             resultTextView.setText("Неправильный ответ!");
 
         }

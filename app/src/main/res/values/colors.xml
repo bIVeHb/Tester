@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlackText">#000000</color>
     <color name="colorDeepOrange">#FF5722</color>
+    <color name="colorRightAnswer">#CCFF90</color>
+    <color name="colorWrongAnswer">#FF8A80</color>
 </resources>
