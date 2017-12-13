@@ -5,22 +5,22 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
     android:weightSum="1">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutTester"
+    <LinearLayout
+        android:id="@+id/linearLayoutTester"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/timerTextView"
+            android:id="@+id/testerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            android:text="@string/startTime"
+            android:text="@string/testerQuestion"
             android:textColor="@color/colorBlackText"
             android:textSize="20sp" />
 
@@ -28,84 +28,147 @@
             android:id="@+id/textViewQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="false"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/timerTextView"
-            android:layout_toLeftOf="@+id/pointsTextView"
-            android:layout_toRightOf="@+id/timerTextView"
+            android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            android:textColor="@color/colorBlackText"
-            android:textSize="20sp" />
+            android:textColor="@color/colorDeepOrange"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/pointsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
             android:padding="10dp"
             android:text="@string/startPoints"
             android:textColor="@color/colorBlackText"
             android:textSize="20sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
-    <GridLayout
-        android:id="@+id/gridLayoutTester"
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:columnCount="2"
-        android:rowCount="2">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView0"
+        <GridLayout
+            android:id="@+id/gridLayoutTester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <ImageView
+                android:id="@+id/imageView0"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="chooseAnswer"
+                android:tag="0"
+                app:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="chooseAnswer"
+                android:tag="1"
+                app:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="chooseAnswer"
+                android:tag="2"
+                app:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:onClick="chooseAnswer"
+                android:tag="3"
+                app:layout_gravity="center" />
+
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayoutBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:visibility="visible"
+            >
+
+        <View
+            android:id="@+id/viewBackground0"
             android:layout_width="128dp"
             android:layout_height="128dp"
+            android:background="#CCFF90"
             android:layout_margin="10dp"
-            android:clickable="true"
-            android:onClick="chooseAnswer"
+            android:alpha="0.5"
             android:tag="0"
-            app:layout_gravity="center" />
+            android:visibility="invisible"
+            android:onClick="chooseAnswerBackGround"
+            android:clickable="true"/>
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <View
+            android:id="@+id/viewBackground1"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_margin="10dp"
-            android:clickable="true"
-            android:onClick="chooseAnswer"
+            android:background="#CCFF90"
+            android:alpha="0.5"
             android:tag="1"
-            app:layout_gravity="center" />
+            android:visibility="invisible"
+            android:onClick="chooseAnswerBackGround"
+            android:clickable="true"/>
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <View
+            android:id="@+id/viewBackground2"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_margin="10dp"
-            android:clickable="true"
-            android:onClick="chooseAnswer"
+            android:background="#CCFF90"
+            android:alpha="0.5"
             android:tag="2"
-            app:layout_gravity="center" />
+            android:visibility="invisible"
+            android:onClick="chooseAnswerBackGround"
+            android:clickable="true"/>
 
-        <ImageView
-            android:id="@+id/imageView3"
+        <View
+            android:id="@+id/viewBackground3"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_margin="10dp"
-            android:onClick="chooseAnswer"
+            android:background="#CCFF90"
+            android:alpha="0.5"
             android:tag="3"
-            app:layout_gravity="center" />
+            android:visibility="invisible"
+            android:onClick="chooseAnswerBackGround"
+            android:clickable="true"/>
+
+        </GridLayout>
 
 
-    </GridLayout>
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text=""
         android:textColor="@color/colorBlackText"
         android:textSize="20sp" />

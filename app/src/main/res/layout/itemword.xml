@@ -48,6 +48,15 @@
             android:layout_below="@+id/transcription"
             />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPlay"
+            android:layout_toRightOf="@+id/picture"
+            android:layout_below="@+id/translatedWord"
+            android:src="@drawable/iconplay"
+            />
+
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

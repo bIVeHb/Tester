@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +27,7 @@ import static com.example.sonyvaio.tester.ArraysWords.actions;
  * Created by SonyVaio on 26.10.2017.
  */
 
-public class TesterActivity extends Activity implements TesterView{
+public class TesterActivity extends Activity implements TesterView {
 
     private TesterPresenter presenter;
 
@@ -35,12 +36,18 @@ public class TesterActivity extends Activity implements TesterView{
     ImageView imageView2;
     ImageView imageView3;
 
+    View view0;
+    View view1;
+    View view2;
+    View view3;
+
     private TextView resultTextView;
     private TextView pointsTextView;
-    private TextView timerTextView;
+    //private TextView timerTextView;
     private TextView textViewQuestion;
 
     private GridLayout gridLayoutTester;
+    private GridLayout gridLayoutBackground;
 
     //Integer[] myArray = {};
 
@@ -62,12 +69,18 @@ public class TesterActivity extends Activity implements TesterView{
         imageView2 = (ImageView) findViewById(R.id.imageView2);
         imageView3 = (ImageView) findViewById(R.id.imageView3);
 
+        view0 = (View) findViewById(R.id.viewBackground0);
+        view1 = (View) findViewById(R.id.viewBackground1);
+        view2 = (View) findViewById(R.id.viewBackground2);
+        view3 = (View) findViewById(R.id.viewBackground3);
+
         resultTextView = (TextView) findViewById(R.id.resultTextView);
         pointsTextView = (TextView) findViewById(R.id.pointsTextView);
-        timerTextView = (TextView) findViewById(R.id.timerTextView);
+        //timerTextView = (TextView) findViewById(R.id.timerTextView);
         textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
 
         gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
+        gridLayoutBackground = (GridLayout) findViewById(R.id.gridLayoutBackground);
 
         presenter.dispatchCreate(savedInstanceState);
 
@@ -80,7 +93,7 @@ public class TesterActivity extends Activity implements TesterView{
         score = 0;
         numberOfQuestions = 0;
 
-        timerTextView.setText("30s");
+        //timerTextView.setText("30s");
         pointsTextView.setText("0/0");
         resultTextView.setText("");
 
@@ -107,18 +120,48 @@ public class TesterActivity extends Activity implements TesterView{
 
     }
 
-    public void chooseAnswer(View view) {
+    public void chooseAnswer(final View view) {
+
+        final View[] views = {view0, view1, view2, view3};
+
         if (view.getTag().toString().equals(Integer.toString(mLocationOfCorrectAnswer))) {
+            views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
             score++;
             resultTextView.setText("Правильный ответ!");
         } else {
             resultTextView.setText("Неправильный ответ!");
+
         }
 
         numberOfQuestions++;
         pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
-        generateQuestion();
+
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                for (int i = 0; i < views.length; i++) {
+                    views[i].setVisibility(View.INVISIBLE);
+                }
+                generateQuestion();
+            }
+        }, 2000);
+
+
+
     }
+
+/*    public void chooseAnswerBackGround(View view){
+
+        final View[] views = {view0, view1, view2, view3};
+
+        if (view.getTag().toString().equals(Integer.toString(mLocationOfCorrectAnswer))) {
+            views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
+
+        } else {
+            views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
+        }
+    }*/
 
     private void generateQuestion() {
 
@@ -142,7 +185,7 @@ public class TesterActivity extends Activity implements TesterView{
 
         ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
 
-        textViewQuestion.setText("Что означает слово " + "\n" + actions[myArray[mLocationOfCorrectAnswer]].getWord());
+        textViewQuestion.setText(actions[myArray[mLocationOfCorrectAnswer]].getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);

@@ -132,13 +132,13 @@ public class ArraysWords {
             new Word("W w", "дабл-ю", "[ ˈdʌbljuː ]", R.drawable.a), new Word("X x", "экс", "[ eks ]", R.drawable.a),
             new Word("Y y", "уай", "[ waɪ ]", R.drawable.a), new Word("Z z", "зед", "[ zed ]", R.drawable.a)};
 
-    final static Word[] animalBodyParts = {new Word("beak", "клюв", "[ biːk ]", R.drawable.claw), new Word("claw", "коготь", "[ klɔː ]", R.drawable.claw),
+    public final static Word[] animalBodyParts = {new Word("beak", "клюв", "[ biːk ]", R.drawable.claw), new Word("claw", "коготь", "[ klɔː ]", R.drawable.claw),
             new Word("feather", "перо", "[ ˈfeðə ]", R.drawable.claw), new Word("horn", "рог", "[ hɔːn ]", R.drawable.claw),
             new Word("jaw", "пасть, челюсть", "[ dʒɔː ]", R.drawable.claw), new Word("paw", "лапа", "[ pɔː ]", R.drawable.claw),
             new Word("tail", "хвост", "[ teɪl ]", R.drawable.claw), new Word("whisker", "ус", "[ ˈwɪskə ]", R.drawable.claw),
             new Word("wing", "крыло", "[ wɪŋ ]", R.drawable.claw)};
 
-    final static Word[] animals = {new Word("bear", "медведь", "[ beə(r) ]", R.drawable.bear), new Word("camel", "верблюд", "[ ˈkæm.əl ]", R.drawable.bear),
+    public final static Word[] animals = {new Word("bear", "медведь", "[ beə(r) ]", R.drawable.bear), new Word("camel", "верблюд", "[ ˈkæm.əl ]", R.drawable.bear),
             new Word("cat", "кошка", "[ kæt ]", R.drawable.bear), new Word("chicken", "курица", "[ ˈtʃɪkɪn ]", R.drawable.bear),
             new Word("cow", "корова", "[ kaʊ ]", R.drawable.bear), new Word("deer", "олень", "[ dɪər ]", R.drawable.bear),
             new Word("dog", "собака", "[ dɒɡ ]  ", R.drawable.bear), new Word("elephant", "слон", "[ ˈel.ɪ.fənt ]", R.drawable.bear),
@@ -150,24 +150,24 @@ public class ArraysWords {
             new Word("snake", "змея", "[ sneɪk ]", R.drawable.bear), new Word("turkey", "индейка", "[ ˈtɜː.ki ]", R.drawable.bear),
             new Word("turtle", "черепаха", "[ ˈtɜː.tl̩ ]", R.drawable.bear), new Word("wolf", "волк", "[ wʊlf ]", R.drawable.bear)};
 
-    final static Word[] birds = {new Word("dove", "голубь", "[ dʌv ]", R.drawable.duck), new Word("duck", "утка", "[ dʌk ]", R.drawable.duck),
+    public final static Word[] birds = {new Word("dove", "голубь", "[ dʌv ]", R.drawable.duck), new Word("duck", "утка", "[ dʌk ]", R.drawable.duck),
             new Word("eagle", "орел", "[ ˈiː.ɡl̩ ]", R.drawable.duck), new Word("flamingo", "фламинго", "[ fləˈmɪŋ.ɡəʊ ]", R.drawable.duck),
             new Word("owl", "сова", "[ aʊl ]", R.drawable.duck)};
 
-    final static Word[] bugs = {new Word("ant", "муравей", "[ ænt ]", R.drawable.bee), new Word("bee", "пчела", "[ biː ]", R.drawable.bee),
+    public final static Word[] bugs = {new Word("ant", "муравей", "[ ænt ]", R.drawable.bee), new Word("bee", "пчела", "[ biː ]", R.drawable.bee),
             new Word("beetle", "жук", "[ ˈbiː.tl̩ ]", R.drawable.bee), new Word("butterfly", "бабочка", "[ ˈbʌt.ə.flaɪ ]", R.drawable.bee),
             new Word("caterpillar", "гусеница", "[ ˈkæt.ə.pɪl.ər ]", R.drawable.bee), new Word("fly", "муха", "[ flaɪ ]", R.drawable.bee),
             new Word("grasshopper", "кузнечик", "[ ˈɡrɑːsˌhɒp.ər ]", R.drawable.bee), new Word("ladybird", "божья коровка", "[ ˈleɪ.di.bɜːd ]", R.drawable.bee),
             new Word("mosquito", "комар", "[ məˈskiː.təʊ ]", R.drawable.bee), new Word("spider", "паук", "[ ˈspaɪdə(r) ]", R.drawable.bee)};
 
-    final static Word[] classroomObjects = {new Word("bag", "сумка", "[ bæɡ ]", R.drawable.calculator), new Word("calculator", "калькулятор", "[ ˈkæl.kjʊ.leɪ.tər ]", R.drawable.calculator),
+    public final static Word[] classroomObjects = {new Word("bag", "сумка", "[ bæɡ ]", R.drawable.calculator), new Word("calculator", "калькулятор", "[ ˈkæl.kjʊ.leɪ.tər ]", R.drawable.calculator),
             new Word("desk", "парта, стол", "[ desk ]", R.drawable.calculator), new Word("eraser", "ластик, резинка", "[ ɪˈreɪ.zər ]", R.drawable.calculator),
             new Word("folder", "папка", "[ ˈfəʊl.dər ]", R.drawable.calculator), new Word("glue", "клей", "[ ɡluː ]", R.drawable.calculator),
             new Word("notebook", "блокнот, тетрадь", "[ ˈnəʊt.bʊk ]", R.drawable.calculator), new Word("pen", "ручка", "[ pen ]", R.drawable.calculator),
             new Word("pencil", "карандаш", "[ ˈpensl ]", R.drawable.calculator), new Word("ruler", "линейка", "[ ˈruːlə(r) ]", R.drawable.calculator),
             new Word("scissors", "ножницы", "[ ˈsɪzəz ]", R.drawable.calculator)};
 
-    final static Word[] clothes = {new Word("belt", "ремень", "[ belt ]", R.drawable.trousers), new Word("blouse", "блузка", "[ blaʊz ]", R.drawable.trousers),
+    public final static Word[] clothes = {new Word("belt", "ремень", "[ belt ]", R.drawable.trousers), new Word("blouse", "блузка", "[ blaʊz ]", R.drawable.trousers),
             new Word("bracelet", "браслет", "[ ˈbreɪ.slət ]", R.drawable.trousers), new Word("cap", "кепка", "[ kæp ]", R.drawable.trousers),
             new Word("coat", "пальто", "[ kəʊt ]", R.drawable.trousers), new Word("dress", "платье", "[ dres ]", R.drawable.trousers),
             new Word("glasses", "очки", "[ ɡlɑːs ]", R.drawable.trousers), new Word("glove", "перчатка", "[ ɡlʌv ]", R.drawable.trousers),
@@ -179,14 +179,14 @@ public class ArraysWords {
             new Word("sunglasses", "солнечные очки", "[ ˈsʌŋˌɡlɑː.sɪz ]", R.drawable.trousers), new Word("trousers", "брюки", "[ ˈtraʊzəz ]", R.drawable.trousers),
             new Word("t-shirt", "футболка", "[ tʃɜːt ]  ", R.drawable.trousers), new Word("watch", "часы", "[ wɒtʃ ]", R.drawable.trousers)};
 
-    final static Word[] colours = {new Word("black", "черный", "[ blæk ]", R.drawable.red), new Word("blue", "синий", "[ bluː ]", R.drawable.red),
+    public final static Word[] colours = {new Word("black", "черный", "[ blæk ]", R.drawable.red), new Word("blue", "синий", "[ bluː ]", R.drawable.red),
             new Word("brown", "коричневый", "[ braʊn ]", R.drawable.red), new Word("green", "зеленый", "[ ɡriːn ]", R.drawable.red),
             new Word("grey", "серый", "[ ɡreɪ ]", R.drawable.red), new Word("orange", "оранжевый", "[ ˈɒrɪndʒ ]", R.drawable.red),
             new Word("pink", "розовый", "[ pɪŋk ]", R.drawable.red), new Word("purple", "фиолетовый", "[ ˈpɜːpl ]", R.drawable.red),
             new Word("red", "красный", "[ red ]", R.drawable.red), new Word("white", "белый", "[ waɪt ]", R.drawable.red),
             new Word("yellow", "желтый", "[ ˈjeləʊ ]", R.drawable.red)};
 
-    final static Word[] describing = {new Word("beautiful", "красивый(ая)", "[ ˈbjuːtɪfl ]", R.drawable.fat), new Word("big", "большой", "[ bɪɡ ]", R.drawable.fat),
+    public final static Word[] describing = {new Word("beautiful", "красивый(ая)", "[ ˈbjuːtɪfl ]", R.drawable.fat), new Word("big", "большой", "[ bɪɡ ]", R.drawable.fat),
             new Word("dirty", "грязный", "[ ˈdɜːti ]", R.drawable.fat), new Word("far", "дальний", "[ fɑː(r) ]  ", R.drawable.fat),
             new Word("fat", "жирный", "[ fæt ]", R.drawable.fat), new Word("long", "длинный", "[ lɒŋ ]", R.drawable.fat),
             new Word("near", "ближайший, рядом", "[ nɪə(r) ]", R.drawable.fat), new Word("old", "старый", "[ əʊld ]", R.drawable.fat),
@@ -195,7 +195,7 @@ public class ArraysWords {
             new Word("thick", "толстый", "[ θɪk ]", R.drawable.fat), new Word("thin", "тонкий", "[ θɪn ]", R.drawable.fat),
             new Word("weak", "слабый", "[ wiːk ]", R.drawable.fat), new Word("young", "молодой(ая)", "[ jʌŋ ]", R.drawable.fat)};
 
-    final static Word[] everydayObjects = {new Word("balloon", "воздушный шар", "[ bəˈluːn ]", R.drawable.calendar), new Word("box", "коробка, ящик", "[ bɒks ]", R.drawable.calendar),
+    public final static Word[] everydayObjects = {new Word("balloon", "воздушный шар", "[ bəˈluːn ]", R.drawable.calendar), new Word("box", "коробка, ящик", "[ bɒks ]", R.drawable.calendar),
             new Word("bucket", "ведро", "[ ˈbʌk.ɪt ]", R.drawable.calendar), new Word("calendar", "календарь", "[ ˈkæl.ɪn.dər ]", R.drawable.calendar),
             new Word("comb", "расческа", "[ kəʊm ]", R.drawable.calendar), new Word("flag", "флаг", "[ flæɡ ]", R.drawable.calendar),
             new Word("hammer", "молоток", "[ ˈhæmə(r) ]", R.drawable.calendar), new Word("ladder", "лестница, стремянка", "[ ˈlæd.ər ]", R.drawable.calendar),
@@ -207,7 +207,7 @@ public class ArraysWords {
             new Word("toothbrush", "зубная щетка", "[ ˈtuːθ.brʌʃ ]", R.drawable.calendar), new Word("toothpaste", "зубная паста", "[ ˈtuːθ.peɪst ]", R.drawable.calendar),
             new Word("towel", "полотенце", "[ taʊəl ]", R.drawable.calendar), new Word("umbrella", "зонт", "[ ʌmˈbrelə ]", R.drawable.calendar)};
 
-    final static Word[] fairyStories = {new Word("castle", "замок", "[ ˈkɑːsl ]  ", R.drawable.castle), new Word("crown", "корона", "[ kraʊn ]", R.drawable.castle),
+    public final static Word[] fairyStories = {new Word("castle", "замок", "[ ˈkɑːsl ]  ", R.drawable.castle), new Word("crown", "корона", "[ kraʊn ]", R.drawable.castle),
             new Word("dragon", "дракон", "[ ˈdræɡ.ən ]", R.drawable.castle), new Word("giant", "гигант, великан", "[ ˈdʒaɪənt ]", R.drawable.castle),
             new Word("gold", "золото", "[ ɡəʊld ]", R.drawable.castle), new Word("king", "король", "[ kɪŋ ]", R.drawable.castle),
             new Word("knight", "рыцарь", "[ naɪt ]", R.drawable.castle), new Word("prince", "принц", "[ prɪns ]", R.drawable.castle),
@@ -215,18 +215,18 @@ public class ArraysWords {
             new Word("shield", "щит", "[ ʃiːld ]", R.drawable.castle), new Word("sword", "меч", "[ sɔːd ]", R.drawable.castle),
             new Word("throne", "трон", "[ θrəʊn ]", R.drawable.castle), new Word("tower", "башня", "[ ˈtaʊə(r) ]", R.drawable.castle)};
 
-    final static Word[] family = {new Word("baby", "младенец", "[ ˈbeɪbi ]", R.drawable.baby), new Word("brother", "брат", "[ ˈbrʌðə(r) ]", R.drawable.baby),
+    public final static Word[] family = {new Word("baby", "младенец", "[ ˈbeɪbi ]", R.drawable.baby), new Word("brother", "брат", "[ ˈbrʌðə(r) ]", R.drawable.baby),
             new Word("family", "семья", "[ ˈfæməli ]", R.drawable.baby), new Word("father", "папа", "[ ˈfɑːðə(r) ]", R.drawable.baby),
             new Word("grandfather", "дедушка", "[ ˈɡrænfɑːðə(r) ]", R.drawable.baby), new Word("grandmother", "бабушка", "[ ˈɡrænmʌðə(r) ]", R.drawable.baby),
             new Word("mother", "мама", "[ ˈmʌðə(r) ]", R.drawable.baby), new Word("sister", "сестра", "[ ˈsɪstə(r) ]", R.drawable.baby)};
 
-    final static Word[] feelings = {new Word("angry", "сердитый, злой", "[ ˈæŋɡri ]", R.drawable.angry), new Word("bored", "скучающий", "[ bɔːd ]", R.drawable.angry),
+    public final static Word[] feelings = {new Word("angry", "сердитый, злой", "[ ˈæŋɡri ]", R.drawable.angry), new Word("bored", "скучающий", "[ bɔːd ]", R.drawable.angry),
             new Word("confused", "смущенный, растерянный", "[ kənˈfjuːzd ]", R.drawable.angry), new Word("excited", "возбужденный, воодушевленный", "[ ɪkˈsaɪtɪd ]", R.drawable.angry),
             new Word("happy", "счастливый", "[ ˈhæpi ]", R.drawable.angry), new Word("hungry", "голодный", "[ ˈhʌŋɡri ]", R.drawable.angry),
             new Word("sad", "грустный", "[ sæd ]", R.drawable.angry), new Word("surprised", "удивленный", "[ səˈpraɪzd ]", R.drawable.angry),
             new Word("upset", "расстроенный", "[ ʌpˈset ]", R.drawable.angry), new Word("worried", "обеспокоенный, встревоженный", "[ ˈwʌrid ]", R.drawable.angry)};
 
-    final static Word[] food = {new Word("apple", "яблоко", "[ ˈæp.l̩ ", R.drawable.chocolate), new Word("banana", "банан", "[ bəˈnɑː.nə ]", R.drawable.chocolate),
+    public final static Word[] food = {new Word("apple", "яблоко", "[ ˈæp.l̩ ", R.drawable.chocolate), new Word("banana", "банан", "[ bəˈnɑː.nə ]", R.drawable.chocolate),
             new Word("biscuits", "печенье", "[ ˈbɪs.kɪt ]", R.drawable.chocolate), new Word("bread", "хлеб", "[ bred ]", R.drawable.chocolate),
             new Word("cake", "торт", "[ keɪk ]", R.drawable.chocolate), new Word("carrot", "морковь", "[ ˈkærət ]", R.drawable.chocolate),
             new Word("cheese", "сыр", "[ tʃiːz ]", R.drawable.chocolate), new Word("cherry", "вишня", "[ ˈtʃer.i ]", R.drawable.chocolate),
@@ -240,10 +240,10 @@ public class ArraysWords {
             new Word("pie", "пирог", "[ paɪ ]", R.drawable.chocolate), new Word("pineapple", "ананас", "[ ˈpaɪnˌæp.l̩ ]", R.drawable.chocolate),
             new Word("potato", "картофель", "[ pəˈteɪtəʊ ]", R.drawable.chocolate), new Word("rice", "рис", "[ raɪs ]", R.drawable.chocolate),
             new Word("sandwich", "бутерброд", "[ ˈsæn.wɪdʒ ]", R.drawable.chocolate), new Word("sausage", "сосиска, колбаска", "[ ˈsɒs.ɪdʒ ]", R.drawable.chocolate),
-            new Word("strawberry", "клубника", "clap", R.drawable.chocolate), new Word("tea", "чай", "cut", R.drawable.chocolate),
+            new Word("strawberry", "клубника", "[ ˈstrɔː.bər.i ]", R.drawable.chocolate), new Word("tea", "чай", "[ tiː ]", R.drawable.chocolate),
             new Word("water", "вода", "[ ˈwɔːtə(r) ]", R.drawable.chocolate)};
 
-    final static Word[] furniture = {new Word("armchair", "кресло", "[ ˈɑːm.tʃeər ]", R.drawable.fridge), new Word("bath", "ванна", "[ bɑːθ ]", R.drawable.fridge),
+    public final static Word[] furniture = {new Word("armchair", "кресло", "[ ˈɑːm.tʃeər ]", R.drawable.fridge), new Word("bath", "ванна", "[ bɑːθ ]", R.drawable.fridge),
             new Word("bed", "кровать", "[ bed ]", R.drawable.fridge), new Word("chair", "стул", "[ tʃeə(r) ]", R.drawable.fridge),
             new Word("fridge", "холодильник", "[ frɪdʒ ]", R.drawable.fridge), new Word("lamp", "лампа", "[ læmp ]", R.drawable.fridge),
             new Word("oven", "духовка", "[ ˈʌvn ]", R.drawable.fridge), new Word("shelf", "полка", "[ ʃelf ]", R.drawable.fridge),
@@ -251,14 +251,14 @@ public class ArraysWords {
             new Word("table", "стол", "[ ˈteɪbl ]", R.drawable.fridge), new Word("toilet", "туалет, унитаз", "[ ˈtɔɪlət ]", R.drawable.fridge),
             new Word("wardrobe", "гардероб, шкаф", "[ ˈwɔː.drəʊb ]", R.drawable.fridge)};
 
-    final static Word[] home = {new Word("balcony", "балкон", "[ ˈbæl.kə.ni ]", R.drawable.bathroom), new Word("bathroom", "ванная комната", "[ ˈbɑːθruːm ]", R.drawable.bathroom),
+    public final static Word[] home = {new Word("balcony", "балкон", "[ ˈbæl.kə.ni ]", R.drawable.bathroom), new Word("bathroom", "ванная комната", "[ ˈbɑːθruːm ]", R.drawable.bathroom),
             new Word("bedroom", "спальня", "[ ˈbedruːm ]", R.drawable.bathroom), new Word("door", "дверь", "[ dɔː(r) ]", R.drawable.bathroom),
-            new Word("floor", "пол, этаж", "clap", R.drawable.bathroom), new Word("garden", "сад", "cut", R.drawable.bathroom),
+            new Word("floor", "пол, этаж", "[ flɔː(r) ]", R.drawable.bathroom), new Word("garden", "сад", "[ ˈɡɑːdn ]", R.drawable.bathroom),
             new Word("hall", "зал, коридор", "[ hɔːl ]", R.drawable.bathroom), new Word("house", "дом", "[ haʊs ]", R.drawable.bathroom),
             new Word("kitchen", "кухня", "[ ˈkɪtʃɪn ]", R.drawable.bathroom), new Word("roof", "крыша", "[ ruːf ]", R.drawable.bathroom),
             new Word("stairs", "лестница, ступеньки", "[ steər ]", R.drawable.bathroom), new Word("window", "окно", "[ ˈwɪndəʊ ]", R.drawable.bathroom)};
 
-    final static Word[] homeObjects = {new Word("bottle", "бутылка", "[ ˈbɒtl ]", R.drawable.knife), new Word("bowl", "чаша, миска", "[ bəʊl ]", R.drawable.knife),
+    public final static Word[] homeObjects = {new Word("bottle", "бутылка", "[ ˈbɒtl ]", R.drawable.knife), new Word("bowl", "чаша, миска", "[ bəʊl ]", R.drawable.knife),
             new Word("clock", "часы", "[ klɒk ]", R.drawable.knife), new Word("cup", "кружка", "[ kʌp ]", R.drawable.knife),
             new Word("fork", "вилка", "[ fɔːk ]", R.drawable.knife), new Word("glass", "стакан, стекло", "[ ɡlɑːs ]", R.drawable.knife),
             new Word("knife", "нож", "[ naɪf ]", R.drawable.knife), new Word("mirror", "зеркало", "[ ˈmɪrə(r) ]", R.drawable.knife),
@@ -268,16 +268,16 @@ public class ArraysWords {
             new Word("tap", "кран", "[ tæp ]", R.drawable.knife), new Word("telephone", "телефон", "[ ˈtelɪfəʊn ]", R.drawable.knife),
             new Word("tv", "телевизор", "[ ˌtiː ˈviː ]", R.drawable.knife)};
 
-    final static Word[] humanBody = {new Word("arm", "рука", "[ ɑːm ]", R.drawable.eye), new Word("back", "спина", "[ bæk ]", R.drawable.eye),
+    public final static Word[] humanBody = {new Word("arm", "рука", "[ ɑːm ]", R.drawable.eye), new Word("back", "спина", "[ bæk ]", R.drawable.eye),
             new Word("body", "тело", "[ ˈbɒdi ]", R.drawable.eye), new Word("ear", "ухо", "[ ɪə(r) ]", R.drawable.eye),
             new Word("eye", "глаз", "[ aɪ ]", R.drawable.eye), new Word("face", "лицо", "[ feɪs ]", R.drawable.eye),
             new Word("finger", "палец", "[ ˈfɪŋɡə(r) ]", R.drawable.eye), new Word("hair", "волосы", "[ heə(r) ]", R.drawable.eye),
-            new Word("hand", "ладонь, кисть руки", "clap", R.drawable.eye), new Word("head", "голова", "cut", R.drawable.eye),
+            new Word("hand", "ладонь, кисть руки", "[ hænd ]", R.drawable.eye), new Word("head", "голова", "[ hed ]", R.drawable.eye),
             new Word("leg", "нога", "[ leɡ ]", R.drawable.eye), new Word("mouth", "рот", "[ maʊθ ]", R.drawable.eye),
             new Word("nose", "нос", "[ nəʊz ]", R.drawable.eye), new Word("shoulder", "плечо", "[ ˈʃəʊldə(r) ]", R.drawable.eye),
             new Word("teeth", "зубы", "[ tiːθ ]", R.drawable.eye)};
 
-    final static Word[] nature = {new Word("beach", "пляж", "[ biːtʃ ]", R.drawable.island), new Word("field", "поле", "[ fiːld ]", R.drawable.island),
+    public final static Word[] nature = {new Word("beach", "пляж", "[ biːtʃ ]", R.drawable.island), new Word("field", "поле", "[ fiːld ]", R.drawable.island),
             new Word("forest", "лес", "[ ˈfɒrɪst ]", R.drawable.island), new Word("island", "остров", "[ ˈaɪlənd ]", R.drawable.island),
             new Word("lake", "озеро", "[ leɪk ]", R.drawable.island), new Word("leaf", "лист", "[ liːf ]", R.drawable.island),
             new Word("log", "бревно", "[ lɒɡ ]", R.drawable.island), new Word("mountain", "гора", "[ ˈmaʊntən ]", R.drawable.island),
@@ -286,7 +286,7 @@ public class ArraysWords {
             new Word("stone", "камень", "[ stəʊn ]", R.drawable.island), new Word("tree", "дерево", "[ triː ]", R.drawable.island),
             new Word("wave", "волна", "[ weɪv ]", R.drawable.island)};
 
-    final static Word[] numbers = {new Word("one", "один", "[ wʌn ]", R.drawable.one), new Word("two", "два", "[ tuː ]", R.drawable.one),
+    public final static Word[] numbers = {new Word("one", "один", "[ wʌn ]", R.drawable.one), new Word("two", "два", "[ tuː ]", R.drawable.one),
             new Word("three", "три", "[ θriː ]", R.drawable.one), new Word("four", "четыре", "[ fɔː(r) ]", R.drawable.one),
             new Word("five", "пять", "[ faɪv ]", R.drawable.one), new Word("six", "шесть", "[ sɪks ]", R.drawable.one),
             new Word("seven", "семь", "[ ˈsevn ]", R.drawable.one), new Word("eight", "восемь", "[ eɪt ]", R.drawable.one),
@@ -302,31 +302,31 @@ public class ArraysWords {
             new Word("ninety", "девяносто", "[ ˈnaɪnti ]", R.drawable.one), new Word("hundred", "сто", "[ ˈhʌndrəd ]", R.drawable.one),
             new Word("thousand", "тысяча", "[ ˈθaʊznd ]", R.drawable.one)};
 
-    final static Word[] places = {new Word("airport", "аэропорт", "[ ˈeəpɔːt ]", R.drawable.library), new Word("bridge", "мост", "[ brɪdʒ ]", R.drawable.library),
+    public final static Word[] places = {new Word("airport", "аэропорт", "[ ˈeəpɔːt ]", R.drawable.library), new Word("bridge", "мост", "[ brɪdʒ ]", R.drawable.library),
             new Word("factory", "завод, фабрика", "[ ˈfæktri ]", R.drawable.library), new Word("hotel", "гостиница", "[ həʊˈtel ]", R.drawable.library),
             new Word("library", "библиотека", "[ ˈlaɪbrəri ]", R.drawable.library), new Word("park", "парк", "[ pɑːk ]", R.drawable.library),
             new Word("school", "школа", "[ skuːl ]", R.drawable.library), new Word("stadium", "стадион", "[ ˈsteɪ.di.əm ]", R.drawable.library),
             new Word("street", "улица", "[ striːt ]", R.drawable.library), new Word("theatre", "театр", "[ ˈθɪətə(r) ]", R.drawable.library)};
 
-    final static Word[] prepositionsOfPlace = {new Word("behind", "за, позади", "[ bɪˈhaɪnd ]", R.drawable.on), new Word("between", "между", "[ bɪˈtwiːn ]", R.drawable.on),
+    public final static Word[] prepositionsOfPlace = {new Word("behind", "за, позади", "[ bɪˈhaɪnd ]", R.drawable.on), new Word("between", "между", "[ bɪˈtwiːn ]", R.drawable.on),
             new Word("in front of", "впереди", "[ ɪn frʌnt əv ]", R.drawable.on), new Word("in", "в, внутри", "[ ɪn ]", R.drawable.on),
             new Word("next", "следующий", "[ nekst ]", R.drawable.on), new Word("on", "на", "[ ɒn ]", R.drawable.on),
             new Word("opposite", "напротив", "[ ˈɒpəzɪt ]", R.drawable.on), new Word("under", "под", "[ ˈʌndə(r) ]", R.drawable.on)};
 
-    final static Word[] shapes = {new Word("circle", "круг", "[ ˈsɜːkl ]", R.drawable.heart), new Word("cube", "куб", "[ kjuːb ]", R.drawable.heart),
+    public final static Word[] shapes = {new Word("circle", "круг", "[ ˈsɜːkl ]", R.drawable.heart), new Word("cube", "куб", "[ kjuːb ]", R.drawable.heart),
             new Word("diamond", "ромб", "[ ˈdaɪəmənd ]", R.drawable.heart), new Word("heart", "сердце", "[ hɑːt ]", R.drawable.heart),
             new Word("hexagon", "шестиугольник", "[ ˈhek.sə.ɡən ]", R.drawable.heart), new Word("oval", "овал", "[ ˈəʊ.vəl ]", R.drawable.heart),
             new Word("pentagon", "пятиугольник", "[ ˈpen.tə.ɡən ]", R.drawable.heart), new Word("rectangle", "прямоугольник", "[ ˈrek.tæŋ.ɡl̩ ]", R.drawable.heart),
             new Word("sphere", "сфера, шар", "[ sfɪər ]", R.drawable.heart), new Word("square", "квадрат, площадь", "[ skweə(r) ]", R.drawable.heart),
             new Word("star", "звезда", "[ stɑː(r) ]", R.drawable.heart), new Word("triangle", "треугольник", "[ ˈtraɪæŋɡl ]", R.drawable.heart)};
 
-    final static Word[] transport = {new Word("bike", "велосипед", "[ baɪk ]", R.drawable.car), new Word("boat", "лодка", "[ bəʊt ]", R.drawable.car),
+    public final static Word[] transport = {new Word("bike", "велосипед", "[ baɪk ]", R.drawable.car), new Word("boat", "лодка", "[ bəʊt ]", R.drawable.car),
             new Word("bus", "автобус", "[ bʌs ]", R.drawable.car), new Word("car", "машина", "[ kɑː(r) ]", R.drawable.car),
             new Word("helicopter", "вертолет", "[ ˈhel.ɪˌkɒp.tər ]", R.drawable.car), new Word("lorry", "грузовик", "[ ˈlɒri ]", R.drawable.car),
             new Word("plane", "самолет", "[ pleɪn ]", R.drawable.car), new Word("ship", "корабль", "[ ʃɪp ]", R.drawable.car),
             new Word("train", "поезд", "[ treɪn ]", R.drawable.car)};
 
-    final static Word[] weather = {new Word("autumn", "осень", "[ ˈɔːtəm ]", R.drawable.spring), new Word("cloudy", "облачно", "[ ˈklaʊ.di ]", R.drawable.spring),
+    public final static Word[] weather = {new Word("autumn", "осень", "[ ˈɔːtəm ]", R.drawable.spring), new Word("cloudy", "облачно", "[ ˈklaʊ.di ]", R.drawable.spring),
             new Word("rainy", "дождливо", "[ ˈreɪ.ni ]", R.drawable.spring), new Word("snowy", "снежно", "[ ˈsnəʊ.i ]", R.drawable.spring),
             new Word("spring", "весна", "[ sprɪŋ ]", R.drawable.spring), new Word("summer", "лето", "[ ˈsʌmə(r) ]", R.drawable.spring),
             new Word("sunny", "солнечно", "[ ˈsʌn.i ]", R.drawable.spring), new Word("windy", "ветрено", "[ ˈwɪn.di ]", R.drawable.spring),
