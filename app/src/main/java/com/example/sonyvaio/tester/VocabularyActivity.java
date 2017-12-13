@@ -17,7 +17,7 @@ import com.example.sonyvaio.tester.view.VocabularyView;
 public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView{
 
     private VocabularyPresenter presenter;
-    private RecyclerView recyclerViewVocabulary;
+    private RecyclerView mRecyclerViewVocabulary;
     //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
 
     public static Intent startIntent(@NonNull Context context) {
@@ -32,17 +32,17 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         presenter = new VocabularyPresenter(this, this);
         ArraysWords arraysWords = new ArraysWords();
 
-        recyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);
+        mRecyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);
 
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerViewVocabulary.setLayoutManager(linearLayoutManager);
+        mRecyclerViewVocabulary.setLayoutManager(linearLayoutManager);
         //recyclerViewVocabulary.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerViewVocabulary.setHasFixedSize(true);
+        mRecyclerViewVocabulary.setHasFixedSize(true);
 
         RVThemesAdapter adapter = new RVThemesAdapter(ArraysWords.themesList2);
-        recyclerViewVocabulary.setAdapter(adapter);
+        mRecyclerViewVocabulary.setAdapter(adapter);
         adapter.setThemeClickListener(this);
     }
 
