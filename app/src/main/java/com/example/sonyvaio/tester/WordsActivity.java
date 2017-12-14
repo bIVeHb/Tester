@@ -33,13 +33,6 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
         mRecyclerViewWords = (RecyclerView) findViewById(R.id.recyclerViewWords);
         mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fabBtnWords);
 
-        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(TesterActivity.startIntent(getApplicationContext()));
-            }
-        });
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerViewWords.setLayoutManager(linearLayoutManager);
         //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -47,6 +40,15 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
 
         RVWordsAdapter adapter = new RVWordsAdapter(words);
         mRecyclerViewWords.setAdapter(adapter);
+
+        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TesterActivity.mTesterWords = words;
+                Intent intent = new Intent(WordsActivity.this, TesterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

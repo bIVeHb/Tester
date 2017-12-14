@@ -17,6 +17,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.view.TesterView;
 
@@ -26,6 +27,7 @@ import java.util.Iterator;
 import java.util.Random;
 
 import static com.example.sonyvaio.tester.ArraysWords.actions;
+import static com.example.sonyvaio.tester.ArraysWords.allArrays;
 
 /**
  * Created by SonyVaio on 26.10.2017.
@@ -60,6 +62,7 @@ public class TesterActivity extends Activity implements TesterView {
     private int numberOfQuestions = 0;
 
     public HashSet<Integer> mTesterSet = new HashSet<Integer>();
+    public static Word[] mTesterWords;
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, TesterActivity.class);
@@ -136,11 +139,13 @@ public class TesterActivity extends Activity implements TesterView {
             views[mLocationOfCorrectAnswer].setBackgroundColor(ContextCompat.getColor(this, R.color.colorRightAnswer));
             views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
             score++;
-            resultTextView.setText("Правильный ответ!");
+            resultTextView.setTextColor(getResources().getColor(R.color.colorMyGreen));
+            resultTextView.setText(R.string.rightAnswer);
         } else {
             views[Integer.parseInt(view.getTag().toString())].setBackgroundColor(ContextCompat.getColor(this, R.color.colorWrongAnswer));
             views[Integer.parseInt(view.getTag().toString())].setVisibility(View.VISIBLE);
-            resultTextView.setText("Неправильный ответ!");
+            resultTextView.setTextColor(Color.RED);
+            resultTextView.setText(R.string.wrongAnswer);
 
         }
 
@@ -158,49 +163,40 @@ public class TesterActivity extends Activity implements TesterView {
             }
         }, 1200);
 
-
-
     }
 
-/*    public void chooseAnswerBackGround(View view){
-
-        final View[] views = {view0, view1, view2, view3};
-
-        if (view.getTag().toString().equals(Integer.toString(mLocationOfCorrectAnswer))) {
-            views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
-
-        } else {
-            views[mLocationOfCorrectAnswer].setVisibility(View.VISIBLE);
-        }
-    }*/
 
     private void generateQuestion() {
 
-        presenter.dispatchGenerateQuestion(mTesterSet);
+        resultTextView.setText("");
+        presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
 
     }
 
 
     @Override
     public void onBackPressed() {
+        mTesterWords = null;
+        mTesterSet.clear();
         // code here to show dialog
         super.onBackPressed();  // optional depending on your needs
         //testerSet = new HashSet<Integer>();
+
         finish();
     }
 
     @Override
-    public void showAnswer(Integer[] myArray) {
+    public void showAnswer(Integer[] myArray, Word[] arrayWords) {
 
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
 
         ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
 
-        textViewQuestion.setText(actions[myArray[mLocationOfCorrectAnswer]].getWord());
+        textViewQuestion.setText(arrayWords[myArray[mLocationOfCorrectAnswer]].getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);
-            imagesView[i].setBackgroundResource(actions[myArray[i]].getPicture());
+            imagesView[i].setBackgroundResource(arrayWords[myArray[i]].getPicture());
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
 

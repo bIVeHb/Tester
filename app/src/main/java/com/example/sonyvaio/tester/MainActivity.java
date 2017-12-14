@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnTester:
+                TesterActivity.mTesterWords = ArraysWords.allArrays;
                 intent = new Intent(MainActivity.this, TesterActivity.class);
                 startActivity(intent);
                 break;

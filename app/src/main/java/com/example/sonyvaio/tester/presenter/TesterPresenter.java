@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.RepositoryProvider;
 import com.example.sonyvaio.tester.view.MainView;
 import com.example.sonyvaio.tester.view.TesterView;
@@ -20,6 +21,7 @@ public class TesterPresenter {
     @NonNull
     private final TesterView mView;
     private HashSet<Integer> mTesterSet;
+    private Word[] mArrayWords;
 
     public TesterPresenter(@NonNull Context context, @NonNull TesterView view){
         mView = view;
@@ -32,8 +34,9 @@ public class TesterPresenter {
         }
     }
 
-    public void dispatchGenerateQuestion(HashSet<Integer> testerSet) {
+    public void dispatchGenerateQuestion(HashSet<Integer> testerSet, Word[] arrayWords) {
         mTesterSet = testerSet;
+        mArrayWords = arrayWords;
         loadContent();
     }
 
@@ -51,14 +54,16 @@ public class TesterPresenter {
 
     private void loadContent(){
 
-        Integer[] myArray = RepositoryProvider.provideTesterRepository(mTesterSet)
+        Integer[] myArray = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
                 .getQuestions();
 
-        handleResponse(myArray);
+        Word[] localArrayWords = mArrayWords;
+
+        handleResponse(myArray, localArrayWords);
     }
 
-    private void handleResponse(Integer[] myArray){
-        mView.showAnswer(myArray);
+    private void handleResponse(Integer[] myArray, Word[] arrayWords){
+        mView.showAnswer(myArray, arrayWords);
 
     }
 

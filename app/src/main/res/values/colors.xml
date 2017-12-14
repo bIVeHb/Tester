@@ -7,4 +7,5 @@
     <color name="colorDeepOrange">#FF5722</color>
     <color name="colorRightAnswer">#CCFF90</color>
     <color name="colorWrongAnswer">#FF8A80</color>
+    <color name="colorMyGreen">#8BC34A</color>
 </resources>
