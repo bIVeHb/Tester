@@ -1,8 +1,6 @@
 package com.example.sonyvaio.tester;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,8 +42,8 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TesterActivity.mTesterWords = words;
                 Intent intent = new Intent(WordsActivity.this, TesterActivity.class);
+                TesterActivity.sTesterWords = words;
                 startActivity(intent);
             }
         });

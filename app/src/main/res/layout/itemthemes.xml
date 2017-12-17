@@ -4,11 +4,19 @@
     android:id="@+id/cardViewThemes"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="2dp"
+    card_view:contentPaddingLeft="20dp"
+    card_view:contentPaddingRight="@dimen/activity_horizontal_margin"
+    card_view:contentPaddingTop="20dp"
+    card_view:contentPaddingBottom="@dimen/activity_vertical_margin"
+
     >
+    <!-- app:cardBackgroundColor="#EEEEEE" -->
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,9 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nameTheme"
-            android:textSize="30sp"
+            android:textSize="16sp"
             android:textColor="@color/colorBlackText"
             android:layout_gravity="center"
+            android:gravity="center"
             />
 
     </LinearLayout>

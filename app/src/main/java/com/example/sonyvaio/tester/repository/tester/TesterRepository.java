@@ -29,4 +29,9 @@ public class TesterRepository extends BaseRepository{
         ArraysWords.fillHashSet(mTesterSet, mArrayWords.length);
         return mTesterSet.toArray(new Integer[mTesterSet.size()]);
     }
+
+    public Word[] getArrayWords()
+    {
+        return mArrayWords;
+    }
 }

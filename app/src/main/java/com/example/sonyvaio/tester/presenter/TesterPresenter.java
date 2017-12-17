@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.RepositoryProvider;
-import com.example.sonyvaio.tester.view.MainView;
 import com.example.sonyvaio.tester.view.TesterView;
 
 import java.util.HashSet;
@@ -57,9 +56,10 @@ public class TesterPresenter {
         Integer[] myArray = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
                 .getQuestions();
 
-        Word[] localArrayWords = mArrayWords;
+        Word[] arrayWord = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
+                .getArrayWords();
 
-        handleResponse(myArray, localArrayWords);
+        handleResponse(myArray, arrayWord);
     }
 
     private void handleResponse(Integer[] myArray, Word[] arrayWords){

@@ -1,16 +1,25 @@
 apply plugin: 'com.android.application'
+//apply plugin: "me.tatarka.retrolambda"
+//apply plugin: 'android-apt'
+//apply from: 'jacoco.gradle'
+//apply plugin: 'com.jakewharton.butterknife'
+
 
 android {
     compileSdkVersion 25
     buildToolsVersion '26.0.0'
     defaultConfig {
         applicationId "com.example.sonyvaio.tester"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+   /* compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }*/
     buildTypes {
         release {
             minifyEnabled false

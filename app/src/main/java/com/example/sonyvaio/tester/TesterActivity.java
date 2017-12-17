@@ -2,11 +2,9 @@ package com.example.sonyvaio.tester;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,18 +14,13 @@ import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.view.TesterView;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
-
-import static com.example.sonyvaio.tester.ArraysWords.actions;
-import static com.example.sonyvaio.tester.ArraysWords.allArrays;
 
 /**
  * Created by SonyVaio on 26.10.2017.
@@ -35,6 +28,7 @@ import static com.example.sonyvaio.tester.ArraysWords.allArrays;
 
 public class TesterActivity extends Activity implements TesterView {
 
+    private static final String TAG = "TesterActivity";
     private TesterPresenter presenter;
 
     ImageView imageView0;
@@ -62,7 +56,7 @@ public class TesterActivity extends Activity implements TesterView {
     private int numberOfQuestions = 0;
 
     public HashSet<Integer> mTesterSet = new HashSet<Integer>();
-    public static Word[] mTesterWords;
+    static Word[] sTesterWords;
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, TesterActivity.class);
@@ -169,21 +163,62 @@ public class TesterActivity extends Activity implements TesterView {
     private void generateQuestion() {
 
         resultTextView.setText("");
-        presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
+        presenter.dispatchGenerateQuestion(mTesterSet, sTesterWords);
 
     }
 
 
     @Override
-    public void onBackPressed() {
-        mTesterWords = null;
-        mTesterSet.clear();
-        // code here to show dialog
-        super.onBackPressed();  // optional depending on your needs
-        //testerSet = new HashSet<Integer>();
+    protected void onStart() {
+        super.onStart();
 
-        finish();
+        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onStart()");
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onResume()");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onPause()");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onStop()");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onRestart()");
+    }
+
+    @Override
+    protected void onDestroy() {
+        sTesterWords = null;
+        finish();
+        super.onDestroy();
+
+        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onDestroy()");
+    }
+
+
 
     @Override
     public void showAnswer(Integer[] myArray, Word[] arrayWords) {
