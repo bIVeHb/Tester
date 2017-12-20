@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,10 +6,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 
+import com.example.sonyvaio.tester.data.ArraysWords;
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.adapter.RVThemesAdapter;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;

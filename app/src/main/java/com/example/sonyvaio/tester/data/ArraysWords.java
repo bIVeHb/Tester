@@ -1,5 +1,6 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.data;
 
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 
 import java.util.ArrayList;
@@ -14,39 +15,39 @@ import java.util.Random;
 
 public class ArraysWords {
 
-    final static HashMap<String, Word[]> themesMap = new HashMap<>();
+    public final static HashMap<String, Word[]> mThemesMap = new HashMap<>();
 
     final static ArrayList<Word[]> themesList = new ArrayList<Word[]>();
-    final static ArrayList<Map.Entry<String, Word[]>> themesList2 = new ArrayList<>();
+    public final static ArrayList<Map.Entry<String, Word[]>> themesList2 = new ArrayList<>();
 
 
     public ArraysWords() {
-        themesMap.put("Глаголы", actions);
-        themesMap.put("Алфавит", alphabet);
-        themesMap.put("Части тела животных", animalBodyParts);
-        themesMap.put("Животные", animals);
-        themesMap.put("Птицы", birds);
-        themesMap.put("Насекомые", bugs);
-        themesMap.put("Школьные предметы", classroomObjects);
-        themesMap.put("Одежда", clothes);
-        themesMap.put("Цвета", colours);
-        themesMap.put("Описание", describing);
-        themesMap.put("Ежедневные предметы", everydayObjects);
-        themesMap.put("Сказка", fairyStories);
-        themesMap.put("Семья", family);
-        themesMap.put("Чувства", feelings);
-        themesMap.put("Еда", food);
-        themesMap.put("Мебель", furniture);
-        themesMap.put("Дом", home);
-        themesMap.put("Домашние предметы", homeObjects);
-        themesMap.put("Части тела человека", humanBody);
-        themesMap.put("Природа", nature);
-        themesMap.put("Числа", numbers);
-        themesMap.put("Места", places);
-        themesMap.put("Предлоги", prepositionsOfPlace);
-        themesMap.put("Фигуры", shapes);
-        themesMap.put("Транспорт", transport);
-        themesMap.put("Погода", weather);
+        mThemesMap.put("Глаголы", actions);
+        mThemesMap.put("Алфавит", alphabet);
+        mThemesMap.put("Части тела животных", animalBodyParts);
+        mThemesMap.put("Животные", animals);
+        mThemesMap.put("Птицы", birds);
+        mThemesMap.put("Насекомые", bugs);
+        mThemesMap.put("Школьные предметы", classroomObjects);
+        mThemesMap.put("Одежда", clothes);
+        mThemesMap.put("Цвета", colours);
+        mThemesMap.put("Описание", describing);
+        mThemesMap.put("Ежедневные предметы", everydayObjects);
+        mThemesMap.put("Сказка", fairyStories);
+        mThemesMap.put("Семья", family);
+        mThemesMap.put("Чувства", feelings);
+        mThemesMap.put("Еда", food);
+        mThemesMap.put("Мебель", furniture);
+        mThemesMap.put("Дом", home);
+        mThemesMap.put("Домашние предметы", homeObjects);
+        mThemesMap.put("Части тела человека", humanBody);
+        mThemesMap.put("Природа", nature);
+        mThemesMap.put("Числа", numbers);
+        mThemesMap.put("Места", places);
+        mThemesMap.put("Предлоги", prepositionsOfPlace);
+        mThemesMap.put("Фигуры", shapes);
+        mThemesMap.put("Транспорт", transport);
+        mThemesMap.put("Погода", weather);
 
         themesList.add(actions);
         themesList.add(alphabet);
@@ -75,7 +76,7 @@ public class ArraysWords {
         themesList.add(transport);
         themesList.add(weather);
 
-        for (Map.Entry<String, Word[]> entry : themesMap.entrySet()) {
+        for (Map.Entry<String, Word[]> entry : mThemesMap.entrySet()) {
             themesList2.add(entry);
         }
     }
@@ -100,7 +101,7 @@ public class ArraysWords {
         add(new Word("write", "писать", "[ ˈraɪt ]", R.drawable.write));
     }};*/
 
-    public static Word[] allArrays = {new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow), new Word("catch", "ловить", "[ kætʃ ]", R.drawable.catchmy),
+    public final static Word[] allArrays = {new Word("blow", "дуть", "[ bləʊ ]", R.drawable.blow), new Word("catch", "ловить", "[ kætʃ ]", R.drawable.catchmy),
             new Word("clap", "хлопать", "[ klæp ]", R.drawable.clap), new Word("cut", "резать", "[ kʌt ]", R.drawable.cut),
             new Word("dance", "танцевать", "[ dɑːns ]", R.drawable.dance), new Word("dig", "копать", "[ dɪɡ ]", R.drawable.dig),
             new Word("drink", "пить", "[ drɪŋk ]", R.drawable.drink), new Word("eat", "кушать", "[ iːt ]", R.drawable.eat),

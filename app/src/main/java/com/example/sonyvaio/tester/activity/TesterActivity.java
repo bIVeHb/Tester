@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,18 +9,20 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sonyvaio.tester.data.ArraysWords;
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.view.TesterView;
 
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  * Created by SonyVaio on 26.10.2017.
@@ -56,7 +58,8 @@ public class TesterActivity extends Activity implements TesterView {
     private int numberOfQuestions = 0;
 
     public HashSet<Integer> mTesterSet = new HashSet<Integer>();
-    static Word[] sTesterWords;
+    private String mNameWords;
+    private Word[] mTesterWords;
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, TesterActivity.class);
@@ -86,6 +89,15 @@ public class TesterActivity extends Activity implements TesterView {
 
         gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
         gridLayoutBackground = (GridLayout) findViewById(R.id.gridLayoutBackground);
+
+        ArraysWords arraysWords = new ArraysWords();
+
+        Intent intent = getIntent();
+        mNameWords = intent.getStringExtra("words");
+        mTesterWords = new Word[getWordsByKey(mNameWords).length];
+        mTesterWords = getWordsByKey(mNameWords);
+
+        Toast.makeText(this, mNameWords, Toast.LENGTH_SHORT).show();
 
         presenter.dispatchCreate(savedInstanceState);
 
@@ -163,12 +175,14 @@ public class TesterActivity extends Activity implements TesterView {
     private void generateQuestion() {
 
         resultTextView.setText("");
-        presenter.dispatchGenerateQuestion(mTesterSet, sTesterWords);
 
+
+        presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
+        mTesterSet.clear();
     }
 
 
-    @Override
+/*    @Override
     protected void onStart() {
         super.onStart();
 
@@ -206,18 +220,22 @@ public class TesterActivity extends Activity implements TesterView {
 
         Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
         Log.i(TAG, "onRestart()");
+    }*/
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 
     @Override
     protected void onDestroy() {
-        sTesterWords = null;
-        finish();
+        //sTesterWords = null;
+
         super.onDestroy();
 
         Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onDestroy()");
     }
-
 
 
     @Override
@@ -235,7 +253,14 @@ public class TesterActivity extends Activity implements TesterView {
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
 
-        mTesterSet.clear();
+    }
 
+    // По ключу находим значение
+    public Word[] getWordsByKey(String someKey) {
+        for (Map.Entry<String, Word[]> entry : ArraysWords.mThemesMap.entrySet()) {
+            if (entry.getKey().equals(String.valueOf(someKey)))
+                return entry.getValue();
+        }
+        return null;
     }
 }

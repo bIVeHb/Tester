@@ -3,10 +3,12 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/colorCards">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,43 +17,46 @@
         >
 
         <ImageView
+            android:id="@+id/picture"
             android:layout_width="128dp"
             android:layout_height="128dp"
-            android:id="@+id/picture"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="16dp"
             />
 
         <TextView
+            android:id="@+id/word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/word"
             android:layout_toRightOf="@+id/picture"
             android:layout_alignParentTop="true"
-            android:textSize="30dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
             />
 
         <TextView
+            android:id="@+id/transcription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/transcription"
             android:layout_toRightOf="@+id/picture"
             android:layout_below="@+id/word"
+            android:textStyle="bold"
             />
 
         <TextView
+            android:id="@+id/translatedWord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/translatedWord"
             android:layout_toRightOf="@+id/picture"
             android:layout_below="@+id/transcription"
+            android:textStyle="bold"
             />
 
         <ImageButton
+            android:id="@+id/btnPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnPlay"
             android:layout_toRightOf="@+id/picture"
             android:layout_below="@+id/translatedWord"
             android:src="@drawable/iconplay"

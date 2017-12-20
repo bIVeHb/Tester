@@ -1,11 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonMainStyle">
+        <item name="android:padding">@dimen/padding_btn_main</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextBtnMain</item>
+        <item name="android:background">@drawable/rounded_btn_main</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

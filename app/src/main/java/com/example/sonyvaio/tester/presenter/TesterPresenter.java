@@ -56,16 +56,11 @@ public class TesterPresenter {
         Integer[] myArray = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
                 .getQuestions();
 
-        Word[] arrayWord = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
-                .getArrayWords();
-
-        handleResponse(myArray, arrayWord);
+        handleResponse(myArray, mArrayWords);
     }
 
     private void handleResponse(Integer[] myArray, Word[] arrayWords){
         mView.showAnswer(myArray, arrayWords);
-
     }
-
 
 }

@@ -11,7 +11,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TesterActivity"
+        <activity android:name=".activity.TesterActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".WordsActivity"
+        <activity android:name=".activity.WordsActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".VocabularyActivity"
+        <activity android:name=".activity.VocabularyActivity"
             android:screenOrientation="portrait"
             />
     </application>

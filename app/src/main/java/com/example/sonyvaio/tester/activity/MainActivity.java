@@ -1,4 +1,4 @@
-package com.example.sonyvaio.tester;
+package com.example.sonyvaio.tester.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.sonyvaio.tester.data.ArraysWords;
+import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.presenter.MainPresenter;
 import com.example.sonyvaio.tester.routers.MainRouter;
 import com.example.sonyvaio.tester.view.MainView;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, MainView{
 
@@ -18,7 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnVocabulary;
     Button btnTester;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +35,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnVocabulary.setOnClickListener(this);
         btnTester.setOnClickListener(this);
+
+
     }
 
     @Override
     public void onClick(View v) {
 
-        //Intent intent;
+        Intent intent;
 
         switch (v.getId())
         {
@@ -49,10 +53,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnTester:
-                //intent = new Intent(MainActivity.this, TesterActivity.class);
-                TesterActivity.sTesterWords = ArraysWords.allArrays;
-                //startActivity(intent);
-                mRouter.showTesterActivity();
+                intent = new Intent(MainActivity.this, TesterActivity.class);
+                //TesterActivity.sTesterWords = ArraysWords.allArrays;
+                startActivity(intent);
+                //mRouter.showTesterActivity();
                 break;
             default:
                 break;

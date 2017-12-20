@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sonyvaio.tester.ArraysWords;
+import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;
