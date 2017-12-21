@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#EFEBE9</color>
+    <color name="colorPrimaryDark">#A1887F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBlackText">#000000</color>
     <color name="colorDeepOrange">#FF5722</color>
     <color name="colorRightAnswer">#CCFF90</color>
     <color name="colorWrongAnswer">#FF8A80</color>
-    <color name="colorMyGreen">#8BC34A</color>
+    <color name="colorMyGreen">#4CAF50</color>
     <color name="colorBackgroundRV">#D7CCC8</color>
     <color name="colorCards">#EFEBE9</color>
 
     <color name="colorPurple">#09b9e2</color>
+    <color name="colorBrown">#795548</color>
     <color name="colorTextBtnMain">#ffffff</color>
 </resources>

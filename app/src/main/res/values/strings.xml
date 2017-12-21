@@ -7,4 +7,7 @@
     <string name="testerQuestion">Что означает слово</string>
     <string name="rightAnswer">Правильно!</string>
     <string name="wrongAnswer">Неправильно!</string>
+    
+    <string name="banner_ad_unit_id">ca-app-pub-6506401356869909/8775818155</string>
+
 </resources>

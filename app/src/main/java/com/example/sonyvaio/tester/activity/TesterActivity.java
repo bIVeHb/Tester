@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sonyvaio.tester.admob.Ads;
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
@@ -72,6 +74,8 @@ public class TesterActivity extends Activity implements TesterView {
 
         presenter = new TesterPresenter(this, this);
 
+        Ads.showBanner(this);
+
         imageView0 = (ImageView) findViewById(R.id.imageView0);
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
@@ -103,6 +107,11 @@ public class TesterActivity extends Activity implements TesterView {
 
         play();
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
     }
 
     public void play() {

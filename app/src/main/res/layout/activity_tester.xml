@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearTesterMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackgroundRV"
     android:gravity="center"
     android:orientation="vertical"
     >
+
 
     <LinearLayout
         android:id="@+id/linearLayoutTester"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        >
+        android:layout_margin="4dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/testerTextView"
@@ -29,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="10dp"
+            android:padding="4dp"
             android:textColor="@color/colorDeepOrange"
             android:textSize="30sp" />
 
@@ -47,9 +51,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="10dp"
+            android:padding="4dp"
             android:text=""
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -63,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@color/colorPrimary"
             android:columnCount="2"
             android:rowCount="2">
 
@@ -115,53 +121,63 @@
             android:layout_gravity="center"
             android:columnCount="2"
             android:rowCount="2"
-            android:visibility="visible"
-            >
+            android:visibility="visible">
 
-        <View
-            android:id="@+id/viewBackground0"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:tag="0"
-            android:visibility="invisible"
-            android:clickable="true"/>
+            <View
+                android:id="@+id/viewBackground0"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:alpha="0.5"
+                android:clickable="true"
+                android:tag="0"
+                android:visibility="invisible" />
 
-        <View
-            android:id="@+id/viewBackground1"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:tag="1"
-            android:visibility="invisible"
-            android:clickable="true"/>
+            <View
+                android:id="@+id/viewBackground1"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:alpha="0.5"
+                android:clickable="true"
+                android:tag="1"
+                android:visibility="invisible" />
 
-        <View
-            android:id="@+id/viewBackground2"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:tag="2"
-            android:visibility="invisible"
-            android:clickable="true"/>
+            <View
+                android:id="@+id/viewBackground2"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:alpha="0.5"
+                android:clickable="true"
+                android:tag="2"
+                android:visibility="invisible" />
 
-        <View
-            android:id="@+id/viewBackground3"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:tag="3"
-            android:visibility="invisible"
-            android:clickable="true"/>
+            <View
+                android:id="@+id/viewBackground3"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="10dp"
+                android:alpha="0.5"
+                android:clickable="true"
+                android:tag="3"
+                android:visibility="invisible" />
 
         </GridLayout>
 
 
     </FrameLayout>
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            >
+        </com.google.android.gms.ads.AdView>
+
 
 
 </LinearLayout>
