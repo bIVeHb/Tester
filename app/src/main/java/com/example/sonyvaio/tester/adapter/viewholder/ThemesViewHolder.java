@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 
+import java.util.ArrayList;
+
 /**
  * Created by SonyVaio on 10.12.2017.
  */
@@ -29,11 +31,11 @@ public class ThemesViewHolder extends RecyclerView.ViewHolder {
     }
 
     public interface ThemeClickListener {
-        void onThemeClick(@NonNull Word[] word);
+        void onThemeClick(@NonNull ArrayList<Word> word);
     }
 
     // Передаем сюда модель из адаптера
-    public void bindView(@NonNull final Word[] word, final ThemesViewHolder.ThemeClickListener mThemeClickListener, Context context) {
+    public void bindView(@NonNull final ArrayList<Word> word, final ThemeClickListener mThemeClickListener, Context context) {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

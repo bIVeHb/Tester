@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.tester.TesterRepository;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -15,14 +16,14 @@ public class RepositoryProvider {
 
     private static TesterRepository sTesterRepository;
     private static HashSet<Integer> mTesterSet;
-    private static Word[] mArrayWords;
+    private static ArrayList<Word> mArrayWords;
 
     private RepositoryProvider() {
         //Not implemented
     }
 
     @NonNull
-    public static TesterRepository provideTesterRepository(HashSet<Integer> testerSet, Word[] arrayWords) {
+    public static TesterRepository provideTesterRepository(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
 
         mTesterSet = testerSet;
         mArrayWords = arrayWords;

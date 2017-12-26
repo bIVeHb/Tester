@@ -9,6 +9,7 @@ import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.RepositoryProvider;
 import com.example.sonyvaio.tester.view.TesterView;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -20,7 +21,7 @@ public class TesterPresenter {
     @NonNull
     private final TesterView mView;
     private HashSet<Integer> mTesterSet;
-    private Word[] mArrayWords;
+    private ArrayList<Word> mArrayWords;
 
     public TesterPresenter(@NonNull Context context, @NonNull TesterView view){
         mView = view;
@@ -33,7 +34,7 @@ public class TesterPresenter {
         }
     }
 
-    public void dispatchGenerateQuestion(HashSet<Integer> testerSet, Word[] arrayWords) {
+    public void dispatchGenerateQuestion(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
         mTesterSet = testerSet;
         mArrayWords = arrayWords;
         loadContent();
@@ -59,7 +60,7 @@ public class TesterPresenter {
         handleResponse(myArray, mArrayWords);
     }
 
-    private void handleResponse(Integer[] myArray, Word[] arrayWords){
+    private void handleResponse(Integer[] myArray, ArrayList<Word> arrayWords){
         mView.showAnswer(myArray, arrayWords);
     }
 

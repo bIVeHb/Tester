@@ -53,15 +53,15 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
     }*/
 
     //private ArrayList<Word[]> themes;
-    private ArrayList<Map.Entry<String, Word[]>> themes;
+    private ArrayList<Map.Entry<String, ArrayList<Word>>> mThemes;
 
     private Context mContext;
 
     @Nullable
     private ThemesViewHolder.ThemeClickListener mThemeClickListener;
 
-    public RVThemesAdapter(ArrayList<Map.Entry<String, Word[]>> themes) {
-        this.themes = themes;
+    public RVThemesAdapter(ArrayList<Map.Entry<String, ArrayList<Word>>> themes) {
+        this.mThemes = themes;
     }
 
     @Override
@@ -73,9 +73,9 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     @Override
     public void onBindViewHolder(ThemesViewHolder holder, int position) {
-        Word[] array = themes.get(position).getValue();
-        holder.nameTheme.setText(themes.get(position).getKey());
-        holder.pictureTheme.setImageResource(array[ArraysWords.randomInt(array.length)].getPicture());
+        ArrayList<Word> array = mThemes.get(position).getValue();
+        holder.nameTheme.setText(mThemes.get(position).getKey());
+        holder.pictureTheme.setImageResource(array.get(ArraysWords.randomInt(array.size())).getPicture());
         //(ThemesViewHolder) holder.bindView(themes.get(position).getValue(), mThemeClickListener, mContext);
         holder.bindView(array, mThemeClickListener, mContext);
     }
@@ -86,7 +86,7 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     @Override
     public int getItemCount() {
-        return themes.size();
+        return mThemes.size();
     }
 
     @Override

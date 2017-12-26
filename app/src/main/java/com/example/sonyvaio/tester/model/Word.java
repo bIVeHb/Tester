@@ -1,5 +1,7 @@
 package com.example.sonyvaio.tester.model;
 
+import android.os.Parcelable;
+
 /**
  * Created by SonyVaio on 09.11.2017.
  */

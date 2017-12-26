@@ -10,12 +10,14 @@ import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sonyvaio.tester.ArrayTransferEvent;
 import com.example.sonyvaio.tester.admob.Ads;
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
@@ -23,6 +25,11 @@ import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.view.TesterView;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Map;
 
@@ -61,7 +68,7 @@ public class TesterActivity extends Activity implements TesterView {
 
     public HashSet<Integer> mTesterSet = new HashSet<Integer>();
     private String mNameWords;
-    private Word[] mTesterWords;
+    private ArrayList<Word> mTesterWords = new ArrayList<Word>();
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, TesterActivity.class);
@@ -72,7 +79,14 @@ public class TesterActivity extends Activity implements TesterView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tester);
 
+        ArraysWords arraysWords = new ArraysWords();
+
         presenter = new TesterPresenter(this, this);
+
+/*        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }*/
+        EventBus.getDefault().register(this);
 
         Ads.showBanner(this);
 
@@ -94,14 +108,11 @@ public class TesterActivity extends Activity implements TesterView {
         gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
         gridLayoutBackground = (GridLayout) findViewById(R.id.gridLayoutBackground);
 
-        ArraysWords arraysWords = new ArraysWords();
 
-        Intent intent = getIntent();
-        mNameWords = intent.getStringExtra("words");
-        mTesterWords = new Word[getWordsByKey(mNameWords).length];
-        mTesterWords = getWordsByKey(mNameWords);
 
-        Toast.makeText(this, mNameWords, Toast.LENGTH_SHORT).show();
+/*        Intent intent = getIntent();
+        //mNameWords = intent.getStringExtra("words");
+        mTesterWords = intent.getParcelableArrayListExtra("words");*/
 
         presenter.dispatchCreate(savedInstanceState);
 
@@ -112,6 +123,12 @@ public class TesterActivity extends Activity implements TesterView {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    @Subscribe()
+    public void onEvent(ArrayTransferEvent event){
+        Log.i("TesterActivity ArraySize = ", String.valueOf(event.getWords().size()));
+        mTesterWords = event.getWords();
     }
 
     public void play() {
@@ -191,50 +208,52 @@ public class TesterActivity extends Activity implements TesterView {
     }
 
 
-/*    @Override
+    @Override
     protected void onStart() {
+        EventBus.getDefault().register(this);//Register
         super.onStart();
 
-        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onStart()");
+
+/*        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onStart()");*/
     }
 
     @Override
     protected void onResume() {
+        EventBus.getDefault().register(this);
         super.onResume();
 
-        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onResume()");
+
+/*        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onResume()");*/
     }
 
     @Override
     protected void onPause() {
+        EventBus.getDefault().unregister(this);
         super.onPause();
 
-        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onPause()");
+/*        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onPause()");*/
+
     }
 
     @Override
     protected void onStop() {
+        EventBus.getDefault().unregister(this);//unregister
         super.onStop();
 
+/*
         Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onStop()");
+        Log.i(TAG, "onStop()");*/
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
 
-        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onRestart()");
-    }*/
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
+/*        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
+        Log.i(TAG, "onRestart()");*/
     }
 
     @Override
@@ -242,31 +261,33 @@ public class TesterActivity extends Activity implements TesterView {
         //sTesterWords = null;
 
         super.onDestroy();
+        mTesterWords.clear();
+        //EventBus.getDefault().unregister(this);
 
-        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
-    public void showAnswer(Integer[] myArray, Word[] arrayWords) {
+    public void showAnswer(Integer[] myArray, ArrayList<Word> arrayWords) {
 
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
 
         ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
 
-        textViewQuestion.setText(arrayWords[myArray[mLocationOfCorrectAnswer]].getWord());
+        textViewQuestion.setText(arrayWords.get(myArray[mLocationOfCorrectAnswer]).getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);
-            imagesView[i].setBackgroundResource(arrayWords[myArray[i]].getPicture());
+            imagesView[i].setBackgroundResource(arrayWords.get(myArray[i]).getPicture());
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
 
     }
 
     // По ключу находим значение
-    public Word[] getWordsByKey(String someKey) {
-        for (Map.Entry<String, Word[]> entry : ArraysWords.mThemesMap.entrySet()) {
+    public ArrayList<Word> getWordsByKey(String someKey) {
+        for (Map.Entry<String, ArrayList<Word>> entry : ArraysWords.mThemesMap.entrySet()) {
             if (entry.getKey().equals(String.valueOf(someKey)))
                 return entry.getValue();
         }

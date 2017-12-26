@@ -4,6 +4,7 @@ import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.BaseRepository;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -13,16 +14,16 @@ import java.util.HashSet;
 public class TesterRepository extends BaseRepository{
 
     private HashSet<Integer> mTesterSet;
-    private Word[] mArrayWords;
+    private ArrayList<Word> mArrayWords;
 
-    public TesterRepository(HashSet<Integer> testerSet, Word[] arrayWords) {
+    public TesterRepository(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
         mTesterSet = testerSet;
         mArrayWords = arrayWords;
     }
 
     public Integer[] getQuestions(){
 
-        ArraysWords.fillHashSet(mTesterSet, mArrayWords.length);
+        ArraysWords.fillHashSet(mTesterSet, mArrayWords.size());
         return mTesterSet.toArray(new Integer[mTesterSet.size()]);
     }
 

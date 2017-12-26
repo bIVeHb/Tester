@@ -9,6 +9,8 @@ import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.adapter.viewholder.WordViewHolder;
 
+import java.util.ArrayList;
+
 /**
  * Created by SonyVaio on 20.11.2017.
  */
@@ -33,10 +35,10 @@ public class RVWordsAdapter extends RecyclerView.Adapter<WordViewHolder> {
         }
     }*/
 
-    private Word[] words;
+    private ArrayList<Word> mWords;
 
-    public RVWordsAdapter(Word[] words) {
-        this.words = words;
+    public RVWordsAdapter(ArrayList<Word> words) {
+        this.mWords = words;
     }
 
     @Override
@@ -48,15 +50,15 @@ public class RVWordsAdapter extends RecyclerView.Adapter<WordViewHolder> {
 
     @Override
     public void onBindViewHolder(WordViewHolder holder, int position) {
-        holder.word.setText(words[position].getWord());
-        holder.translatedWord.setText(words[position].getTranslatedWord());
-        holder.transription.setText(words[position].getTranscription());
-        holder.picture.setImageResource(words[position].getPicture());
+        holder.word.setText(mWords.get(position).getWord());
+        holder.translatedWord.setText(mWords.get(position).getTranslatedWord());
+        holder.transription.setText(mWords.get(position).getTranscription());
+        holder.picture.setImageResource(mWords.get(position).getPicture());
     }
 
     @Override
     public int getItemCount() {
-        return words.length;
+        return mWords.size();
     }
 
     @Override

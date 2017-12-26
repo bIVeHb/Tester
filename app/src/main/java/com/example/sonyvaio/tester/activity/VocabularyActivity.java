@@ -16,6 +16,8 @@ import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;
 import com.example.sonyvaio.tester.presenter.VocabularyPresenter;
 import com.example.sonyvaio.tester.view.VocabularyView;
 
+import java.util.ArrayList;
+
 public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView{
 
     private VocabularyPresenter presenter;
@@ -51,7 +53,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
     }
 
     @Override
-    public void onThemeClick(@NonNull Word[] word) {
+    public void onThemeClick(@NonNull ArrayList<Word> word) {
 
         Intent intent = new Intent(VocabularyActivity.this, WordsActivity.class);
         WordsActivity.words = word;
