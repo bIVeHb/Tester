@@ -6,6 +6,7 @@ import com.example.sonyvaio.tester.repository.BaseRepository;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by SonyVaio on 11.12.2017.
@@ -14,9 +15,9 @@ import java.util.HashSet;
 public class TesterRepository extends BaseRepository{
 
     private HashSet<Integer> mTesterSet;
-    private ArrayList<Word> mArrayWords;
+    private List<Word> mArrayWords;
 
-    public TesterRepository(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
+    public TesterRepository(HashSet<Integer> testerSet, List<Word> arrayWords) {
         mTesterSet = testerSet;
         mArrayWords = arrayWords;
     }

@@ -30,7 +30,9 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -67,7 +69,6 @@ public class TesterActivity extends Activity implements TesterView {
     private int numberOfQuestions = 0;
 
     public HashSet<Integer> mTesterSet = new HashSet<Integer>();
-    private String mNameWords;
     private ArrayList<Word> mTesterWords = new ArrayList<Word>();
 
     public static Intent startIntent(@NonNull Context context) {
@@ -79,14 +80,14 @@ public class TesterActivity extends Activity implements TesterView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tester);
 
-        ArraysWords arraysWords = new ArraysWords();
+        //ArraysWords arraysWords = new ArraysWords();
 
         presenter = new TesterPresenter(this, this);
 
 /*        if (!EventBus.getDefault().isRegistered(this)) {
             EventBus.getDefault().register(this);
         }*/
-        EventBus.getDefault().register(this);
+        //EventBus.getDefault().register(this);
 
         Ads.showBanner(this);
 
@@ -108,8 +109,11 @@ public class TesterActivity extends Activity implements TesterView {
         gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
         gridLayoutBackground = (GridLayout) findViewById(R.id.gridLayoutBackground);
 
-
-
+        Bundle extras = getIntent().getExtras();
+        mTesterWords = new ArrayList<>();
+        mTesterWords = extras.getParcelableArrayList("words");
+        // mTesterWords.clear();
+        //mTesterWords = new ArrayList<Word>(getIntent().getParcelableArrayListExtra("words"));
 /*        Intent intent = getIntent();
         //mNameWords = intent.getStringExtra("words");
         mTesterWords = intent.getParcelableArrayListExtra("words");*/
@@ -123,18 +127,20 @@ public class TesterActivity extends Activity implements TesterView {
     @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
+        outState.getParcelableArrayList("words");
     }
 
-    @Subscribe()
+/*    @Subscribe()
     public void onEvent(ArrayTransferEvent event){
         Log.i("TesterActivity ArraySize = ", String.valueOf(event.getWords().size()));
         mTesterWords = event.getWords();
-    }
+    }*/
 
     public void play() {
 
         score = 0;
         numberOfQuestions = 0;
+
 
         //timerTextView.setText("30s");
         pointsTextView.setText("0/0");
@@ -204,13 +210,12 @@ public class TesterActivity extends Activity implements TesterView {
 
 
         presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
-        mTesterSet.clear();
     }
 
 
     @Override
     protected void onStart() {
-        EventBus.getDefault().register(this);//Register
+        //EventBus.getDefault().register(this);//Register
         super.onStart();
 
 
@@ -220,7 +225,7 @@ public class TesterActivity extends Activity implements TesterView {
 
     @Override
     protected void onResume() {
-        EventBus.getDefault().register(this);
+        //EventBus.getDefault().register(this);
         super.onResume();
 
 
@@ -230,7 +235,7 @@ public class TesterActivity extends Activity implements TesterView {
 
     @Override
     protected void onPause() {
-        EventBus.getDefault().unregister(this);
+        //EventBus.getDefault().unregister(this);
         super.onPause();
 
 /*        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
@@ -240,7 +245,7 @@ public class TesterActivity extends Activity implements TesterView {
 
     @Override
     protected void onStop() {
-        EventBus.getDefault().unregister(this);//unregister
+        //EventBus.getDefault().unregister(this);//unregister
         super.onStop();
 
 /*
@@ -258,10 +263,10 @@ public class TesterActivity extends Activity implements TesterView {
 
     @Override
     protected void onDestroy() {
-        //sTesterWords = null;
 
         super.onDestroy();
-        mTesterWords.clear();
+        mTesterWords = new ArrayList<>();
+        mTesterSet.clear();
         //EventBus.getDefault().unregister(this);
 
         //Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
@@ -269,7 +274,7 @@ public class TesterActivity extends Activity implements TesterView {
 
 
     @Override
-    public void showAnswer(Integer[] myArray, ArrayList<Word> arrayWords) {
+    public void showAnswer(Integer[] myArray, List<Word> arrayWords) {
 
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
 
@@ -282,7 +287,7 @@ public class TesterActivity extends Activity implements TesterView {
             imagesView[i].setBackgroundResource(arrayWords.get(myArray[i]).getPicture());
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
-
+        mTesterSet.clear();
     }
 
     // По ключу находим значение

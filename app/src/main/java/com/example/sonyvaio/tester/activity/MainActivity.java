@@ -64,7 +64,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnTester:
                 intent = new Intent(MainActivity.this, TesterActivity.class);
 
-                EventBus.getDefault().post(new ArrayTransferEvent(ArraysWords.arrays));
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("words", new ArrayList<Word>(ArraysWords.arrays));
+                //ArrayList<Word> testing = new ArrayList<Word>(ArraysWords.arrays);
+                intent.putExtras(bundle);
+/*                ArrayTransferEvent event = new ArrayTransferEvent();
+                event.setWords(ArraysWords.arrays);
+                EventBus.getDefault().post(event);*/
                 //Log.i("MainActivity ArraySize = ", String.valueOf(event.getWords().size()));
                 startActivity(intent);
                 //mRouter.showTesterActivity();

@@ -12,9 +12,6 @@ public class ArrayTransferEvent {
 
     private ArrayList<Word> mWords;
 
-    public ArrayTransferEvent(ArrayList<Word> mWords) {
-        this.mWords = mWords;
-    }
 
     public ArrayList<Word> getWords() {
         return mWords;

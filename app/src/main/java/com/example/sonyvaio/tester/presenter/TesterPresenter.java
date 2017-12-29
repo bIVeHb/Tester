@@ -11,6 +11,7 @@ import com.example.sonyvaio.tester.view.TesterView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by SonyVaio on 11.12.2017.
@@ -20,8 +21,8 @@ public class TesterPresenter {
 
     @NonNull
     private final TesterView mView;
-    private HashSet<Integer> mTesterSet;
-    private ArrayList<Word> mArrayWords;
+    private HashSet<Integer> mTesterSet = new HashSet<>();
+    private List<Word> mArrayWords = new ArrayList<Word>();
 
     public TesterPresenter(@NonNull Context context, @NonNull TesterView view){
         mView = view;
@@ -35,8 +36,10 @@ public class TesterPresenter {
     }
 
     public void dispatchGenerateQuestion(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
-        mTesterSet = testerSet;
-        mArrayWords = arrayWords;
+        mArrayWords.clear();
+        mTesterSet.clear();
+        mTesterSet.addAll(testerSet);
+        mArrayWords.addAll(arrayWords);
         loadContent();
     }
 
@@ -60,7 +63,7 @@ public class TesterPresenter {
         handleResponse(myArray, mArrayWords);
     }
 
-    private void handleResponse(Integer[] myArray, ArrayList<Word> arrayWords){
+    private void handleResponse(Integer[] myArray, List<Word> arrayWords){
         mView.showAnswer(myArray, arrayWords);
     }
 

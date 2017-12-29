@@ -60,9 +60,15 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
                 Intent intent = new Intent(WordsActivity.this, TesterActivity.class);
                 //intent.putExtra("words", mNameWords);
 
-                //ArrayTransferEvent event = new ArrayTransferEvent();
-                //event.setWords(new ArrayList<Word>(words));
-                EventBus.getDefault().post(new ArrayTransferEvent(words));
+                //ArrayList<Word> testing = new ArrayList<Word>(words);
+                //intent.putParcelableArrayListExtra("words", words);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("words", new ArrayList<Word>(words));
+                //ArrayList<Word> testing = new ArrayList<Word>(ArraysWords.arrays);
+                intent.putExtras(bundle);
+/*                ArrayTransferEvent event = new ArrayTransferEvent();
+                event.setWords(words);
+                EventBus.getDefault().post(event);*/
                 //Log.i("WordsActivity ArraySize = ", String.valueOf(event.getWords().size()));
                 startActivity(intent);
             }
