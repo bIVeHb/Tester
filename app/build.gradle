@@ -1,6 +1,11 @@
+plugins {
+    id "org.sonarqube" version "1.2"
+}
 apply plugin: 'com.android.application'
 apply plugin: "me.tatarka.retrolambda"
 apply plugin: 'com.jakewharton.butterknife'
+
+
 
 android {
     signingConfigs {
@@ -41,6 +46,9 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile 'com.jakewharton:butterknife:8.8.1'
     compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+    compile 'com.jakewharton.timber:timber:4.1.1'
+    compile 'com.google.dagger:dagger:2.7'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

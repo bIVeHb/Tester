@@ -20,14 +20,24 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 
+import butterknife.OnClick;
+import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, MainView{
+
+public class MainActivity extends AppCompatActivity implements MainView{
 
     private MainPresenter presenter;
     private MainRouter mRouter;
 
-    Button btnVocabulary;
-    Button btnTester;
+    @OnClick(R.id.btnVocabulary)
+    public void OnBtnVocabularyClick(){
+        startActivity(VocabularyActivity.startIntent(this));
+    }
+
+    @OnClick(R.id.btnTester)
+    public void OnBtnTesterClick(){
+        mRouter.showTesterActivity();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,50 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ArraysWords arraysWords = new ArraysWords();
 
-        btnVocabulary = (Button) findViewById(R.id.btnVocabulary);
-        btnTester = (Button) findViewById(R.id.btnTester);
-
-        btnVocabulary.setOnClickListener(this);
-        btnTester.setOnClickListener(this);
-
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        Intent intent;
-
-        switch (v.getId())
-        {
-            case R.id.btnVocabulary:
-                startActivity(VocabularyActivity.startIntent(this));
-                /*intent = new Intent(MainActivity.this, VocabularyActivity.class);
-                startActivity(intent);*/
-                break;
-
-            case R.id.btnTester:
-                intent = new Intent(MainActivity.this, TesterActivity.class);
-
-                Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList("words", new ArrayList<Word>(ArraysWords.arrays));
-                //ArrayList<Word> testing = new ArrayList<Word>(ArraysWords.arrays);
-                intent.putExtras(bundle);
-/*                ArrayTransferEvent event = new ArrayTransferEvent();
-                event.setWords(ArraysWords.arrays);
-                EventBus.getDefault().post(event);*/
-                //Log.i("MainActivity ArraySize = ", String.valueOf(event.getWords().size()));
-                startActivity(intent);
-                //mRouter.showTesterActivity();
-                break;
-            default:
-                break;
-
-        }
     }
 
     @Override
     public void loadInfo() {
+        Timber.i("LoadInfo");
         Log.i("TEST", "LoadInfo");
     }
 }

@@ -35,34 +35,47 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import butterknife.BindView;
+
 /**
  * Created by SonyVaio on 26.10.2017.
  */
 
 public class TesterActivity extends Activity implements TesterView {
 
-    private static final String TAG = "TesterActivity";
-    private TesterPresenter presenter;
-
+    @BindView(R.id.imageView0)
     ImageView imageView0;
+    @BindView(R.id.imageView1)
     ImageView imageView1;
+    @BindView(R.id.imageView2)
     ImageView imageView2;
+    @BindView(R.id.imageView3)
     ImageView imageView3;
 
+
+    @BindView(R.id.viewBackground0)
     View view0;
+    @BindView(R.id.viewBackground1)
     View view1;
+    @BindView(R.id.viewBackground2)
     View view2;
+    @BindView(R.id.viewBackground3)
     View view3;
 
-    private TextView resultTextView;
-    private TextView pointsTextView;
-    //private TextView timerTextView;
-    private TextView textViewQuestion;
+    @BindView(R.id.resultTextView)
+    TextView resultTextView;
+    @BindView(R.id.pointsTextView)
+    TextView pointsTextView;
+    @BindView(R.id.textViewQuestion)
+    TextView textViewQuestion;
 
-    private GridLayout gridLayoutTester;
-    private GridLayout gridLayoutBackground;
+    @BindView(R.id.gridLayoutTester)
+    GridLayout gridLayoutTester;
+    @BindView(R.id.gridLayoutBackground)
+    GridLayout gridLayoutBackground;
 
-    //Integer[] myArray = {};
+    private static final String TAG = "TesterActivity";
+    private TesterPresenter presenter;
 
     private int mLocationOfCorrectAnswer = 0;
     private int score = 0;
@@ -91,23 +104,6 @@ public class TesterActivity extends Activity implements TesterView {
 
         Ads.showBanner(this);
 
-        imageView0 = (ImageView) findViewById(R.id.imageView0);
-        imageView1 = (ImageView) findViewById(R.id.imageView1);
-        imageView2 = (ImageView) findViewById(R.id.imageView2);
-        imageView3 = (ImageView) findViewById(R.id.imageView3);
-
-        view0 = (View) findViewById(R.id.viewBackground0);
-        view1 = (View) findViewById(R.id.viewBackground1);
-        view2 = (View) findViewById(R.id.viewBackground2);
-        view3 = (View) findViewById(R.id.viewBackground3);
-
-        resultTextView = (TextView) findViewById(R.id.resultTextView);
-        pointsTextView = (TextView) findViewById(R.id.pointsTextView);
-        //timerTextView = (TextView) findViewById(R.id.timerTextView);
-        textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
-
-        gridLayoutTester = (GridLayout) findViewById(R.id.gridLayoutTester);
-        gridLayoutBackground = (GridLayout) findViewById(R.id.gridLayoutBackground);
 
         Bundle extras = getIntent().getExtras();
         mTesterWords = new ArrayList<>();
