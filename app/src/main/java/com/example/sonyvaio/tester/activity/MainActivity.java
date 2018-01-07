@@ -20,6 +20,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import timber.log.Timber;
 
@@ -43,11 +44,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         presenter = new MainPresenter(this, this);
         mRouter = new MainRouter(this);
-
-        ArraysWords arraysWords = new ArraysWords();
 
     }
 

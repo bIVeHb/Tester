@@ -37,8 +37,6 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words);
 
-        ArraysWords arraysWords = new ArraysWords();
-
         presenter = new WordsPresenter(this, this);
         mRecyclerViewWords = (RecyclerView) findViewById(R.id.recyclerViewWords);
         mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fabBtnWords);

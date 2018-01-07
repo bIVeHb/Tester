@@ -22,10 +22,11 @@ public class TesterRepository extends BaseRepository{
         mArrayWords = arrayWords;
     }
 
-    public Integer[] getQuestions(){
+    public ArrayList<Integer> getQuestions(){
 
         ArraysWords.fillHashSet(mTesterSet, mArrayWords.size());
-        return mTesterSet.toArray(new Integer[mTesterSet.size()]);
+        return new ArrayList<Integer>(mTesterSet);
+        //return mTesterSet.toArray(new Integer[mTesterSet.size()]);
     }
 
 }

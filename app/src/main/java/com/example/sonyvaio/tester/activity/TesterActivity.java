@@ -36,6 +36,7 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by SonyVaio on 26.10.2017.
@@ -92,8 +93,7 @@ public class TesterActivity extends Activity implements TesterView {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tester);
-
-        //ArraysWords arraysWords = new ArraysWords();
+        ButterKnife.bind(this);
 
         presenter = new TesterPresenter(this, this);
 
@@ -106,7 +106,7 @@ public class TesterActivity extends Activity implements TesterView {
 
 
         Bundle extras = getIntent().getExtras();
-        mTesterWords = new ArrayList<>();
+        mTesterWords.clear();
         mTesterWords = extras.getParcelableArrayList("words");
         // mTesterWords.clear();
         //mTesterWords = new ArrayList<Word>(getIntent().getParcelableArrayListExtra("words"));
@@ -206,6 +206,7 @@ public class TesterActivity extends Activity implements TesterView {
 
 
         presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
+        mTesterSet.clear();
     }
 
 
@@ -261,8 +262,8 @@ public class TesterActivity extends Activity implements TesterView {
     protected void onDestroy() {
 
         super.onDestroy();
-        mTesterWords = new ArrayList<>();
-        mTesterSet.clear();
+        //mTesterWords = new ArrayList<>();
+        //mTesterSet.clear();
         //EventBus.getDefault().unregister(this);
 
         //Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
@@ -270,20 +271,22 @@ public class TesterActivity extends Activity implements TesterView {
 
 
     @Override
-    public void showAnswer(Integer[] myArray, List<Word> arrayWords) {
+    public void showAnswer(ArrayList<Integer> myArray, List<Word> arrayWords) {
 
-        mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.length);
+        Log.i("TA arrayWords = ", String.valueOf(arrayWords.size()));
+
+        mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.size());
 
         ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
 
-        textViewQuestion.setText(arrayWords.get(myArray[mLocationOfCorrectAnswer]).getWord());
+        textViewQuestion.setText(arrayWords.get(myArray.get(mLocationOfCorrectAnswer)).getWord());
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);
-            imagesView[i].setBackgroundResource(arrayWords.get(myArray[i]).getPicture());
+            imagesView[i].setBackgroundResource(arrayWords.get(myArray.get(i)).getPicture());
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
-        mTesterSet.clear();
+        //mTesterSet.clear();
     }
 
     // По ключу находим значение

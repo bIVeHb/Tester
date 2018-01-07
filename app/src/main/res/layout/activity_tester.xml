@@ -168,14 +168,22 @@
 
     </FrameLayout>
 
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/banner"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="SMART_BANNER"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        ads:adUnitId="@string/banner_ad_unit_id" />
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            ads:adSize="SMART_BANNER"
+            android:layout_marginBottom="@dimen/default_gap"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            />
+
+    </FrameLayout>
 
 
 

@@ -10,5 +10,5 @@ import java.util.List;
  */
 
 public interface TesterView {
-    void showAnswer(Integer[] myArray, List<Word> arrayWords);
+    void showAnswer(ArrayList<Integer> myArray, List<Word> arrayWords);
 }

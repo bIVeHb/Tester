@@ -22,7 +22,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
 
     private VocabularyPresenter presenter;
     private RecyclerView mRecyclerViewVocabulary;
-    //static ArrayList<Word[]> arrayList = new ArrayList<Word[]>();
+    private ArraysWords arraysWords = new ArraysWords();
     private int COLUMN_PORTRAIT = 2;
 
     public static Intent startIntent(@NonNull Context context) {
@@ -35,7 +35,9 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         setContentView(R.layout.activity_vocabulary);
 
         presenter = new VocabularyPresenter(this, this);
-        ArraysWords arraysWords = new ArraysWords();
+
+/*        if (arraysWords == null)
+            arraysWords = new ArraysWords();*/
 
         mRecyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);
 
@@ -59,6 +61,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         WordsActivity.words = word;
         startActivity(intent);
     }
+
 }
 
 

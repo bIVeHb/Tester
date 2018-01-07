@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 
 import com.example.sonyvaio.tester.activity.TesterActivity;
+import com.example.sonyvaio.tester.data.AllArrayList;
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.model.Word;
 
@@ -32,7 +33,7 @@ public class MainRouter {
     public void showTesterActivity(){
         Intent i = new Intent(mActivity, TesterActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList("words", new ArrayList<Word>(ArraysWords.arrays));
+        bundle.putParcelableArrayList("words", new ArrayList<Word>(AllArrayList.arrays));
         i.putExtras(bundle);
         mActivity.startActivity(i);
 
