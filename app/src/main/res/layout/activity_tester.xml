@@ -61,7 +61,8 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <GridLayout
             android:id="@+id/gridLayoutTester"
@@ -70,7 +71,8 @@
             android:layout_gravity="center"
             android:background="@color/colorPrimary"
             android:columnCount="2"
-            android:rowCount="2">
+            android:rowCount="2"
+            >
 
             <ImageView
                 android:id="@+id/imageView0"
@@ -80,7 +82,8 @@
                 android:clickable="true"
                 android:onClick="chooseAnswer"
                 android:tag="0"
-                app:layout_gravity="center" />
+                app:layout_gravity="center"
+                />
 
             <ImageView
                 android:id="@+id/imageView1"
@@ -90,7 +93,8 @@
                 android:clickable="true"
                 android:onClick="chooseAnswer"
                 android:tag="1"
-                app:layout_gravity="center" />
+                app:layout_gravity="center"
+                />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -100,7 +104,8 @@
                 android:clickable="true"
                 android:onClick="chooseAnswer"
                 android:tag="2"
-                app:layout_gravity="center" />
+                app:layout_gravity="center"
+                />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -109,7 +114,8 @@
                 android:layout_margin="10dp"
                 android:onClick="chooseAnswer"
                 android:tag="3"
-                app:layout_gravity="center" />
+                app:layout_gravity="center"
+                />
 
 
         </GridLayout>
@@ -121,7 +127,8 @@
             android:layout_gravity="center"
             android:columnCount="2"
             android:rowCount="2"
-            android:visibility="visible">
+            android:visibility="visible"
+            >
 
             <View
                 android:id="@+id/viewBackground0"
@@ -131,7 +138,8 @@
                 android:alpha="0.5"
                 android:clickable="true"
                 android:tag="0"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
             <View
                 android:id="@+id/viewBackground1"
@@ -141,7 +149,8 @@
                 android:alpha="0.5"
                 android:clickable="true"
                 android:tag="1"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
             <View
                 android:id="@+id/viewBackground2"
@@ -151,7 +160,8 @@
                 android:alpha="0.5"
                 android:clickable="true"
                 android:tag="2"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
             <View
                 android:id="@+id/viewBackground3"
@@ -161,7 +171,8 @@
                 android:alpha="0.5"
                 android:clickable="true"
                 android:tag="3"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
         </GridLayout>
 

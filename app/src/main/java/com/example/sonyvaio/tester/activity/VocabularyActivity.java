@@ -22,8 +22,8 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
 
     private VocabularyPresenter presenter;
     private RecyclerView mRecyclerViewVocabulary;
-    private ArraysWords arraysWords = new ArraysWords();
     private int COLUMN_PORTRAIT = 2;
+    private ArraysWords arraysWords = new ArraysWords();
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, VocabularyActivity.class);
