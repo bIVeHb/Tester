@@ -23,9 +23,7 @@ public class TesterPresenter {
 
     @NonNull
     private final TesterView mView;
-    private HashSet<Integer> mTesterSet = new HashSet<>();
-    private List<Word> mArrayWords = new ArrayList<Word>();
-    private ArrayList<Integer> myArray = new ArrayList<>();
+    private ArrayList<Word> mArrayWords = new ArrayList<Word>();
 
     public TesterPresenter(@NonNull Context context, @NonNull TesterView view) {
         mView = view;
@@ -38,10 +36,8 @@ public class TesterPresenter {
         }
     }
 
-    public void dispatchGenerateQuestion(HashSet<Integer> testerSet, ArrayList<Word> arrayWords) {
+    public void dispatchGenerateQuestion(ArrayList<Word> arrayWords) {
         mArrayWords.clear();
-        mTesterSet.clear();
-        mTesterSet.addAll(testerSet);
         mArrayWords.addAll(arrayWords);
         loadContent();
     }
@@ -60,18 +56,22 @@ public class TesterPresenter {
 
     private void loadContent() {
 
+        ArrayList<Integer> myArray = new ArrayList<>();
         myArray.clear();
-        myArray = RepositoryProvider.provideTesterRepository(mTesterSet, mArrayWords)
+        myArray = RepositoryProvider.provideTesterRepository(mArrayWords)
                 .getQuestions();
         for (int i = 0; i < myArray.size(); i++) {
             Log.i("myArray = ", String.valueOf(myArray.get(i)));
         }
 
         handleResponse(myArray, mArrayWords);
+
     }
 
-    private void handleResponse(ArrayList<Integer> myArray, List<Word> arrayWords) {
+    private void handleResponse(ArrayList<Integer> myArray, ArrayList<Word> arrayWords) {
         mView.showAnswer(myArray, arrayWords);
+        myArray.clear();
+        arrayWords.clear();
     }
 
 }

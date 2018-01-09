@@ -82,7 +82,6 @@ public class TesterActivity extends Activity implements TesterView {
     private int score = 0;
     private int numberOfQuestions = 0;
 
-    public HashSet<Integer> mTesterSet = new HashSet<Integer>();
     private ArrayList<Word> mTesterWords = new ArrayList<Word>();
 
     public static Intent startIntent(@NonNull Context context) {
@@ -114,17 +113,17 @@ public class TesterActivity extends Activity implements TesterView {
         //mNameWords = intent.getStringExtra("words");
         mTesterWords = intent.getParcelableArrayListExtra("words");*/
 
-        presenter.dispatchCreate(savedInstanceState);
+        //presenter.dispatchCreate(savedInstanceState);
 
         play();
 
     }
 
-    @Override
+   /* @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
         outState.getParcelableArrayList("words");
-    }
+    }*/
 
 /*    @Subscribe()
     public void onEvent(ArrayTransferEvent event){
@@ -205,8 +204,7 @@ public class TesterActivity extends Activity implements TesterView {
         resultTextView.setText("");
 
 
-        presenter.dispatchGenerateQuestion(mTesterSet, mTesterWords);
-        mTesterSet.clear();
+        presenter.dispatchGenerateQuestion(mTesterWords);
     }
 
 
@@ -260,7 +258,6 @@ public class TesterActivity extends Activity implements TesterView {
 
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
         //mTesterWords = new ArrayList<>();
         //mTesterSet.clear();
@@ -271,9 +268,17 @@ public class TesterActivity extends Activity implements TesterView {
 
 
     @Override
-    public void showAnswer(ArrayList<Integer> myArray, List<Word> arrayWords) {
+    public void showAnswer(ArrayList<Integer> myArray, ArrayList<Word> arrayWords) {
 
-        Log.i("TA arrayWords = ", String.valueOf(arrayWords.size()));
+        Log.i(" TA arrayWords = ", String.valueOf(arrayWords.size()));
+
+        for (int i = 0; i < myArray.size(); i++) {
+            Log.i(" TA myArray = ", String.valueOf(myArray.get(i)));
+        }
+
+        Log.i(" TA CorrectAnswer = ", String.valueOf(mLocationOfCorrectAnswer));
+        mLocationOfCorrectAnswer = 0;
+        Log.i(" TA CorrectAnswer = ", String.valueOf(mLocationOfCorrectAnswer));
 
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.size());
 
@@ -286,7 +291,6 @@ public class TesterActivity extends Activity implements TesterView {
             imagesView[i].setBackgroundResource(arrayWords.get(myArray.get(i)).getPicture());
             imagesView[i].animate().translationXBy(1000f).setDuration(300);
         }
-        //mTesterSet.clear();
     }
 
     // По ключу находим значение

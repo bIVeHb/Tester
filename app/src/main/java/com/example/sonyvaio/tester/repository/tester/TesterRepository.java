@@ -1,5 +1,7 @@
 package com.example.sonyvaio.tester.repository.tester;
 
+import android.util.Log;
+
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.BaseRepository;
@@ -14,18 +16,22 @@ import java.util.List;
 
 public class TesterRepository extends BaseRepository{
 
-    private HashSet<Integer> mTesterSet;
-    private List<Word> mArrayWords;
+    //private HashSet<Integer> mTesterSet = new HashSet<Integer>();
+    private ArrayList<Word> mArrayWords = new ArrayList<Word>();
 
-    public TesterRepository(HashSet<Integer> testerSet, List<Word> arrayWords) {
-        mTesterSet = testerSet;
-        mArrayWords = arrayWords;
+    public TesterRepository(ArrayList<Word> arrayWords) {
+        mArrayWords.clear();
+        mArrayWords.addAll(arrayWords);
+        //mArrayWords = arrayWords;
     }
 
     public ArrayList<Integer> getQuestions(){
 
-        ArraysWords.fillHashSet(mTesterSet, mArrayWords.size());
-        return new ArrayList<Integer>(mTesterSet);
+        Log.i(" TRepository array = ", String.valueOf(mArrayWords.size()));
+
+        HashSet<Integer> testerSet = new HashSet<Integer>();
+        ArraysWords.fillHashSet(testerSet, mArrayWords.size());
+        return new ArrayList<Integer>(testerSet);
         //return mTesterSet.toArray(new Integer[mTesterSet.size()]);
     }
 

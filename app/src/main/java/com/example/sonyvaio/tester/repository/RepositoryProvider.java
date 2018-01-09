@@ -16,21 +16,19 @@ import java.util.List;
 public class RepositoryProvider {
 
     private static TesterRepository sTesterRepository;
-    private static HashSet<Integer> mTesterSet;
-    private static List<Word> mArrayWords;
+    private static ArrayList<Word> mArrayWords;
 
     private RepositoryProvider() {
         //Not implemented
     }
 
     @NonNull
-    public static TesterRepository provideTesterRepository(HashSet<Integer> testerSet, List<Word> arrayWords) {
+    public static TesterRepository provideTesterRepository(ArrayList<Word> arrayWords) {
 
-        mTesterSet = testerSet;
         mArrayWords = arrayWords;
 
         if (sTesterRepository == null) {
-            sTesterRepository = new TesterRepository(mTesterSet, mArrayWords);
+            sTesterRepository = new TesterRepository(mArrayWords);
         }
         return sTesterRepository;
     }
