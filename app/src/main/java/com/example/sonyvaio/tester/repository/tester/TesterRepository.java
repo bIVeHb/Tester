@@ -27,7 +27,7 @@ public class TesterRepository extends BaseRepository{
 
     public ArrayList<Integer> getQuestions(){
 
-        Log.i(" TRepository array = ", String.valueOf(mArrayWords.size()));
+        Log.i(" Repository array = ", String.valueOf(mArrayWords.size()));
 
         HashSet<Integer> testerSet = new HashSet<Integer>();
         ArraysWords.fillHashSet(testerSet, mArrayWords.size());

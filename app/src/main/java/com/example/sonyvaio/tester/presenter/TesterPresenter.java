@@ -23,7 +23,7 @@ public class TesterPresenter {
 
     @NonNull
     private final TesterView mView;
-    private ArrayList<Word> mArrayWords = new ArrayList<Word>();
+    private ArrayList<Word> mArrayWords;
 
     public TesterPresenter(@NonNull Context context, @NonNull TesterView view) {
         mView = view;
@@ -37,7 +37,7 @@ public class TesterPresenter {
     }
 
     public void dispatchGenerateQuestion(ArrayList<Word> arrayWords) {
-        mArrayWords.clear();
+        mArrayWords = new ArrayList<Word>();
         mArrayWords.addAll(arrayWords);
         loadContent();
     }

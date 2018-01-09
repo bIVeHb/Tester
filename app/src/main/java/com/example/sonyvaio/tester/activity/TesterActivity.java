@@ -82,7 +82,7 @@ public class TesterActivity extends Activity implements TesterView {
     private int score = 0;
     private int numberOfQuestions = 0;
 
-    private ArrayList<Word> mTesterWords = new ArrayList<Word>();
+    private ArrayList<Word> mTesterWords = new ArrayList<>();
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, TesterActivity.class);
@@ -94,6 +94,13 @@ public class TesterActivity extends Activity implements TesterView {
         setContentView(R.layout.activity_tester);
         ButterKnife.bind(this);
 
+
+        Bundle extras = getIntent().getExtras();
+        ArrayList<Word> testerWords = new ArrayList<Word>();
+        testerWords = extras.getParcelableArrayList("words");
+        mTesterWords.clear();
+        mTesterWords.addAll(testerWords);
+
         presenter = new TesterPresenter(this, this);
 
 /*        if (!EventBus.getDefault().isRegistered(this)) {
@@ -104,9 +111,6 @@ public class TesterActivity extends Activity implements TesterView {
         Ads.showBanner(this);
 
 
-        Bundle extras = getIntent().getExtras();
-        mTesterWords.clear();
-        mTesterWords = extras.getParcelableArrayList("words");
         // mTesterWords.clear();
         //mTesterWords = new ArrayList<Word>(getIntent().getParcelableArrayListExtra("words"));
 /*        Intent intent = getIntent();
@@ -209,68 +213,9 @@ public class TesterActivity extends Activity implements TesterView {
 
 
     @Override
-    protected void onStart() {
-        //EventBus.getDefault().register(this);//Register
-        super.onStart();
-
-
-/*        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onStart()");*/
-    }
-
-    @Override
-    protected void onResume() {
-        //EventBus.getDefault().register(this);
-        super.onResume();
-
-
-/*        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onResume()");*/
-    }
-
-    @Override
-    protected void onPause() {
-        //EventBus.getDefault().unregister(this);
-        super.onPause();
-
-/*        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onPause()");*/
-
-    }
-
-    @Override
-    protected void onStop() {
-        //EventBus.getDefault().unregister(this);//unregister
-        super.onStop();
-
-/*
-        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onStop()");*/
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-
-/*        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "onRestart()");*/
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        //mTesterWords = new ArrayList<>();
-        //mTesterSet.clear();
-        //EventBus.getDefault().unregister(this);
-
-        //Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
-    }
-
-
-    @Override
     public void showAnswer(ArrayList<Integer> myArray, ArrayList<Word> arrayWords) {
 
-        Log.i(" TA arrayWords = ", String.valueOf(arrayWords.size()));
+        Log.i(" TesterAct array = ", String.valueOf(arrayWords.size()));
 
         for (int i = 0; i < myArray.size(); i++) {
             Log.i(" TA myArray = ", String.valueOf(myArray.get(i)));
