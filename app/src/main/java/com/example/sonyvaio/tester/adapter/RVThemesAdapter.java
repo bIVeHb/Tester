@@ -22,45 +22,20 @@ import java.util.Map;
 public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
 
-/*    public static class ThemesViewHolder extends RecyclerView.ViewHolder {
-        CardView cardViewThemes;
-        TextView nameTheme;
-        ImageView pictureTheme;
+    ArraysWords arraysWords = new ArraysWords();
 
-        ThemesViewHolder(View itemThemesView) {
-            super(itemThemesView);
-            cardViewThemes = (CardView) itemThemesView.findViewById(R.id.cardViewThemes);
-            nameTheme = (TextView) itemThemesView.findViewById(R.id.nameTheme);
-            pictureTheme = (ImageView) itemThemesView.findViewById(R.id.pictureTheme);
-        }
-
-        public interface ThemeClickListener {
-            void onThemeClick(@NonNull Word[] word);
-        }
-
-        // Передаем сюда модель из адаптера
-        public void bindView(@NonNull final Word[] word, final ThemeClickListener mThemeClickListener, Context context) {
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (mThemeClickListener != null){
-                        mThemeClickListener.onThemeClick(word);
-                    }
-                }
-            });
-        }
-
-    }*/
 
     //private ArrayList<Word[]> themes;
-    private ArrayList<Map.Entry<String, ArrayList<Word>>> mThemes;
+    //private ArrayList<Map.Entry<String, ArrayList<Word>>> mThemes;
+    private ArrayList<String> mThemes = new ArrayList<>();
 
     private Context mContext;
 
     @Nullable
     private ThemesViewHolder.ThemeClickListener mThemeClickListener;
 
-    public RVThemesAdapter(ArrayList<Map.Entry<String, ArrayList<Word>>> themes) {
+    public RVThemesAdapter(ArrayList<String> themes) {
+        mThemes.clear();
         this.mThemes = themes;
     }
 
@@ -73,8 +48,9 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     @Override
     public void onBindViewHolder(ThemesViewHolder holder, int position) {
-        ArrayList<Word> array = mThemes.get(position).getValue();
-        holder.nameTheme.setText(mThemes.get(position).getKey());
+        //ArrayList<Word> array = mThemes.get(position).getValue();
+        ArrayList<Word> array = getWordsByKey(mThemes.get(position));
+        holder.nameTheme.setText(mThemes.get(position));
         holder.pictureTheme.setImageResource(array.get(ArraysWords.randomInt(array.size())).getPicture());
         //(ThemesViewHolder) holder.bindView(themes.get(position).getValue(), mThemeClickListener, mContext);
         holder.bindView(array, mThemeClickListener, mContext);
@@ -92,6 +68,15 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    // По ключу находим значение
+    public ArrayList<Word> getWordsByKey(String someKey) {
+        for (Map.Entry<String, ArrayList<Word>> entry : ArraysWords.mThemesMap.entrySet()) {
+            if (entry.getKey().equals(String.valueOf(someKey)))
+                return entry.getValue();
+        }
+        return null;
     }
 }
 

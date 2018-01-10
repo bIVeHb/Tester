@@ -17,13 +17,15 @@ import com.example.sonyvaio.tester.presenter.VocabularyPresenter;
 import com.example.sonyvaio.tester.view.VocabularyView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView{
+public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView {
 
     private VocabularyPresenter presenter;
     private RecyclerView mRecyclerViewVocabulary;
     private int COLUMN_PORTRAIT = 2;
-    private ArraysWords arraysWords = new ArraysWords();
+    private ArrayList<String> mThemes = new ArrayList<>();
+
 
     public static Intent startIntent(@NonNull Context context) {
         return new Intent(context, VocabularyActivity.class);
@@ -33,6 +35,34 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
+
+        mThemes.add("Глаголы");
+        mThemes.add("Алфавит");
+        mThemes.add("Части тела животных");
+        mThemes.add("Животные");
+        mThemes.add("Птицы");
+        mThemes.add("Насекомые");
+        mThemes.add("Школьные предметы");
+        mThemes.add("Одежда");
+        mThemes.add("Цвета");
+        mThemes.add("Описание");
+        mThemes.add("Ежедневные предметы");
+        mThemes.add("Сказка");
+        mThemes.add("Семья");
+        mThemes.add("Чувства");
+        mThemes.add("Еда");
+        mThemes.add("Мебель");
+        mThemes.add("Дом");
+        mThemes.add("Домашние предметы");
+        mThemes.add("Части тела человека");
+        mThemes.add("Природа");
+        mThemes.add("Числа");
+        mThemes.add("Места");
+        mThemes.add("Предлоги");
+        mThemes.add("Фигуры");
+        mThemes.add("Транспорт");
+        mThemes.add("Погода");
+        Collections.sort(mThemes);
 
         presenter = new VocabularyPresenter(this, this);
 
@@ -49,7 +79,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         //mRecyclerViewVocabulary.setLayoutManager(new StaggeredGridLayoutManager(COLUMN_PORTRAIT, StaggeredGridLayoutManager.VERTICAL));
         mRecyclerViewVocabulary.setHasFixedSize(true);
 
-        RVThemesAdapter adapter = new RVThemesAdapter(ArraysWords.themesList2);
+        RVThemesAdapter adapter = new RVThemesAdapter(mThemes);
         mRecyclerViewVocabulary.setAdapter(adapter);
         adapter.setThemeClickListener(this);
     }
