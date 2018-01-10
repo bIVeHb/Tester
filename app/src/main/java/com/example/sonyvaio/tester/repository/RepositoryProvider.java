@@ -1,6 +1,7 @@
 package com.example.sonyvaio.tester.repository;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.repository.tester.TesterRepository;
@@ -26,10 +27,11 @@ public class RepositoryProvider {
     public static TesterRepository provideTesterRepository(ArrayList<Word> arrayWords) {
 
         mArrayWords = arrayWords;
+        Log.i(" Provider array = ", String.valueOf(mArrayWords.size()));
 
-        if (sTesterRepository == null) {
+        //if (sTesterRepository == null) {
             sTesterRepository = new TesterRepository(mArrayWords);
-        }
+        //}
         return sTesterRepository;
     }
 }

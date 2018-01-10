@@ -217,13 +217,12 @@ public class TesterActivity extends Activity implements TesterView {
 
         Log.i(" TesterAct array = ", String.valueOf(arrayWords.size()));
 
-        for (int i = 0; i < myArray.size(); i++) {
+/*        for (int i = 0; i < myArray.size(); i++) {
             Log.i(" TA myArray = ", String.valueOf(myArray.get(i)));
-        }
+        }*/
 
-        Log.i(" TA CorrectAnswer = ", String.valueOf(mLocationOfCorrectAnswer));
+
         mLocationOfCorrectAnswer = 0;
-        Log.i(" TA CorrectAnswer = ", String.valueOf(mLocationOfCorrectAnswer));
 
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.size());
 

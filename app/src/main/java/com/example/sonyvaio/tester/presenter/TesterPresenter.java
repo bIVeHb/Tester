@@ -56,13 +56,15 @@ public class TesterPresenter {
 
     private void loadContent() {
 
+        Log.i(" Presenter array = ", String.valueOf(mArrayWords.size()));
         ArrayList<Integer> myArray = new ArrayList<>();
         myArray.clear();
         myArray = RepositoryProvider.provideTesterRepository(mArrayWords)
                 .getQuestions();
-        for (int i = 0; i < myArray.size(); i++) {
+
+/*        for (int i = 0; i < myArray.size(); i++) {
             Log.i("myArray = ", String.valueOf(myArray.get(i)));
-        }
+        }*/
 
         handleResponse(myArray, mArrayWords);
 
