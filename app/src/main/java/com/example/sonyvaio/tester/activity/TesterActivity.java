@@ -245,4 +245,5 @@ public class TesterActivity extends Activity implements TesterView {
         }
         return null;
     }
+
 }

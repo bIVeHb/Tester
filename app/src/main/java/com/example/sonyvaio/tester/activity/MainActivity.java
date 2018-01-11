@@ -1,7 +1,9 @@
 package com.example.sonyvaio.tester.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Parcelable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,18 +27,18 @@ import butterknife.OnClick;
 import timber.log.Timber;
 
 
-public class MainActivity extends AppCompatActivity implements MainView{
+public class MainActivity extends AppCompatActivity implements MainView {
 
     private MainPresenter presenter;
     private MainRouter mRouter;
 
     @OnClick(R.id.btnVocabulary)
-    public void OnBtnVocabularyClick(){
+    public void OnBtnVocabularyClick() {
         startActivity(VocabularyActivity.startIntent(this));
     }
 
     @OnClick(R.id.btnTester)
-    public void OnBtnTesterClick(){
+    public void OnBtnTesterClick() {
         mRouter.showTesterActivity();
     }
 
@@ -46,9 +48,30 @@ public class MainActivity extends AppCompatActivity implements MainView{
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        if (getIntent().getBooleanExtra("LOGOUT", false)) {
+            finish();
+        }
+
         presenter = new MainPresenter(this, this);
         mRouter = new MainRouter(this);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        openQuitDialog();
+    }
+
+    private void openQuitDialog() {
+
+        AlertDialog quitDialog = new AlertDialog.Builder(this)
+                .setTitle("Закрыть приложение?")
+                .setPositiveButton("Да", (dialog, which) -> {
+                    finish();
+                })
+                .setNegativeButton("Нет", (dialog, which) -> {
+                }).show();
     }
 
     @Override
