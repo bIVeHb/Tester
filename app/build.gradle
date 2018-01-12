@@ -10,12 +10,12 @@ apply plugin: 'com.jakewharton.butterknife'
 android {
     signingConfigs {
     }
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.1'
     defaultConfig {
         applicationId "com.example.sonyvaio.tester"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

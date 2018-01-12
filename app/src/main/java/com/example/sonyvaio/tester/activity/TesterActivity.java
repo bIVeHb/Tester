@@ -3,10 +3,12 @@ package com.example.sonyvaio.tester.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -14,10 +16,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.sonyvaio.tester.ArrayTransferEvent;
 import com.example.sonyvaio.tester.admob.Ads;
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
@@ -25,14 +26,7 @@ import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.TesterPresenter;
 import com.example.sonyvaio.tester.view.TesterView;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -65,15 +59,21 @@ public class TesterActivity extends Activity implements TesterView {
 
     @BindView(R.id.resultTextView)
     TextView resultTextView;
-    @BindView(R.id.pointsTextView)
-    TextView pointsTextView;
+    //@BindView(R.id.pointsTextView)
+    //TextView pointsTextView;
     @BindView(R.id.textViewQuestion)
     TextView textViewQuestion;
+    @BindView(R.id.textViewPBar)
+    TextView textViewProgressBar;
 
     @BindView(R.id.gridLayoutTester)
     GridLayout gridLayoutTester;
     @BindView(R.id.gridLayoutBackground)
     GridLayout gridLayoutBackground;
+
+    @BindView(R.id.progressBar)
+    ProgressBar mProgressBar;
+
 
     private static final String TAG = "TesterActivity";
     private TesterPresenter presenter;
@@ -94,6 +94,8 @@ public class TesterActivity extends Activity implements TesterView {
         setContentView(R.layout.activity_tester);
         ButterKnife.bind(this);
 
+        mProgressBar.setProgress(0);
+        mProgressBar.setMax(100);
 
         Bundle extras = getIntent().getExtras();
         ArrayList<Word> testerWords = new ArrayList<Word>();
@@ -142,8 +144,9 @@ public class TesterActivity extends Activity implements TesterView {
 
 
         //timerTextView.setText("30s");
-        pointsTextView.setText("0/0");
+        //pointsTextView.setText("0/0");
         resultTextView.setText("");
+
 
         generateQuestion();
 
@@ -178,6 +181,7 @@ public class TesterActivity extends Activity implements TesterView {
             score++;
             resultTextView.setTextColor(getResources().getColor(R.color.colorMyGreen));
             resultTextView.setText(R.string.rightAnswer);
+
         } else {
             views[Integer.parseInt(view.getTag().toString())].setBackgroundColor(ContextCompat.getColor(this, R.color.colorWrongAnswer));
             views[Integer.parseInt(view.getTag().toString())].setVisibility(View.VISIBLE);
@@ -187,7 +191,24 @@ public class TesterActivity extends Activity implements TesterView {
         }
 
         numberOfQuestions++;
-        pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+        //pointsTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+
+
+        // получаем текущее значение ProgressBar
+        int progressValue = (int) ((double)(Double.valueOf(score)/Double.valueOf(numberOfQuestions)) * 100);
+        mProgressBar.setProgress(progressValue);
+
+        // Зададим цвет индикатора ProgressBar
+        Resources res = getResources();
+        if (progressValue > 75) {
+            mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_green));
+        }else if (progressValue >= 50 && progressValue <= 75){
+            mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_yellow));
+        }else if (progressValue < 50){
+            mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_red));
+        }
+
+        textViewProgressBar.setText(String.valueOf(progressValue) + "%");
 
 
         Handler handler = new Handler();

@@ -26,7 +26,8 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/testerQuestion"
             android:textColor="@color/colorBlackText"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
 
         <TextView
             android:id="@+id/textViewQuestion"
@@ -35,16 +36,8 @@
             android:layout_gravity="center_horizontal"
             android:padding="4dp"
             android:textColor="@color/colorDeepOrange"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/pointsTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/startPoints"
-            android:textColor="@color/colorBlackText"
-            android:textSize="20sp" />
+            android:textSize="30sp"
+            />
 
         <TextView
             android:id="@+id/resultTextView"
@@ -54,7 +47,8 @@
             android:padding="4dp"
             android:text=""
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
 
@@ -176,8 +170,41 @@
 
         </GridLayout>
 
-
     </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/frameLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textViewPBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/progressBar"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textColor="@color/colorBlackText"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -193,6 +220,7 @@
             android:layout_marginBottom="@dimen/default_gap"
             ads:adUnitId="@string/banner_ad_unit_id"
             />
+
 
     </FrameLayout>
 
