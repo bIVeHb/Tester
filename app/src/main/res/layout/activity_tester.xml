@@ -11,7 +11,36 @@
     android:orientation="vertical"
     >
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar_green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textViewPBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/progressBar"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textColor="@color/colorBlackText"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
     <LinearLayout
         android:id="@+id/linearLayoutTester"
         android:layout_width="match_parent"
@@ -172,38 +201,7 @@
 
     </FrameLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/frameLayout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        >
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:progressDrawable="@drawable/progressbar_green"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            />
-
-        <TextView
-            android:id="@+id/textViewPBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/progressBar"
-            android:background="@android:color/transparent"
-            android:gravity="center"
-            android:textColor="@color/colorBlackText"
-            android:textStyle="bold"
-            />
-    </RelativeLayout>
 
 
     <FrameLayout
