@@ -4,7 +4,7 @@
     <string name="tester">Тестирование</string>
     <string name="startTime">30s</string>
     <string name="startPoints">0 / 0</string>
-    <string name="testerQuestion">Что означает слово</string>
+    <string name="testerQuestion">Выберите карточку</string>
     <string name="rightAnswer">Правильно!</string>
     <string name="wrongAnswer">Неправильно!</string>
     

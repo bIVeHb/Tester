@@ -57,22 +57,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-        openQuitDialog();
-    }
-
-    private void openQuitDialog() {
-
-        AlertDialog quitDialog = new AlertDialog.Builder(this)
-                .setTitle("Закрыть приложение?")
-                .setPositiveButton("Да", (dialog, which) -> {
-                    finish();
-                })
-                .setNegativeButton("Нет", (dialog, which) -> {
-                }).show();
-    }
 
     @Override
     public void loadInfo() {

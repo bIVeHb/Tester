@@ -202,13 +202,13 @@ public class TesterActivity extends Activity implements TesterView {
         Resources res = getResources();
         if (progressValue >= 75) {
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_green));
-        }else if (progressValue >= 50 && progressValue < 75){
+        }else if (progressValue > 33 && progressValue < 75){
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_yellow));
-        }else if (progressValue < 50){
+        }else if (progressValue <= 33){
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_red));
         }
 
-        textViewProgressBar.setText(String.valueOf(progressValue) + "%" + "(" + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions) + ")");
+        textViewProgressBar.setText(String.valueOf(progressValue) + "%" + " (" + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions) + ")");
 
 
         Handler handler = new Handler();
