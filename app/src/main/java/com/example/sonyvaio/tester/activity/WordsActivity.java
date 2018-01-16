@@ -6,48 +6,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
-import com.example.sonyvaio.tester.ArrayTransferEvent;
-import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.adapter.RVWordsAdapter;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.WordsPresenter;
 import com.example.sonyvaio.tester.view.WordsView;
 
-import org.greenrobot.eventbus.EventBus;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class WordsActivity extends AppCompatActivity implements WordsView {
 
+    @BindView(R.id.recyclerViewWords)
+    RecyclerView mRecyclerViewWords;
+    @BindView(R.id.fabBtnWords)
+    FloatingActionButton mFloatingActionButton;
+
     private WordsPresenter presenter;
-    private RecyclerView mRecyclerViewWords;
     public static ArrayList<Word> words;
-    private FloatingActionButton mFloatingActionButton;
-    private String mNameWords;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words);
+        ButterKnife.bind(this);
 
         presenter = new WordsPresenter(this, this);
-        mRecyclerViewWords = (RecyclerView) findViewById(R.id.recyclerViewWords);
-        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fabBtnWords);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerViewWords.setLayoutManager(linearLayoutManager);
-        //recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         mRecyclerViewWords.setHasFixedSize(true);
 
-        //mNameWords = getKeyByWords(ArraysWords.mThemesMap, words);
-        //Toast.makeText(this, mNameWords, Toast.LENGTH_SHORT).show();
 
         RVWordsAdapter adapter = new RVWordsAdapter(words);
         mRecyclerViewWords.setAdapter(adapter);
@@ -56,18 +52,10 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WordsActivity.this, TesterActivity.class);
-                //intent.putExtra("words", mNameWords);
 
-                //ArrayList<Word> testing = new ArrayList<Word>(words);
-                //intent.putParcelableArrayListExtra("words", words);
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("words", new ArrayList<Word>(words));
-                //ArrayList<Word> testing = new ArrayList<Word>(ArraysWords.arrays);
                 intent.putExtras(bundle);
-/*                ArrayTransferEvent event = new ArrayTransferEvent();
-                event.setWords(words);
-                EventBus.getDefault().post(event);*/
-                //Log.i("WordsActivity ArraySize = ", String.valueOf(event.getWords().size()));
                 startActivity(intent);
             }
         });

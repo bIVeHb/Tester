@@ -31,8 +31,8 @@ public class ArraysWords {
         mThemesMap.put("Школьные предметы", classroomObjects);
         mThemesMap.put("Одежда", clothes);
         mThemesMap.put("Цвета", colours);
-        mThemesMap.put("Описание", describing);
-        mThemesMap.put("Ежедневные предметы", everydayObjects);
+        mThemesMap.put("Прилагательные", describing);
+        mThemesMap.put("Повседневные предметы", everydayObjects);
         mThemesMap.put("Сказка", fairyStories);
         mThemesMap.put("Семья", family);
         mThemesMap.put("Чувства", feelings);
@@ -312,7 +312,7 @@ public class ArraysWords {
         add(new Word("knight", "рыцарь", "[ naɪt ]", R.drawable.castle));
         add(new Word("prince", "принц", "[ prɪns ]", R.drawable.castle));
         add(new Word("princess", "принцесса", "[ ˌprɪnˈses ]", R.drawable.castle));
-        add(new Word("queen", "королека", "[ kwiːn ]", R.drawable.castle));
+        add(new Word("queen", "королева", "[ kwiːn ]", R.drawable.castle));
         add(new Word("shield", "щит", "[ ʃiːld ]", R.drawable.castle));
         add(new Word("sword", "меч", "[ sɔːd ]", R.drawable.castle));
         add(new Word("throne", "трон", "[ θrəʊn ]", R.drawable.castle));
@@ -344,7 +344,7 @@ public class ArraysWords {
     }};
 
     public final static ArrayList<Word> food = new ArrayList<Word>() {{
-        add(new Word("apple", "яблоко", "[ ˈæp.l̩ ", R.drawable.chocolate));
+        add(new Word("apple", "яблоко", "[ ˈæp.l̩ ]", R.drawable.chocolate));
         add(new Word("banana", "банан", "[ bəˈnɑː.nə ]", R.drawable.chocolate));
         add(new Word("biscuits", "печенье", "[ ˈbɪs.kɪt ]", R.drawable.chocolate));
         add(new Word("bread", "хлеб", "[ bred ]", R.drawable.chocolate));

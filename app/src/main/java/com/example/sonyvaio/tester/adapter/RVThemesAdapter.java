@@ -3,6 +3,7 @@ package com.example.sonyvaio.tester.adapter;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -24,12 +26,12 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     ArraysWords arraysWords = new ArraysWords();
 
-
     //private ArrayList<Word[]> themes;
     //private ArrayList<Map.Entry<String, ArrayList<Word>>> mThemes;
     private ArrayList<String> mThemes = new ArrayList<>();
-
+    public static HashMap<String, ArrayList<Word>> mThemesMap = new HashMap<>();
     private Context mContext;
+
 
     @Nullable
     private ThemesViewHolder.ThemeClickListener mThemeClickListener;
@@ -72,12 +74,23 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     // По ключу находим значение
     public ArrayList<Word> getWordsByKey(String someKey) {
-        for (Map.Entry<String, ArrayList<Word>> entry : ArraysWords.mThemesMap.entrySet()) {
+        for (Map.Entry<String, ArrayList<Word>> entry : mThemesMap.entrySet()) {
+            Log.i("hashmapKey ", entry.getKey() + " = " + String.valueOf(entry.getValue().size()));
+            Log.i("hashmapKey", "-----------------------------------------");
+            for (int i = 0; i < entry.getValue().size(); i++) {
+                Log.i("hashmapValue", i + " " + entry.getValue().get(i).getWord());
+                Log.i("hashmapValue", i + " " + entry.getValue().get(i).getTranslatedWord());
+                Log.i("hashmapValue", i + " " + entry.getValue().get(i).getTranscription());
+                Log.i("hashmapValue", i + " " + String.valueOf(entry.getValue().get(i).getPicture()));
+                Log.i("hashmapValue", "-----------------------------------------");
+            }
             if (entry.getKey().equals(String.valueOf(someKey)))
                 return entry.getValue();
         }
         return null;
     }
+
+
 }
 
 

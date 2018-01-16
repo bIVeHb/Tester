@@ -7,7 +7,11 @@
 
     <dimen name="padding_btn_main">6dp</dimen>
 
-    <dimen name="size_image_sw600dp">192dp</dimen>
+    <dimen name="size_image_min">128dp</dimen>
+    <dimen name="size_image_sw420dp">160dp</dimen>
+    <dimen name="size_image_sw560dp">160dp</dimen>
+    <dimen name="size_image_sw600dp">208dp</dimen>
     <dimen name="size_image_sw720dp">256dp</dimen>
+    <dimen name="size_image_sw800dp">288dp</dimen>
 
 </resources>

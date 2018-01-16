@@ -47,12 +47,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <TextView
             android:id="@+id/testerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             android:text="@string/testerQuestion"
             android:textColor="@color/colorBlackText"
@@ -215,7 +217,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             ads:adSize="SMART_BANNER"
-            android:layout_marginBottom="@dimen/default_gap"
+            android:layout_marginBottom="5dp"
             ads:adUnitId="@string/banner_ad_unit_id"
             />
 

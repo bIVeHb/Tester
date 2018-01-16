@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
@@ -16,14 +17,28 @@ import com.example.sonyvaio.tester.adapter.viewholder.ThemesViewHolder;
 import com.example.sonyvaio.tester.presenter.VocabularyPresenter;
 import com.example.sonyvaio.tester.view.VocabularyView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class VocabularyActivity extends AppCompatActivity implements ThemesViewHolder.ThemeClickListener, VocabularyView {
 
+    @BindView(R.id.recyclerViewVocabulary)
+    RecyclerView mRecyclerViewVocabulary;
+
     private VocabularyPresenter presenter;
-    private RecyclerView mRecyclerViewVocabulary;
-    private int COLUMN_PORTRAIT = 2;
     private ArrayList<String> mThemes = new ArrayList<>();
 
 
@@ -35,6 +50,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
+        ButterKnife.bind(this);
 
         mThemes.add("Глаголы");
         mThemes.add("Алфавит");
@@ -45,8 +61,8 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         mThemes.add("Школьные предметы");
         mThemes.add("Одежда");
         mThemes.add("Цвета");
-        mThemes.add("Описание");
-        mThemes.add("Ежедневные предметы");
+        mThemes.add("Прилагательные");
+        mThemes.add("Повседневные предметы");
         mThemes.add("Сказка");
         mThemes.add("Семья");
         mThemes.add("Чувства");
@@ -66,22 +82,17 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
 
         presenter = new VocabularyPresenter(this, this);
 
-/*        if (arraysWords == null)
-            arraysWords = new ArraysWords();*/
 
-        mRecyclerViewVocabulary = (RecyclerView) findViewById(R.id.recyclerViewVocabulary);
+        loadJSONFromAsset(RVThemesAdapter.mThemesMap);
 
 
-
-        /*LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        mRecyclerViewVocabulary.setLayoutManager(linearLayoutManager);*/
         mRecyclerViewVocabulary.setLayoutManager(new GridLayoutManager(this, 2));
-        //mRecyclerViewVocabulary.setLayoutManager(new StaggeredGridLayoutManager(COLUMN_PORTRAIT, StaggeredGridLayoutManager.VERTICAL));
         mRecyclerViewVocabulary.setHasFixedSize(true);
 
         RVThemesAdapter adapter = new RVThemesAdapter(mThemes);
         mRecyclerViewVocabulary.setAdapter(adapter);
         adapter.setThemeClickListener(this);
+
     }
 
     @Override
@@ -92,6 +103,52 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         startActivity(intent);
     }
 
+    public void loadJSONFromAsset(HashMap<String, ArrayList<Word>> themesMap) {
+
+        List<String> themes = Arrays.asList(
+                "Глаголы", "Алфавит", "Части тела животных",
+                "Животные", "Птицы", "Насекомые", "Школьные предметы", "Одежда", "Цвета",
+                "Прилагательные", "Повседневные предметы", "Сказка", "Семья", "Чувства", "Еда",
+                "Мебель", "Дом", "Домашние предметы", "Части тела человека", "Природа", "Числа",
+                "Места", "Предлоги", "Фигуры", "Транспорт", "Погода");
+        Collections.sort(themes);
+
+        String json = "";
+
+        try {
+            InputStream is = getAssets().open("words2.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+
+            // Сначала получаем объект, а потом ищем в нем массивы(списки)
+            JSONObject words = new JSONObject(json);
+
+            for (int k = 0; k < themes.size(); k++) {
+
+                JSONArray wordsArray = words.getJSONArray(themes.get(k));
+                ArrayList<Word> wordArrayList = new ArrayList<>();
+
+                for (int i = 0; i < wordsArray.length(); i++) {
+                    String word = wordsArray.getJSONObject(i).getString("word");
+                    String translatedWord = wordsArray.getJSONObject(i).getString("translatedWord");
+                    String transcription = wordsArray.getJSONObject(i).getString("transcription");
+                    String pictureString = wordsArray.getJSONObject(i).getString("picture");
+                    int picture = getResources().getIdentifier(pictureString, null, getPackageName());
+
+                    Word temp = new Word(word, translatedWord, transcription, picture);
+                    // adding word to wordlist
+                    wordArrayList.add(temp);
+                }
+                themesMap.put(themes.get(k), wordArrayList);
+            }
+
+        } catch (IOException | JSONException ex) {
+            ex.printStackTrace();
+        }
+    }
 }
 
 

@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -105,69 +103,20 @@ public class TesterActivity extends Activity implements TesterView {
 
         presenter = new TesterPresenter(this, this);
 
-/*        if (!EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().register(this);
-        }*/
-        //EventBus.getDefault().register(this);
-
         Ads.showBanner(this);
-
-
-        // mTesterWords.clear();
-        //mTesterWords = new ArrayList<Word>(getIntent().getParcelableArrayListExtra("words"));
-/*        Intent intent = getIntent();
-        //mNameWords = intent.getStringExtra("words");
-        mTesterWords = intent.getParcelableArrayListExtra("words");*/
-
-        //presenter.dispatchCreate(savedInstanceState);
 
         play();
 
     }
-
-   /* @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-        outState.getParcelableArrayList("words");
-    }*/
-
-/*    @Subscribe()
-    public void onEvent(ArrayTransferEvent event){
-        Log.i("TesterActivity ArraySize = ", String.valueOf(event.getWords().size()));
-        mTesterWords = event.getWords();
-    }*/
 
     public void play() {
 
         score = 0;
         numberOfQuestions = 0;
 
-
-        //timerTextView.setText("30s");
-        //pointsTextView.setText("0/0");
         resultTextView.setText("");
 
-
         generateQuestion();
-
-        /*new CountDownTimer(30100, 1000) {
-
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-                timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
-
-            }
-
-            @Override
-            public void onFinish() {
-
-                timerTextView.setText("0s");
-                resultTextView.setText("Количество правильных ответов: " + Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
-                gridLayoutTester.setVisibility(View.INVISIBLE);
-            }
-        }.start();*/
-
 
     }
 
@@ -202,9 +151,9 @@ public class TesterActivity extends Activity implements TesterView {
         Resources res = getResources();
         if (progressValue >= 75) {
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_green));
-        }else if (progressValue > 33 && progressValue < 75){
+        }else if (progressValue > 25 && progressValue < 75){
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_yellow));
-        }else if (progressValue <= 33){
+        }else if (progressValue <= 25){
             mProgressBar.setProgressDrawable(res.getDrawable(R.drawable.progressbar_red));
         }
 
@@ -238,18 +187,13 @@ public class TesterActivity extends Activity implements TesterView {
 
         Log.i(" TesterAct array = ", String.valueOf(arrayWords.size()));
 
-/*        for (int i = 0; i < myArray.size(); i++) {
-            Log.i(" TA myArray = ", String.valueOf(myArray.get(i)));
-        }*/
-
-
-        mLocationOfCorrectAnswer = 0;
-
         mLocationOfCorrectAnswer = ArraysWords.randomInt(myArray.size());
 
         ImageView[] imagesView = {imageView0, imageView1, imageView2, imageView3};
 
+        textViewQuestion.setTranslationX(-1000f);
         textViewQuestion.setText(arrayWords.get(myArray.get(mLocationOfCorrectAnswer)).getWord());
+        textViewQuestion.animate().translationXBy(1000f).setDuration(300);
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);

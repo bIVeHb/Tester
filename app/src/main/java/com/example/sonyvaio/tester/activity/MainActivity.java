@@ -1,27 +1,31 @@
 package com.example.sonyvaio.tester.activity;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Parcelable;
-import android.support.v7.app.AlertDialog;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
-import com.example.sonyvaio.tester.ArrayTransferEvent;
-import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
+import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.presenter.MainPresenter;
 import com.example.sonyvaio.tester.routers.MainRouter;
 import com.example.sonyvaio.tester.view.MainView;
 
-import org.greenrobot.eventbus.EventBus;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import timber.log.Timber;
@@ -47,10 +51,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        if (getIntent().getBooleanExtra("LOGOUT", false)) {
-            finish();
-        }
 
         presenter = new MainPresenter(this, this);
         mRouter = new MainRouter(this);

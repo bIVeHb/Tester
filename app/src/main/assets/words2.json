@@ -1,0 +1,2833 @@
+{
+  "Глаголы": [
+    {
+      "index": "0",
+      "word": "blow",
+      "translatedWord": "дуть",
+      "transcription": "[ bləʊ ]",
+      "picture": "drawable/blow"
+    },
+    {
+      "index": "1",
+      "word": "catch",
+      "translatedWord": "ловить",
+      "transcription": "[ kætʃ ]",
+      "picture": "drawable/catchmy"
+    },
+    {
+      "index": "2",
+      "word": "clap",
+      "translatedWord": "хлопать",
+      "transcription": "[ klæp ]",
+      "picture": "drawable/clap"
+    },
+    {
+      "index": "3",
+      "word": "cut",
+      "translatedWord": "резать",
+      "transcription": "[ kʌt ]",
+      "picture": "drawable/cut"
+    },
+    {
+      "index": "4",
+      "word": "dance",
+      "translatedWord": "танцевать",
+      "transcription": "[ dɑːns ]",
+      "picture": "drawable/dance"
+    },
+    {
+      "index": "5",
+      "word": "dig",
+      "translatedWord": "копать",
+      "transcription": "[ dɪɡ ]",
+      "picture": "drawable/dig"
+    },
+    {
+      "index": "6",
+      "word": "drink",
+      "translatedWord": "пить",
+      "transcription": "[ drɪŋk ]",
+      "picture": "drawable/drink"
+    },
+    {
+      "index": "7",
+      "word": "eat",
+      "translatedWord": "кушать",
+      "transcription": "[ iːt ]",
+      "picture": "drawable/eat"
+    },
+    {
+      "index": "8",
+      "word": "follow",
+      "translatedWord": "следовать",
+      "transcription": "[ ˈfɒləʊ ]",
+      "picture": "drawable/follow"
+    },
+    {
+      "index": "9",
+      "word": "go",
+      "translatedWord": "идти",
+      "transcription": "[ ɡəʊ ]",
+      "picture": "drawable/go"
+    },
+    {
+      "index": "10",
+      "word": "hide",
+      "translatedWord": "прятать(ся)",
+      "transcription": "[ haɪd ]",
+      "picture": "drawable/hide"
+    },
+    {
+      "index": "11",
+      "word": "hug",
+      "translatedWord": "обниматься",
+      "transcription": "[ hʌɡ ]",
+      "picture": "drawable/hug"
+    },
+    {
+      "index": "12",
+      "word": "jump",
+      "translatedWord": "прыгать",
+      "transcription": "[ dʒʌmp ]",
+      "picture": "drawable/jump"
+    },
+    {
+      "index": "13",
+      "word": "listen",
+      "translatedWord": "слушать",
+      "transcription": "[ ˈlɪsn̩ ]",
+      "picture": "drawable/listen"
+    },
+    {
+      "index": "14",
+      "word": "look",
+      "translatedWord": "смотреть",
+      "transcription": "[ lʊk ]",
+      "picture": "drawable/look"
+    },
+    {
+      "index": "15",
+      "word": "point",
+      "translatedWord": "указывать",
+      "transcription": "[ pɔɪnt ]",
+      "picture": "drawable/point"
+    },
+    {
+      "index": "16",
+      "word": "pull",
+      "translatedWord": "тянуть",
+      "transcription": "[ pʊl ]",
+      "picture": "drawable/pull"
+    },
+    {
+      "index": "17",
+      "word": "read",
+      "translatedWord": "читать",
+      "transcription": "[ riːd ]",
+      "picture": "drawable/read"
+    },
+    {
+      "index": "18",
+      "word": "run",
+      "translatedWord": "бежать",
+      "transcription": "[ rʌn ]",
+      "picture": "drawable/run"
+    },
+    {
+      "index": "19",
+      "word": "share",
+      "translatedWord": "делиться",
+      "transcription": "[ ʃeə ]",
+      "picture": "drawable/share"
+    },
+    {
+      "index": "20",
+      "word": "shout",
+      "translatedWord": "кричать",
+      "transcription": "[ ʃaʊt ]",
+      "picture": "drawable/shout"
+    },
+    {
+      "index": "21",
+      "word": "sing",
+      "translatedWord": "петь",
+      "transcription": "[ sɪŋ ]",
+      "picture": "drawable/sing"
+    },
+    {
+      "index": "22",
+      "word": "smell",
+      "translatedWord": "пахнуть",
+      "transcription": "[ smel ]",
+      "picture": "drawable/smell"
+    },
+    {
+      "index": "23",
+      "word": "smile",
+      "translatedWord": "улыбаться",
+      "transcription": "[ smaɪl ]",
+      "picture": "drawable/smile"
+    },
+    {
+      "index": "24",
+      "word": "talk",
+      "translatedWord": "разговаривать",
+      "transcription": "[ ˈtɔːk ]",
+      "picture": "drawable/talk"
+    },
+    {
+      "index": "25",
+      "word": "taste",
+      "translatedWord": "пробовать",
+      "transcription": "[ teɪst ]",
+      "picture": "drawable/taste"
+    },
+    {
+      "index": "26",
+      "word": "touch",
+      "translatedWord": "касаться",
+      "transcription": "[ tʌtʃ ]",
+      "picture": "drawable/touch"
+    },
+    {
+      "index": "27",
+      "word": "underline",
+      "translatedWord": "подчеркивать",
+      "transcription": "[ ˌʌndəˈlaɪn ]",
+      "picture": "drawable/underline"
+    },
+    {
+      "index": "28",
+      "word": "wait",
+      "translatedWord": "ждать",
+      "transcription": "[ weɪt ]",
+      "picture": "drawable/wait"
+    },
+    {
+      "index": "29",
+      "word": "whisper",
+      "translatedWord": "шептать",
+      "transcription": "[ ˈwɪspə ]",
+      "picture": "drawable/whisper"
+    },
+    {
+      "index": "30",
+      "word": "write",
+      "translatedWord": "писать",
+      "transcription": "[ ˈraɪt ]",
+      "picture": "drawable/write"
+    }
+  ],
+  "Алфавит": [
+    {
+      "index": "0",
+      "word": "A a",
+      "translatedWord": "эй",
+      "transcription": "[ eɪ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "1",
+      "word": "B b",
+      "translatedWord": "би",
+      "transcription": "[ biː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "2",
+      "word": "C c",
+      "translatedWord": "си",
+      "transcription": "[ siː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "3",
+      "word": "D d",
+      "translatedWord": "ди",
+      "transcription": "[ diː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "4",
+      "word": "E e",
+      "translatedWord": "и",
+      "transcription": "[ iː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "5",
+      "word": "F f",
+      "translatedWord": "эф",
+      "transcription": "[ ef ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "6",
+      "word": "G g",
+      "translatedWord": "джи",
+      "transcription": "[ dʒiː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "7",
+      "word": "H h",
+      "translatedWord": "эйч",
+      "transcription": "[ eɪtʃ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "8",
+      "word": "I i",
+      "translatedWord": "ай",
+      "transcription": "[ ˈaɪ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "9",
+      "word": "J j",
+      "translatedWord": "джей",
+      "transcription": "[ dʒeɪ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "10",
+      "word": "K k",
+      "translatedWord": "кей",
+      "transcription": "[ keɪ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "11",
+      "word": "L l",
+      "translatedWord": "эл",
+      "transcription": "[ el ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "12",
+      "word": "M m",
+      "translatedWord": "эм",
+      "transcription": "[ em ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "13",
+      "word": "N n",
+      "translatedWord": "эн",
+      "transcription": "[ en ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "14",
+      "word": "O o",
+      "translatedWord": "оу",
+      "transcription": "[ əʊ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "15",
+      "word": "P p",
+      "translatedWord": "пи",
+      "transcription": "[ ˈpiː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "16",
+      "word": "Q q",
+      "translatedWord": "кью",
+      "transcription": "[ kjuː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "17",
+      "word": "R r",
+      "translatedWord": "а:, ар",
+      "transcription": "[ ɑː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "18",
+      "word": "S s",
+      "translatedWord": "эс",
+      "transcription": "[ ˈes ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "19",
+      "word": "T t",
+      "translatedWord": "ти",
+      "transcription": "[ tiː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "20",
+      "word": "U u",
+      "translatedWord": "ю",
+      "transcription": "[ juː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "21",
+      "word": "V v",
+      "translatedWord": "ви",
+      "transcription": "[ viː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "22",
+      "word": "W w",
+      "translatedWord": "дабл-ю",
+      "transcription": "[ ˈdʌbljuː ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "23",
+      "word": "X x",
+      "translatedWord": "экс",
+      "transcription": "[ eks ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "24",
+      "word": "Y y",
+      "translatedWord": "уай",
+      "transcription": "[ waɪ ]",
+      "picture": "drawable/a"
+    },
+    {
+      "index": "25",
+      "word": "Z z",
+      "translatedWord": "зед",
+      "transcription": "[ zed ]",
+      "picture": "drawable/a"
+    }
+  ],
+  "Части тела животных": [
+    {
+      "index": "0",
+      "word": "beak",
+      "translatedWord": "клюв",
+      "transcription": "[ biːk ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "1",
+      "word": "claw",
+      "translatedWord": "коготь",
+      "transcription": "[ klɔː ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "2",
+      "word": "feather",
+      "translatedWord": "перо",
+      "transcription": "[ ˈfeðə ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "3",
+      "word": "horn",
+      "translatedWord": "рог",
+      "transcription": "[ hɔːn ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "4",
+      "word": "jaw",
+      "translatedWord": "пасть, челюсть",
+      "transcription": "[ dʒɔː ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "5",
+      "word": "paw",
+      "translatedWord": "лапа",
+      "transcription": "[ pɔː ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "6",
+      "word": "tail",
+      "translatedWord": "хвост",
+      "transcription": "[ teɪl ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "7",
+      "word": "whisker",
+      "translatedWord": "ус",
+      "transcription": "[ ˈwɪskə ]",
+      "picture": "drawable/claw"
+    },
+    {
+      "index": "8",
+      "word": "wing",
+      "translatedWord": "крыло",
+      "transcription": "[ wɪŋ ]",
+      "picture": "drawable/claw"
+    }
+  ],
+  "Животные": [
+    {
+      "index": "0",
+      "word": "bear",
+      "translatedWord": "медведь",
+      "transcription": "[ beə(r) ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "1",
+      "word": "camel",
+      "translatedWord": "верблюд",
+      "transcription": "[ ˈkæm.əl ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "2",
+      "word": "cat",
+      "translatedWord": "кошка",
+      "transcription": "[ kæt ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "3",
+      "word": "chicken",
+      "translatedWord": "курица",
+      "transcription": "[ ˈtʃɪkɪn ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "4",
+      "word": "cow",
+      "translatedWord": "корова",
+      "transcription": "[ kaʊ ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "5",
+      "word": "deer",
+      "translatedWord": "олень",
+      "transcription": "[ dɪər ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "6",
+      "word": "dog",
+      "translatedWord": "собака",
+      "transcription": "[ dɒɡ ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "7",
+      "word": "elephant",
+      "translatedWord": "слон",
+      "transcription": "[ ˈel.ɪ.fənt ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "8",
+      "word": "fox",
+      "translatedWord": "лиса",
+      "transcription": "[ fɒks ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "9",
+      "word": "horse",
+      "translatedWord": "лошадь",
+      "transcription": "[ hɔːs ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "10",
+      "word": "lamb",
+      "translatedWord": "ягненок",
+      "transcription": "[ læm ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "11",
+      "word": "lion",
+      "translatedWord": "лев",
+      "transcription": "[ ˈlaɪ.ən ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "12",
+      "word": "monkey",
+      "translatedWord": "обезьяна",
+      "transcription": "[ ˈmʌŋ.ki ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "13",
+      "word": "mouse",
+      "translatedWord": "мышь",
+      "transcription": "[ maʊs ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "14",
+      "word": "parrot",
+      "translatedWord": "попугай",
+      "transcription": "[ ˈpær.ət ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "15",
+      "word": "pig",
+      "translatedWord": "свинья",
+      "transcription": "[ pɪɡ ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "16",
+      "word": "rabbit",
+      "translatedWord": "кролик",
+      "transcription": "[ ˈræb.ɪt ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "17",
+      "word": "sheep",
+      "translatedWord": "овца",
+      "transcription": "[ ʃiːp ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "18",
+      "word": "snake",
+      "translatedWord": "змея",
+      "transcription": "[ sneɪk ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "19",
+      "word": "turkey",
+      "translatedWord": "индейка",
+      "transcription": "[ ˈtɜː.ki ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "20",
+      "word": "turtle",
+      "translatedWord": "черепаха",
+      "transcription": "[ ˈtɜː.tl̩ ]",
+      "picture": "drawable/bear"
+    },
+    {
+      "index": "21",
+      "word": "wolf",
+      "translatedWord": "волк",
+      "transcription": "[ wʊlf ]",
+      "picture": "drawable/bear"
+    }
+  ],
+  "Птицы": [
+    {
+      "index": "0",
+      "word": "dove",
+      "translatedWord": "голубь",
+      "transcription": "[ dʌv ]",
+      "picture": "drawable/duck"
+    },
+    {
+      "index": "1",
+      "word": "duck",
+      "translatedWord": "утка",
+      "transcription": "[ dʌk ]",
+      "picture": "drawable/duck"
+    },
+    {
+      "index": "2",
+      "word": "eagle",
+      "translatedWord": "орел",
+      "transcription": "[ ˈiː.ɡl̩ ]",
+      "picture": "drawable/duck"
+    },
+    {
+      "index": "3",
+      "word": "flamingo",
+      "translatedWord": "фламинго",
+      "transcription": "[ fləˈmɪŋ.ɡəʊ ]",
+      "picture": "drawable/duck"
+    },
+    {
+      "index": "4",
+      "word": "owl",
+      "translatedWord": "сова",
+      "transcription": "[ aʊl ]",
+      "picture": "drawable/duck"
+    }
+  ],
+  "Насекомые": [
+    {
+      "index": "0",
+      "word": "ant",
+      "translatedWord": "муравей",
+      "transcription": "[ ænt ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "1",
+      "word": "bee",
+      "translatedWord": "пчела",
+      "transcription": "[ biː ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "2",
+      "word": "beetle",
+      "translatedWord": "жук",
+      "transcription": "[ ˈbiː.tl̩ ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "3",
+      "word": "butterfly",
+      "translatedWord": "бабочка",
+      "transcription": "[ ˈbʌt.ə.flaɪ ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "4",
+      "word": "caterpillar",
+      "translatedWord": "гусеница",
+      "transcription": "[ ˈkæt.ə.pɪl.ər ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "5",
+      "word": "fly",
+      "translatedWord": "муха",
+      "transcription": "[ flaɪ ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "6",
+      "word": "grasshopper",
+      "translatedWord": "кузнечик",
+      "transcription": "[ ˈɡrɑːsˌhɒp.ər ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "7",
+      "word": "ladybird",
+      "translatedWord": "божья коровка",
+      "transcription": "[ ˈleɪ.di.bɜːd ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "8",
+      "word": "mosquito",
+      "translatedWord": "комар",
+      "transcription": "[ məˈskiː.təʊ ]",
+      "picture": "drawable/bee"
+    },
+    {
+      "index": "9",
+      "word": "spider",
+      "translatedWord": "паук",
+      "transcription": "[ ˈspaɪdə(r) ]",
+      "picture": "drawable/bee"
+    }
+  ],
+  "Школьные предметы": [
+    {
+      "index": "0",
+      "word": "bag",
+      "translatedWord": "сумка",
+      "transcription": "[ bæɡ ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "1",
+      "word": "calculator",
+      "translatedWord": "калькулятор",
+      "transcription": "[ ˈkæl.kjʊ.leɪ.tər ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "2",
+      "word": "desk",
+      "translatedWord": "парта, стол",
+      "transcription": "[ desk ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "3",
+      "word": "eraser",
+      "translatedWord": "ластик, резинка",
+      "transcription": "[ ɪˈreɪ.zər ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "4",
+      "word": "folder",
+      "translatedWord": "папка",
+      "transcription": "[ ˈfəʊl.dər ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "5",
+      "word": "glue",
+      "translatedWord": "клей",
+      "transcription": "[ ɡluː ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "6",
+      "word": "notebook",
+      "translatedWord": "блокнот, тетрадь",
+      "transcription": "[ ˈnəʊt.bʊk ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "7",
+      "word": "pen",
+      "translatedWord": "ручка",
+      "transcription": "[ pen ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "8",
+      "word": "pencil",
+      "translatedWord": "карандаш",
+      "transcription": "[ ˈpensl ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "9",
+      "word": "ruler",
+      "translatedWord": "линейка",
+      "transcription": "[ ˈruːlə(r) ]",
+      "picture": "drawable/calculator"
+    },
+    {
+      "index": "10",
+      "word": "scissors",
+      "translatedWord": "ножницы",
+      "transcription": "[ ˈsɪzəz ]",
+      "picture": "drawable/calculator"
+    }
+  ],
+  "Одежда": [
+    {
+      "index": "0",
+      "word": "belt",
+      "translatedWord": "ремень",
+      "transcription": "[ belt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "1",
+      "word": "blouse",
+      "translatedWord": "блузка",
+      "transcription": "[ blaʊz ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "2",
+      "word": "bracelet",
+      "translatedWord": "браслет",
+      "transcription": "[ ˈbreɪ.slət ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "3",
+      "word": "cap",
+      "translatedWord": "кепка",
+      "transcription": "[ kæp ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "4",
+      "word": "coat",
+      "translatedWord": "пальто",
+      "transcription": "[ kəʊt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "5",
+      "word": "dress",
+      "translatedWord": "платье",
+      "transcription": "[ dres ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "6",
+      "word": "glasses",
+      "translatedWord": "очки",
+      "transcription": "[ ɡlɑːs ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "7",
+      "word": "glove",
+      "translatedWord": "перчатка",
+      "transcription": "[ ɡlʌv ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "8",
+      "word": "hat",
+      "translatedWord": "шляпа",
+      "transcription": "[ hæt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "9",
+      "word": "jacket",
+      "translatedWord": "куртка, пиджак",
+      "transcription": "[ ˈdʒækɪt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "10",
+      "word": "jumper",
+      "translatedWord": "свитер",
+      "transcription": "[ ˈdʒʌm.pər ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "11",
+      "word": "necklace",
+      "translatedWord": "бусы, ожерелье",
+      "transcription": "[ ˈnek.ləs ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "12",
+      "word": "ring",
+      "translatedWord": "кольцо",
+      "transcription": "[ rɪŋ ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "13",
+      "word": "scarf",
+      "translatedWord": "шарф",
+      "transcription": "[ skɑːf ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "14",
+      "word": "shirt",
+      "translatedWord": "рубашка",
+      "transcription": "[ ʃɜːt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "15",
+      "word": "shorts",
+      "translatedWord": "шорты",
+      "transcription": "[ ʃɔːts ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "16",
+      "word": "skirt",
+      "translatedWord": "юбка",
+      "transcription": "[ skɜːt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "17",
+      "word": "sock",
+      "translatedWord": "носок",
+      "transcription": "[ sɒk ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "18",
+      "word": "sunglasses",
+      "translatedWord": "солнечные очки",
+      "transcription": "[ ˈsʌŋˌɡlɑː.sɪz ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "19",
+      "word": "trousers",
+      "translatedWord": "брюки",
+      "transcription": "[ ˈtraʊzəz ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "20",
+      "word": "t-shirt",
+      "translatedWord": "футболка",
+      "transcription": "[ tʃɜːt ]",
+      "picture": "drawable/trousers"
+    },
+    {
+      "index": "21",
+      "word": "watch",
+      "translatedWord": "часы",
+      "transcription": "[ wɒtʃ ]",
+      "picture": "drawable/trousers"
+    }
+  ],
+  "Цвета": [
+    {
+      "index": "0",
+      "word": "black",
+      "translatedWord": "черный",
+      "transcription": "[ blæk ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "1",
+      "word": "blue",
+      "translatedWord": "синий",
+      "transcription": "[ bluː ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "2",
+      "word": "brown",
+      "translatedWord": "коричневый",
+      "transcription": "[ braʊn ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "3",
+      "word": "green",
+      "translatedWord": "зеленый",
+      "transcription": "[ ɡriːn ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "4",
+      "word": "grey",
+      "translatedWord": "серый",
+      "transcription": "[ ɡreɪ ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "5",
+      "word": "orange",
+      "translatedWord": "оранжевый",
+      "transcription": "[ ˈɒrɪndʒ ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "6",
+      "word": "pink",
+      "translatedWord": "розовый",
+      "transcription": "[ pɪŋk ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "7",
+      "word": "purple",
+      "translatedWord": "фиолетовый",
+      "transcription": "[ ˈpɜːpl ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "8",
+      "word": "red",
+      "translatedWord": "красный",
+      "transcription": "[ red ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "9",
+      "word": "white",
+      "translatedWord": "белый",
+      "transcription": "[ waɪt ]",
+      "picture": "drawable/red"
+    },
+    {
+      "index": "10",
+      "word": "yellow",
+      "translatedWord": "желтый",
+      "transcription": "[ ˈjeləʊ ]",
+      "picture": "drawable/red"
+    }
+  ],
+  "Прилагательные": [
+    {
+      "index": "0",
+      "word": "beautiful",
+      "translatedWord": "красивый(ая)",
+      "transcription": "[ ˈbjuːtɪfl ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "1",
+      "word": "big",
+      "translatedWord": "большой",
+      "transcription": "[ bɪɡ ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "2",
+      "word": "dirty",
+      "translatedWord": "грязный",
+      "transcription": "[ ˈdɜːti ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "3",
+      "word": "far",
+      "translatedWord": "дальний",
+      "transcription": "[ fɑː(r) ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "4",
+      "word": "fat",
+      "translatedWord": "жирный",
+      "transcription": "[ fæt ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "5",
+      "word": "long",
+      "translatedWord": "длинный",
+      "transcription": "[ lɒŋ ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "6",
+      "word": "near",
+      "translatedWord": "ближайший, рядом",
+      "transcription": "[ nɪə(r) ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "7",
+      "word": "old",
+      "translatedWord": "старый",
+      "transcription": "[ əʊld ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "8",
+      "word": "short",
+      "translatedWord": "короткий",
+      "transcription": "[ ʃɔːt ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "9",
+      "word": "small",
+      "translatedWord": "маленький",
+      "transcription": "[ smɔːl ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "10",
+      "word": "strong",
+      "translatedWord": "сильный",
+      "transcription": "[ strɒŋ ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "11",
+      "word": "tall",
+      "translatedWord": "высокий",
+      "transcription": "[ tɔːl ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "12",
+      "word": "thick",
+      "translatedWord": "толстый",
+      "transcription": "[ θɪk ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "13",
+      "word": "thin",
+      "translatedWord": "тонкий",
+      "transcription": "[ θɪn ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "14",
+      "word": "weak",
+      "translatedWord": "слабый",
+      "transcription": "[ wiːk ]",
+      "picture": "drawable/fat"
+    },
+    {
+      "index": "15",
+      "word": "young",
+      "translatedWord": "молодой(ая)",
+      "transcription": "[ jʌŋ ]",
+      "picture": "drawable/fat"
+    }
+  ],
+  "Повседневные предметы": [
+    {
+      "index": "0",
+      "word": "balloon",
+      "translatedWord": "воздушный шар",
+      "transcription": "[ bəˈluːn ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "1",
+      "word": "box",
+      "translatedWord": "коробка, ящик",
+      "transcription": "[ bɒks ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "2",
+      "word": "bucket",
+      "translatedWord": "ведро",
+      "transcription": "[ ˈbʌk.ɪt ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "3",
+      "word": "calendar",
+      "translatedWord": "календарь",
+      "transcription": "[ ˈkæl.ɪn.dər ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "4",
+      "word": "comb",
+      "translatedWord": "расческа",
+      "transcription": "[ kəʊm ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "5",
+      "word": "flag",
+      "translatedWord": "флаг",
+      "transcription": "[ flæɡ ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "6",
+      "word": "hammer",
+      "translatedWord": "молоток",
+      "transcription": "[ ˈhæmə(r) ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "7",
+      "word": "ladder",
+      "translatedWord": "лестница, стремянка",
+      "transcription": "[ ˈlæd.ər ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "8",
+      "word": "letter",
+      "translatedWord": "письмо",
+      "transcription": "[ ˈletə(r) ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "9",
+      "word": "lightbulb",
+      "translatedWord": "лампочка",
+      "transcription": "[ laɪt bʌlb]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "10",
+      "word": "map",
+      "translatedWord": "карта",
+      "transcription": "[ mæp ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "11",
+      "word": "pin",
+      "translatedWord": "булавка, шпилька",
+      "transcription": "[ pɪn ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "12",
+      "word": "present",
+      "translatedWord": "подарок",
+      "transcription": "[ ˈpreznt ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "13",
+      "word": "rope",
+      "translatedWord": "веревка",
+      "transcription": "[ rəʊp ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "14",
+      "word": "saw",
+      "translatedWord": "пила",
+      "transcription": "[ sɔː ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "15",
+      "word": "snowflake",
+      "translatedWord": "снежинка",
+      "transcription": "[ ˈsnəʊ.fleɪk ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "16",
+      "word": "snowman",
+      "translatedWord": "снеговик",
+      "transcription": "[ ˈsnəʊ.mæn ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "17",
+      "word": "soap",
+      "translatedWord": "мыло",
+      "transcription": "[ səʊp ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "18",
+      "word": "toothbrush",
+      "translatedWord": "зубная щетка",
+      "transcription": "[ ˈtuːθ.brʌʃ ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "19",
+      "word": "toothpaste",
+      "translatedWord": "зубная паста",
+      "transcription": "[ ˈtuːθ.peɪst ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "20",
+      "word": "towel",
+      "translatedWord": "полотенце",
+      "transcription": "[ taʊəl ]",
+      "picture": "drawable/calendar"
+    },
+    {
+      "index": "21",
+      "word": "umbrella",
+      "translatedWord": "зонт",
+      "transcription": "[ ʌmˈbrelə ]",
+      "picture": "drawable/calendar"
+    }
+  ],
+  "Сказка": [
+    {
+      "index": "0",
+      "word": "castle",
+      "translatedWord": "замок",
+      "transcription": "[ ˈkɑːsl ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "1",
+      "word": "crown",
+      "translatedWord": "корона",
+      "transcription": "[ kraʊn ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "2",
+      "word": "dragon",
+      "translatedWord": "дракон",
+      "transcription": "[ ˈdræɡ.ən ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "3",
+      "word": "giant",
+      "translatedWord": "гигант, великан",
+      "transcription": "[ ˈdʒaɪənt ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "4",
+      "word": "gold",
+      "translatedWord": "золото",
+      "transcription": "[ ɡəʊld ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "5",
+      "word": "king",
+      "translatedWord": "король",
+      "transcription": "[ kɪŋ ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "6",
+      "word": "knight",
+      "translatedWord": "рыцарь",
+      "transcription": "[ naɪt ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "7",
+      "word": "prince",
+      "translatedWord": "принц",
+      "transcription": "[ prɪns ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "8",
+      "word": "princess",
+      "translatedWord": "принцесса",
+      "transcription": "[ ˌprɪnˈses ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "9",
+      "word": "queen",
+      "translatedWord": "королева",
+      "transcription": "[ kwiːn ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "10",
+      "word": "shield",
+      "translatedWord": "щит",
+      "transcription": "[ ʃiːld ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "11",
+      "word": "sword",
+      "translatedWord": "меч",
+      "transcription": "[ sɔːd ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "12",
+      "word": "throne",
+      "translatedWord": "трон",
+      "transcription": "[ θrəʊn ]",
+      "picture": "drawable/castle"
+    },
+    {
+      "index": "13",
+      "word": "tower",
+      "translatedWord": "башня",
+      "transcription": "[ ˈtaʊə(r) ]",
+      "picture": "drawable/castle"
+    }
+  ],
+  "Семья": [
+    {
+      "index": "0",
+      "word": "baby",
+      "translatedWord": "младенец",
+      "transcription": "[ ˈbeɪbi ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "1",
+      "word": "brother",
+      "translatedWord": "брат",
+      "transcription": "[ ˈbrʌðə(r) ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "2",
+      "word": "family",
+      "translatedWord": "семья",
+      "transcription": "[ ˈfæməli ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "3",
+      "word": "father",
+      "translatedWord": "папа",
+      "transcription": "[ ˈfɑːðə(r) ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "4",
+      "word": "grandfather",
+      "translatedWord": "дедушка",
+      "transcription": "[ ˈɡrænfɑːðə(r) ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "5",
+      "word": "grandmother",
+      "translatedWord": "бабушка",
+      "transcription": "[ ˈɡrænmʌðə(r) ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "6",
+      "word": "mother",
+      "translatedWord": "мама",
+      "transcription": "[ ˈmʌðə(r) ]",
+      "picture": "drawable/baby"
+    },
+    {
+      "index": "7",
+      "word": "sister",
+      "translatedWord": "сестра",
+      "transcription": "[ ˈsɪstə(r) ]",
+      "picture": "drawable/baby"
+    }
+  ],
+  "Чувства": [
+    {
+      "index": "0",
+      "word": "angry",
+      "translatedWord": "сердитый, злой",
+      "transcription": "[ ˈæŋɡri ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "1",
+      "word": "bored",
+      "translatedWord": "скучающий",
+      "transcription": "[ bɔːd ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "2",
+      "word": "confused",
+      "translatedWord": "смущенный, растерянный",
+      "transcription": "[ kənˈfjuːzd ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "3",
+      "word": "excited",
+      "translatedWord": "возбужденный, воодушевленный",
+      "transcription": "[ ɪkˈsaɪtɪd ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "4",
+      "word": "happy",
+      "translatedWord": "счастливый",
+      "transcription": "[ ˈhæpi ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "5",
+      "word": "hungry",
+      "translatedWord": "голодный",
+      "transcription": "[ ˈhʌŋɡri ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "6",
+      "word": "sad",
+      "translatedWord": "грустный",
+      "transcription": "[ sæd ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "7",
+      "word": "surprised",
+      "translatedWord": "удивленный",
+      "transcription": "[ səˈpraɪzd ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "8",
+      "word": "upset",
+      "translatedWord": "расстроенный",
+      "transcription": "[ ʌpˈset ]",
+      "picture": "drawable/angry"
+    },
+    {
+      "index": "9",
+      "word": "worried",
+      "translatedWord": "обеспокоенный, встревоженный",
+      "transcription": "[ ˈwʌrid ]",
+      "picture": "drawable/angry"
+    }
+  ],
+  "Еда": [
+    {
+      "index": "0",
+      "word": "apple",
+      "translatedWord": "яблоко",
+      "transcription": "[ ˈæp.l̩ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "1",
+      "word": "banana",
+      "translatedWord": "банан",
+      "transcription": "[ bəˈnɑː.nə ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "2",
+      "word": "biscuits",
+      "translatedWord": "печенье",
+      "transcription": "[ ˈbɪs.kɪt ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "3",
+      "word": "bread",
+      "translatedWord": "хлеб",
+      "transcription": "[ bred ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "4",
+      "word": "cake",
+      "translatedWord": "торт",
+      "transcription": "[ keɪk ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "5",
+      "word": "carrot",
+      "translatedWord": "морковь",
+      "transcription": "[ ˈkærət ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "6",
+      "word": "cheese",
+      "translatedWord": "сыр",
+      "transcription": "[ tʃiːz ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "7",
+      "word": "cherry",
+      "translatedWord": "вишня",
+      "transcription": "[ ˈtʃer.i ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "8",
+      "word": "chicken",
+      "translatedWord": "цыпленок",
+      "transcription": "[ ˈtʃɪkɪn ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "9",
+      "word": "chocolate",
+      "translatedWord": "шоколад",
+      "transcription": "[ ˈtʃɒklət ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "10",
+      "word": "cucumber",
+      "translatedWord": "огурец",
+      "transcription": "[ ˈkjuː.kʌm.bər ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "11",
+      "word": "egg",
+      "translatedWord": "яйцо",
+      "transcription": "[ eɡ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "12",
+      "word": "fish",
+      "translatedWord": "рыба",
+      "transcription": "[ fɪʃ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "13",
+      "word": "grapes",
+      "translatedWord": "виноград",
+      "transcription": "[ ɡreɪp ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "14",
+      "word": "ice cream",
+      "translatedWord": "мороженое",
+      "transcription": "[ aɪs kriːm ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "15",
+      "word": "lemonade",
+      "translatedWord": "лимонад",
+      "transcription": "[ ˌlem.əˈneɪd ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "16",
+      "word": "meat",
+      "translatedWord": "мясо",
+      "transcription": "[ miːt ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "17",
+      "word": "milk",
+      "translatedWord": "молоко",
+      "transcription": "[ mɪlk ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "18",
+      "word": "orange",
+      "translatedWord": "апельсин",
+      "transcription": "[ ˈɒrɪndʒ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "19",
+      "word": "pasta",
+      "translatedWord": "макароны",
+      "transcription": "[ ˈpæs.tə ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "20",
+      "word": "pear",
+      "translatedWord": "груша",
+      "transcription": "[ peər ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "21",
+      "word": "pepper",
+      "translatedWord": "перец",
+      "transcription": "[ ˈpepə(r) ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "22",
+      "word": "pie",
+      "translatedWord": "пирог",
+      "transcription": "[ paɪ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "23",
+      "word": "pineapple",
+      "translatedWord": "ананас",
+      "transcription": "[ ˈpaɪnˌæp.l̩ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "23",
+      "word": "potato",
+      "translatedWord": "картофель",
+      "transcription": "[ pəˈteɪtəʊ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "24",
+      "word": "rice",
+      "translatedWord": "рис",
+      "transcription": "[ raɪs ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "25",
+      "word": "sandwich",
+      "translatedWord": "бутерброд",
+      "transcription": "[ ˈsæn.wɪdʒ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "26",
+      "word": "sausage",
+      "translatedWord": "сосиска, колбаска",
+      "transcription": "[ ˈsɒs.ɪdʒ ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "27",
+      "word": "strawberry",
+      "translatedWord": "клубника",
+      "transcription": "[ ˈstrɔː.bər.i ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "28",
+      "word": "tea",
+      "translatedWord": "чай",
+      "transcription": "[ tiː ]",
+      "picture": "drawable/chocolate"
+    },
+    {
+      "index": "29",
+      "word": "water",
+      "translatedWord": "вода",
+      "transcription": "[ ˈwɔːtə(r) ]",
+      "picture": "drawable/chocolate"
+    }
+  ],
+  "Мебель": [
+    {
+      "index": "0",
+      "word": "armchair",
+      "translatedWord": "кресло",
+      "transcription": "[ ˈɑːm.tʃeər ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "1",
+      "word": "bath",
+      "translatedWord": "ванна",
+      "transcription": "[ bɑːθ ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "2",
+      "word": "bed",
+      "translatedWord": "кровать",
+      "transcription": "[ bed ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "3",
+      "word": "chair",
+      "translatedWord": "стул",
+      "transcription": "[ tʃeə(r) ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "4",
+      "word": "fridge",
+      "translatedWord": "холодильник",
+      "transcription": "[ frɪdʒ ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "5",
+      "word": "lamp",
+      "translatedWord": "лампа",
+      "transcription": "[ læmp ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "6",
+      "word": "oven",
+      "translatedWord": "духовка",
+      "transcription": "[ ˈʌvn ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "7",
+      "word": "shelf",
+      "translatedWord": "полка",
+      "transcription": "[ ʃelf ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "8",
+      "word": "sink",
+      "translatedWord": "раковина",
+      "transcription": "[ sɪŋk ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "9",
+      "word": "sofa",
+      "translatedWord": "диван",
+      "transcription": "[ ˈsəʊ.fə ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "10",
+      "word": "table",
+      "translatedWord": "стол",
+      "transcription": "[ ˈteɪbl ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "11",
+      "word": "toilet",
+      "translatedWord": "туалет, унитаз",
+      "transcription": "[ ˈtɔɪlət ]",
+      "picture": "drawable/fridge"
+    },
+    {
+      "index": "12",
+      "word": "wardrobe",
+      "translatedWord": "гардероб, шкаф",
+      "transcription": "[ ˈwɔː.drəʊb ]",
+      "picture": "drawable/fridge"
+    }
+  ],
+  "Дом": [
+    {
+      "index": "0",
+      "word": "balcony",
+      "translatedWord": "балкон",
+      "transcription": "[ ˈbæl.kə.ni ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "1",
+      "word": "bathroom",
+      "translatedWord": "ванная комната",
+      "transcription": "[ ˈbɑːθruːm ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "2",
+      "word": "bedroom",
+      "translatedWord": "спальня",
+      "transcription": "[ ˈbedruːm ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "3",
+      "word": "door",
+      "translatedWord": "дверь",
+      "transcription": "[ dɔː(r) ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "4",
+      "word": "floor",
+      "translatedWord": "пол, этаж",
+      "transcription": "[ flɔː(r) ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "5",
+      "word": "garden",
+      "translatedWord": "сад",
+      "transcription": "[ ˈɡɑːdn ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "6",
+      "word": "hall",
+      "translatedWord": "зал, коридор",
+      "transcription": "[ hɔːl ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "7",
+      "word": "house",
+      "translatedWord": "дом",
+      "transcription": "[ haʊs ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "8",
+      "word": "kitchen",
+      "translatedWord": "кухня",
+      "transcription": "[ ˈkɪtʃɪn ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "9",
+      "word": "roof",
+      "translatedWord": "крыша",
+      "transcription": "[ ruːf ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "10",
+      "word": "stairs",
+      "translatedWord": "лестница, ступеньки",
+      "transcription": "[ steər ]",
+      "picture": "drawable/bathroom"
+    },
+    {
+      "index": "11",
+      "word": "window",
+      "translatedWord": "окно",
+      "transcription": "[ ˈwɪndəʊ ]",
+      "picture": "drawable/bathroom"
+    }
+  ],
+  "Домашние предметы": [
+    {
+      "index": "0",
+      "word": "bottle",
+      "translatedWord": "бутылка",
+      "transcription": "[ ˈbɒtl ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "1",
+      "word": "bowl",
+      "translatedWord": "чаша, миска",
+      "transcription": "[ bəʊl ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "2",
+      "word": "clock",
+      "translatedWord": "часы",
+      "transcription": "[ klɒk ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "3",
+      "word": "cup",
+      "translatedWord": "кружка",
+      "transcription": "[ kʌp ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "4",
+      "word": "fork",
+      "translatedWord": "вилка",
+      "transcription": "[ fɔːk ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "5",
+      "word": "glass",
+      "translatedWord": "стакан, стекло",
+      "transcription": "[ ɡlɑːs ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "6",
+      "word": "knife",
+      "translatedWord": "нож",
+      "transcription": "[ naɪf ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "7",
+      "word": "mirror",
+      "translatedWord": "зеркало",
+      "transcription": "[ ˈmɪrə(r) ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "8",
+      "word": "pan",
+      "translatedWord": "сковородка",
+      "transcription": "[ pæn ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "9",
+      "word": "picture",
+      "translatedWord": "картина",
+      "transcription": "[ ˈpɪktʃə(r) ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "10",
+      "word": "pillow",
+      "translatedWord": "подушка",
+      "transcription": "[ ˈpɪl.əʊ ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "11",
+      "word": "plate",
+      "translatedWord": "тарелка",
+      "transcription": "[ pleɪt ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "12",
+      "word": "rug",
+      "translatedWord": "ковер",
+      "transcription": "[ rʌɡ ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "13",
+      "word": "spoon",
+      "translatedWord": "ложка",
+      "transcription": "[ spuːn ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "14",
+      "word": "tap",
+      "translatedWord": "кран",
+      "transcription": "[ tæp ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "15",
+      "word": "telephone",
+      "translatedWord": "телефон",
+      "transcription": "[ ˈtelɪfəʊn ]",
+      "picture": "drawable/knife"
+    },
+    {
+      "index": "16",
+      "word": "tv",
+      "translatedWord": "телевизор",
+      "transcription": "[ ˌtiː ˈviː ]",
+      "picture": "drawable/knife"
+    }
+  ],
+  "Части тела человека": [
+    {
+      "index": "0",
+      "word": "arm",
+      "translatedWord": "рука",
+      "transcription": "[ ɑːm ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "1",
+      "word": "back",
+      "translatedWord": "спина",
+      "transcription": "[ bæk ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "2",
+      "word": "body",
+      "translatedWord": "тело",
+      "transcription": "[ ˈbɒdi ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "3",
+      "word": "ear",
+      "translatedWord": "ухо",
+      "transcription": "[ ɪə(r) ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "4",
+      "word": "eye",
+      "translatedWord": "глаз",
+      "transcription": "[ aɪ ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "5",
+      "word": "face",
+      "translatedWord": "лицо",
+      "transcription": "[ feɪs ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "6",
+      "word": "finger",
+      "translatedWord": "палец",
+      "transcription": "[ ˈfɪŋɡə(r) ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "7",
+      "word": "hair",
+      "translatedWord": "волосы",
+      "transcription": "[ heə(r) ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "8",
+      "word": "hand",
+      "translatedWord": "ладонь, кисть руки",
+      "transcription": "[ hænd ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "9",
+      "word": "head",
+      "translatedWord": "голова",
+      "transcription": "[ hed ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "10",
+      "word": "leg",
+      "translatedWord": "нога",
+      "transcription": "[ leɡ ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "11",
+      "word": "mouth",
+      "translatedWord": "рот",
+      "transcription": "[ maʊθ ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "12",
+      "word": "nose",
+      "translatedWord": "нос",
+      "transcription": "[ nəʊz ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "13",
+      "word": "shoulder",
+      "translatedWord": "плечо",
+      "transcription": "[ ˈʃəʊldə(r) ]",
+      "picture": "drawable/eye"
+    },
+    {
+      "index": "14",
+      "word": "teeth",
+      "translatedWord": "зубы",
+      "transcription": "[ tiːθ ]",
+      "picture": "drawable/eye"
+    }
+  ],
+  "Природа": [
+    {
+      "index": "0",
+      "word": "beach",
+      "translatedWord": "пляж",
+      "transcription": "[ biːtʃ ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "1",
+      "word": "field",
+      "translatedWord": "поле",
+      "transcription": "[ fiːld ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "2",
+      "word": "forest",
+      "translatedWord": "лес",
+      "transcription": "[ ˈfɒrɪst ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "3",
+      "word": "island",
+      "translatedWord": "остров",
+      "transcription": "[ ˈaɪlənd ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "4",
+      "word": "lake",
+      "translatedWord": "озеро",
+      "transcription": "[ leɪk ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "5",
+      "word": "leaf",
+      "translatedWord": "лист",
+      "transcription": "[ liːf ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "6",
+      "word": "log",
+      "translatedWord": "бревно",
+      "transcription": "[ lɒɡ ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "7",
+      "word": "mountain",
+      "translatedWord": "гора",
+      "transcription": "[ ˈmaʊntən ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "8",
+      "word": "rainbow",
+      "translatedWord": "радуга",
+      "transcription": "[ ˈreɪn.bəʊ ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "9",
+      "word": "river",
+      "translatedWord": "река",
+      "transcription": "[ ˈrɪvə(r) ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "10",
+      "word": "rock",
+      "translatedWord": "скала",
+      "transcription": "[ rɒk ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "11",
+      "word": "sea",
+      "translatedWord": "море",
+      "transcription": "[ siː ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "12",
+      "word": "stone",
+      "translatedWord": "камень",
+      "transcription": "[ stəʊn ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "13",
+      "word": "tree",
+      "translatedWord": "дерево",
+      "transcription": "[ triː ]",
+      "picture": "drawable/island"
+    },
+    {
+      "index": "14",
+      "word": "wave",
+      "translatedWord": "волна",
+      "transcription": "[ weɪv ]",
+      "picture": "drawable/island"
+    }
+  ],
+  "Числа": [
+    {
+      "index": "0",
+      "word": "one",
+      "translatedWord": "один",
+      "transcription": "[ wʌn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "1",
+      "word": "two",
+      "translatedWord": "два",
+      "transcription": "[ tuː ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "2",
+      "word": "three",
+      "translatedWord": "три",
+      "transcription": "[ θriː ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "3",
+      "word": "four",
+      "translatedWord": "четыре",
+      "transcription": "[ fɔː(r) ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "4",
+      "word": "five",
+      "translatedWord": "пять",
+      "transcription": "[ faɪv ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "5",
+      "word": "six",
+      "translatedWord": "шесть",
+      "transcription": "[ sɪks ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "6",
+      "word": "seven",
+      "translatedWord": "семь",
+      "transcription": "[ ˈsevn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "7",
+      "word": "eight",
+      "translatedWord": "восемь",
+      "transcription": "[ eɪt ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "8",
+      "word": "nine",
+      "translatedWord": "девять",
+      "transcription": "[ naɪn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "9",
+      "word": "ten",
+      "translatedWord": "десять",
+      "transcription": "[ ten ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "10",
+      "word": "eleven",
+      "translatedWord": "одиннадцать",
+      "transcription": "[ ɪˈlevn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "11",
+      "word": "twelve",
+      "translatedWord": "двенадцать",
+      "transcription": "[ twelv ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "12",
+      "word": "thirteen",
+      "translatedWord": "тринадцать",
+      "transcription": "[ ˌθɜːˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "13",
+      "word": "fourteen",
+      "translatedWord": "четырнадцать",
+      "transcription": "[ ˌfɔːˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "14",
+      "word": "fifteen",
+      "translatedWord": "пятнадцать",
+      "transcription": "[ ˌfɪfˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "15",
+      "word": "sixteen",
+      "translatedWord": "шестнадцать",
+      "transcription": "[ ˌsɪksˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "16",
+      "word": "seventeen",
+      "translatedWord": "семнадцать",
+      "transcription": "[ ˌsevnˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "17",
+      "word": "eighteen",
+      "translatedWord": "восемнадцать",
+      "transcription": "[ ˌeɪˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "19",
+      "word": "nineteen",
+      "translatedWord": "девятнадцать",
+      "transcription": "[ ˌnaɪnˈtiːn ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "20",
+      "word": "twenty",
+      "translatedWord": "двадцать",
+      "transcription": "[ ˈtwenti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "21",
+      "word": "thirty",
+      "translatedWord": "тридцать",
+      "transcription": "[ ˈθɜːti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "22",
+      "word": "forty",
+      "translatedWord": "сорок",
+      "transcription": "[ ˈfɔːti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "23",
+      "word": "fifty",
+      "translatedWord": "пятьдесят",
+      "transcription": "[ ˈfɪfti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "24",
+      "word": "sixty",
+      "translatedWord": "шестьдесят",
+      "transcription": "[ ˈsɪksti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "25",
+      "word": "seventy",
+      "translatedWord": "семьдесят",
+      "transcription": "[ ˈsevnti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "26",
+      "word": "eighty",
+      "translatedWord": "восемьдесят",
+      "transcription": "[ ˈeɪti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "27",
+      "word": "ninety",
+      "translatedWord": "девяносто",
+      "transcription": "[ ˈnaɪnti ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "28",
+      "word": "hundred",
+      "translatedWord": "сто",
+      "transcription": "[ ˈhʌndrəd ]",
+      "picture": "drawable/one"
+    },
+    {
+      "index": "29",
+      "word": "thousand",
+      "translatedWord": "тысяча",
+      "transcription": "[ ˈθaʊznd ]",
+      "picture": "drawable/one"
+    }
+  ],
+  "Места": [
+    {
+      "index": "0",
+      "word": "airport",
+      "translatedWord": "аэропорт",
+      "transcription": "[ ˈeəpɔːt ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "1",
+      "word": "bridge",
+      "translatedWord": "мост",
+      "transcription": "[ brɪdʒ ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "2",
+      "word": "factory",
+      "translatedWord": "завод, фабрика",
+      "transcription": "[ ˈfæktri ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "3",
+      "word": "hotel",
+      "translatedWord": "гостиница",
+      "transcription": "[ həʊˈtel ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "4",
+      "word": "library",
+      "translatedWord": "библиотека",
+      "transcription": "[ ˈlaɪbrəri ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "5",
+      "word": "park",
+      "translatedWord": "парк",
+      "transcription": "[ pɑːk ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "6",
+      "word": "school",
+      "translatedWord": "школа",
+      "transcription": "[ skuːl ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "7",
+      "word": "stadium",
+      "translatedWord": "стадион",
+      "transcription": "[ ˈsteɪ.di.əm ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "8",
+      "word": "street",
+      "translatedWord": "улица",
+      "transcription": "[ striːt ]",
+      "picture": "drawable/library"
+    },
+    {
+      "index": "9",
+      "word": "theatre",
+      "translatedWord": "театр",
+      "transcription": "[ ˈθɪətə(r) ]",
+      "picture": "drawable/library"
+    }
+  ],
+  "Предлоги": [
+    {
+      "index": "0",
+      "word": "behind",
+      "translatedWord": "за, позади",
+      "transcription": "[ bɪˈhaɪnd ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "1",
+      "word": "between",
+      "translatedWord": "между",
+      "transcription": "[ bɪˈtwiːn ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "2",
+      "word": "in front of",
+      "translatedWord": "впереди",
+      "transcription": "[ ɪn frʌnt əv ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "3",
+      "word": "in",
+      "translatedWord": "в, внутри",
+      "transcription": "[ ɪn ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "4",
+      "word": "next",
+      "translatedWord": "следующий",
+      "transcription": "[ nekst ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "5",
+      "word": "on",
+      "translatedWord": "на",
+      "transcription": "[ ɒn ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "6",
+      "word": "opposite",
+      "translatedWord": "напротив",
+      "transcription": "[ ˈɒpəzɪt ]",
+      "picture": "drawable/on"
+    },
+    {
+      "index": "7",
+      "word": "under",
+      "translatedWord": "под",
+      "transcription": "[ ˈʌndə(r) ]",
+      "picture": "drawable/on"
+    }
+  ],
+  "Фигуры": [
+    {
+      "index": "0",
+      "word": "circle",
+      "translatedWord": "круг",
+      "transcription": "[ ˈsɜːkl ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "1",
+      "word": "cube",
+      "translatedWord": "куб",
+      "transcription": "[ kjuːb ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "2",
+      "word": "diamond",
+      "translatedWord": "ромб",
+      "transcription": "[ ˈdaɪəmənd ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "3",
+      "word": "heart",
+      "translatedWord": "сердце",
+      "transcription": "[ hɑːt ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "4",
+      "word": "hexagon",
+      "translatedWord": "шестиугольник",
+      "transcription": "[ ˈhek.sə.ɡən ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "5",
+      "word": "oval",
+      "translatedWord": "овал",
+      "transcription": "[ ˈəʊ.vəl ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "6",
+      "word": "pentagon",
+      "translatedWord": "пятиугольник",
+      "transcription": "[ ˈpen.tə.ɡən ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "7",
+      "word": "rectangle",
+      "translatedWord": "прямоугольник",
+      "transcription": "[ ˈrek.tæŋ.ɡl̩ ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "8",
+      "word": "sphere",
+      "translatedWord": "сфера, шар",
+      "transcription": "[ sfɪər ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "9",
+      "word": "square",
+      "translatedWord": "квадрат, площадь",
+      "transcription": "[ skweə(r) ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "10",
+      "word": "star",
+      "translatedWord": "звезда",
+      "transcription": "[ stɑː(r) ]",
+      "picture": "drawable/heart"
+    },
+    {
+      "index": "11",
+      "word": "triangle",
+      "translatedWord": "треугольник",
+      "transcription": "[ ˈtraɪæŋɡl ]",
+      "picture": "drawable/heart"
+    }
+  ],
+  "Транспорт": [
+    {
+      "index": "0",
+      "word": "bike",
+      "translatedWord": "велосипед",
+      "transcription": "[ baɪk ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "1",
+      "word": "boat",
+      "translatedWord": "лодка",
+      "transcription": "[ bəʊt ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "2",
+      "word": "bus",
+      "translatedWord": "автобус",
+      "transcription": "[ bʌs ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "3",
+      "word": "car",
+      "translatedWord": "машина",
+      "transcription": "[ kɑː(r) ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "4",
+      "word": "helicopter",
+      "translatedWord": "вертолет",
+      "transcription": "[ ˈhel.ɪˌkɒp.tər ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "5",
+      "word": "lorry",
+      "translatedWord": "грузовик",
+      "transcription": "[ ˈlɒri ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "6",
+      "word": "plane",
+      "translatedWord": "самолет",
+      "transcription": "[ pleɪn ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "7",
+      "word": "ship",
+      "translatedWord": "корабль",
+      "transcription": "[ ʃɪp ]",
+      "picture": "drawable/car"
+    },
+    {
+      "index": "8",
+      "word": "train",
+      "translatedWord": "поезд",
+      "transcription": "[ treɪn ]",
+      "picture": "drawable/car"
+    }
+  ],
+  "Погода": [
+    {
+      "index": "0",
+      "word": "autumn",
+      "translatedWord": "осень",
+      "transcription": "[ ˈɔːtəm ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "1",
+      "word": "cloudy",
+      "translatedWord": "облачно",
+      "transcription": "[ ˈklaʊ.di ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "2",
+      "word": "rainy",
+      "translatedWord": "дождливо",
+      "transcription": "[ ˈreɪ.ni ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "3",
+      "word": "snowy",
+      "translatedWord": "снежно",
+      "transcription": "[ ˈsnəʊ.i ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "4",
+      "word": "spring",
+      "translatedWord": "весна",
+      "transcription": "[ sprɪŋ ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "5",
+      "word": "summer",
+      "translatedWord": "лето",
+      "transcription": "[ ˈsʌmə(r) ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "6",
+      "word": "sunny",
+      "translatedWord": "солнечно",
+      "transcription": "[ ˈsʌn.i ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "7",
+      "word": "windy",
+      "translatedWord": "ветрено",
+      "transcription": "[ ˈwɪn.di ]",
+      "picture": "drawable/spring"
+    },
+    {
+      "index": "8",
+      "word": "winter",
+      "translatedWord": "зима",
+      "transcription": "[ ˈwɪntə(r) ]",
+      "picture": "drawable/spring"
+    }
+  ]
+}
