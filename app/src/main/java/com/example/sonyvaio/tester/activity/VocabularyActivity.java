@@ -83,7 +83,7 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
         presenter = new VocabularyPresenter(this, this);
 
 
-        loadJSONFromAsset(RVThemesAdapter.mThemesMap);
+        //loadJSONFromAsset(RVThemesAdapter.mThemesMap);
 
 
         mRecyclerViewVocabulary.setLayoutManager(new GridLayoutManager(this, 2));
@@ -136,9 +136,11 @@ public class VocabularyActivity extends AppCompatActivity implements ThemesViewH
                     String translatedWord = wordsArray.getJSONObject(i).getString("translatedWord");
                     String transcription = wordsArray.getJSONObject(i).getString("transcription");
                     String pictureString = wordsArray.getJSONObject(i).getString("picture");
+                    String soundString = wordsArray.getJSONObject(i).getString("sound");
                     int picture = getResources().getIdentifier(pictureString, null, getPackageName());
+                    int sound = getResources().getIdentifier(soundString, null, getPackageName());
 
-                    Word temp = new Word(word, translatedWord, transcription, picture);
+                    Word temp = new Word(word, translatedWord, transcription, picture, sound);
                     // adding word to wordlist
                     wordArrayList.add(temp);
                 }

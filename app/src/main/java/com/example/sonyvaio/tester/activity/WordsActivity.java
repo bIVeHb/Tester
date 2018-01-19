@@ -45,7 +45,7 @@ public class WordsActivity extends AppCompatActivity implements WordsView {
         mRecyclerViewWords.setHasFixedSize(true);
 
 
-        RVWordsAdapter adapter = new RVWordsAdapter(words);
+        RVWordsAdapter adapter = new RVWordsAdapter(getApplicationContext(), words);
         mRecyclerViewWords.setAdapter(adapter);
 
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {

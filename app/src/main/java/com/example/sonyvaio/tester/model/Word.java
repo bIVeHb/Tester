@@ -7,18 +7,20 @@ import android.os.Parcelable;
  * Created by SonyVaio on 09.11.2017.
  */
 
-public class Word implements Parcelable{
+public class Word implements Parcelable {
 
     private String word;
     private String translatedWord;
     private String transcription;
     private int picture;
+    private int sound;
 
-    public Word(String word, String translatedWord, String transcription, int picture) {
+    public Word(String word, String translatedWord, String transcription, int picture, int sound) {
         this.word = word;
         this.translatedWord = translatedWord;
         this.transcription = transcription;
         this.picture = picture;
+        this.sound = sound;
     }
 
     protected Word(Parcel in) {
@@ -26,6 +28,7 @@ public class Word implements Parcelable{
         translatedWord = in.readString();
         transcription = in.readString();
         picture = in.readInt();
+        sound = in.readInt();
     }
 
     public static final Creator<Word> CREATOR = new Creator<Word>() {
@@ -56,6 +59,10 @@ public class Word implements Parcelable{
         return picture;
     }
 
+    public int getSound() {
+        return sound;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -67,5 +74,6 @@ public class Word implements Parcelable{
         dest.writeString(translatedWord);
         dest.writeString(transcription);
         dest.writeInt(picture);
+        dest.writeInt(sound);
     }
 }

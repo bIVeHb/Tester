@@ -63,6 +63,8 @@ public class TesterActivity extends Activity implements TesterView {
     TextView textViewQuestion;
     @BindView(R.id.textViewPBar)
     TextView textViewProgressBar;
+    @BindView(R.id.hintTextView)
+    TextView textViewHint;
 
     @BindView(R.id.gridLayoutTester)
     GridLayout gridLayoutTester;
@@ -115,6 +117,7 @@ public class TesterActivity extends Activity implements TesterView {
         numberOfQuestions = 0;
 
         resultTextView.setText("");
+        textViewHint.setText("");
 
         generateQuestion();
 
@@ -136,6 +139,7 @@ public class TesterActivity extends Activity implements TesterView {
             views[Integer.parseInt(view.getTag().toString())].setVisibility(View.VISIBLE);
             resultTextView.setTextColor(Color.RED);
             resultTextView.setText(R.string.wrongAnswer);
+            textViewHint.setVisibility(View.VISIBLE);
 
         }
 
@@ -176,7 +180,7 @@ public class TesterActivity extends Activity implements TesterView {
     private void generateQuestion() {
 
         resultTextView.setText("");
-
+        textViewHint.setText("");
 
         presenter.dispatchGenerateQuestion(mTesterWords);
     }
@@ -194,6 +198,9 @@ public class TesterActivity extends Activity implements TesterView {
         textViewQuestion.setTranslationX(-1000f);
         textViewQuestion.setText(arrayWords.get(myArray.get(mLocationOfCorrectAnswer)).getWord());
         textViewQuestion.animate().translationXBy(1000f).setDuration(300);
+        // Подсказка
+        textViewHint.setVisibility(View.INVISIBLE);
+        textViewHint.setText("Правильный ответ: " + arrayWords.get(myArray.get(mLocationOfCorrectAnswer)).getTranslatedWord());
 
         for (int i = 0; i < imagesView.length; i++) {
             imagesView[i].setTranslationX(-1000f);

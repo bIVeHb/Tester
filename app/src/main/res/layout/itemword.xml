@@ -60,6 +60,7 @@
             android:layout_toRightOf="@+id/picture"
             android:layout_below="@+id/translatedWord"
             android:src="@drawable/iconplay"
+            style="@style/ButtonWordStyle"
             />
 
     </RelativeLayout>

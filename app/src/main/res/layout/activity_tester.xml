@@ -205,6 +205,14 @@
         android:textStyle="bold"
         />
 
+    <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textStyle="bold"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -1,11 +1,14 @@
 package com.example.sonyvaio.tester.adapter;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sonyvaio.tester.R;
+import com.example.sonyvaio.tester.activity.WordsActivity;
 import com.example.sonyvaio.tester.model.Word;
 import com.example.sonyvaio.tester.adapter.viewholder.WordViewHolder;
 
@@ -34,10 +37,11 @@ public class RVWordsAdapter extends RecyclerView.Adapter<WordViewHolder> {
             picture = (ImageView) itemView.findViewById(R.id.picture);
         }
     }*/
-
+    private Context mContext;
     private ArrayList<Word> mWords;
 
-    public RVWordsAdapter(ArrayList<Word> words) {
+    public RVWordsAdapter(Context context, ArrayList<Word> words) {
+        mContext = context;
         this.mWords = words;
     }
 
@@ -54,6 +58,13 @@ public class RVWordsAdapter extends RecyclerView.Adapter<WordViewHolder> {
         holder.translatedWord.setText(mWords.get(position).getTranslatedWord());
         holder.transription.setText(mWords.get(position).getTranscription());
         holder.picture.setImageResource(mWords.get(position).getPicture());
+        holder.btnSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer mp = MediaPlayer.create(mContext, mWords.get(position).getSound());
+                mp.start();
+            }
+        });
     }
 
     @Override

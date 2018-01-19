@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.sonyvaio.tester.data.AllArrayList;
 import com.example.sonyvaio.tester.data.ArraysWords;
 import com.example.sonyvaio.tester.R;
 import com.example.sonyvaio.tester.model.Word;
@@ -74,7 +75,7 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
 
     // По ключу находим значение
     public ArrayList<Word> getWordsByKey(String someKey) {
-        for (Map.Entry<String, ArrayList<Word>> entry : mThemesMap.entrySet()) {
+        for (Map.Entry<String, ArrayList<Word>> entry : ArraysWords.mThemesMap.entrySet()) {
             Log.i("hashmapKey ", entry.getKey() + " = " + String.valueOf(entry.getValue().size()));
             Log.i("hashmapKey", "-----------------------------------------");
             for (int i = 0; i < entry.getValue().size(); i++) {
@@ -82,6 +83,7 @@ public class RVThemesAdapter extends RecyclerView.Adapter<ThemesViewHolder> {
                 Log.i("hashmapValue", i + " " + entry.getValue().get(i).getTranslatedWord());
                 Log.i("hashmapValue", i + " " + entry.getValue().get(i).getTranscription());
                 Log.i("hashmapValue", i + " " + String.valueOf(entry.getValue().get(i).getPicture()));
+                Log.i("hashmapValue", i + " " + String.valueOf(entry.getValue().get(i).getSound()));
                 Log.i("hashmapValue", "-----------------------------------------");
             }
             if (entry.getKey().equals(String.valueOf(someKey)))
